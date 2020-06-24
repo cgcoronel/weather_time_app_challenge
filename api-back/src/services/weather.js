@@ -31,7 +31,7 @@ const getLocation = async ip => {
  */
 const getCurrent = async city => {
   try {
-    const url = `${OPEN_WEATHER.url}/weather?q=${city}&appid=${OPEN_WEATHER.accessKey}&lang=${OPEN_WEATHER.lang}`
+    const url = `${OPEN_WEATHER.url}/weather?q=${city}&appid=${OPEN_WEATHER.accessKey}&lang=${OPEN_WEATHER.lang}&units=${OPEN_WEATHER.units}`
     const { data } = await axios.get(url)
 
     return data
@@ -51,7 +51,7 @@ const getCurrent = async city => {
  */
 const getForecast = async city => {
   try {
-    const url = `${OPEN_WEATHER.url}/forecast?q=${city}&appid=${OPEN_WEATHER.accessKey}&lang=${OPEN_WEATHER.lang}`
+    const url = `${OPEN_WEATHER.url}/forecast?q=${city}&appid=${OPEN_WEATHER.accessKey}&lang=${OPEN_WEATHER.lang}&units=${OPEN_WEATHER.units}`
     const { data } = await axios.get(url)
 
     return data

@@ -1,5 +1,4 @@
 // Utilidades
-import { getStorage } from './SessionStorage'
 import { isObject } from './Objects'
 import { onError } from './ErrorHandler'
 
@@ -241,17 +240,6 @@ const getHeaders = () => {
   headersArray.append('Accept', 'application/json')
   headersArray.append('Content-Type', 'application/json')
 
-  // Alias del usuario.
-  const user = getStorage('user', true)
-
-  // Validamos que exista el usuario.
-  if (user) {
-    // Alias del usuario
-    const { token } = user
-
-    // Validamos si tiene un token de autenticación.
-    headersArray.append('authorization', typeof token === 'string' ? token : '')
-  }
   return headersArray
 }
 

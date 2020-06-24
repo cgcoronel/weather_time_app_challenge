@@ -28,5 +28,6 @@ exports.IP_API = {
 exports.OPEN_WEATHER = {
   url: process.env.OPEN_WEATHER_URL || '',
   accessKey: process.env.OPEN_WEATHER_ACCESS_KEY || '',
-  lang: process.env.OPEN_WEATHER_LANG || 'sp'
+  lang: process.env.OPEN_WEATHER_LANG || 'sp',
+  units: process.env.OPEN_WEATHER_UNITS || 'metric'
 }

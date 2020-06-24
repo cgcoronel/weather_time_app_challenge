@@ -1,132 +1,20 @@
 @import './theme.scss';
 @import './reset.scss';
-@import './buttons.scss';
-@import './report-list.scss';
-@import './icons.scss';
-@import './datepicker.scss';
-@import './screen-list.scss';
 
-.clickable {
-  display: inline-block;
-  cursor: pointer;
+html {
+  min-height: 100%;
 }
+body {
+  overflow: auto;
 
-html,
-body,
-#root {
-  height: 100%;
-  overflow: hidden;
-  background-color: $color-main-content-background;
-  //background: url('/assets/img/llama.gif') no-repeat center center fixed;
-  background-size: 700px 700px;
-  background-position: 0px 100%;
-}
-
-.container-screen {
-  padding: 40px;
-  border: solid 0px #e2e1de;
-  box-shadow: 0 2px 4px 0 rgba(206, 206, 206, 0.5);
-  background-color: #fff;
-}
-
-.form-control {
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
-  height: 30px;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url('/assets/img/wall.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 100%;
-  border-radius: 0.25rem !important;
-}
-
-.input-lg {
-  margin-right: 10px;
-}
-
-.select-lg {
-  margin-right: 10px;
-}
-
-.date-lg {
-  margin-right: 10px;
-  width: 100px !important;
-}
-
-.message-error-input {
-  color: $color-input-message-error;
-  font-size: 0.6em;
-  vertical-align: top;
-  padding-left: 5px;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-a {
-  text-decoration: none !important;
-}
-
-.form-crear {
-  width: 150px;
-  margin-left: 10px;
-}
-.form-crear200 {
-  width: 200px;
-  margin-left: 10px;
-}
-
-.form-action {
-  width: 150px;
-  margin-left: 10px;
-}
-
-.btn-group button {
-  min-width: 110px;
-}
-
-.table-sm {
-  margin-bottom: 10px !important;
-}
-
-.form-inline {
-  margin-bottom: 10px !important;
-}
-
-.white-space {
-  height: 50px;
-}
-
-a {
-  color: $color-darkgray;
-
-  &:hover {
-    color: $color-white !important;
-  }
-}
-
-// Drop Down
-.dropdown-item {
-  color: $color-darkgray;
-  &:hover {
-    background-color: $color-items;
-  }
-}
-
-.panel-box-text {
-  border: solid 1px $color-button-main-menu-active;
-  border-radius: 5px;
-  padding: 15px;
-  margin: 0px;
-  color: $color-button-main-menu-font;
-  font-weight: bold;
-}
-
-.container-screen {
-  margin-left: 60px;
-  margin-right: 60px;
+  height: 100%;
 }

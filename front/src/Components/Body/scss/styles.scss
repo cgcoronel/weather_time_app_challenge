@@ -1,0 +1,10 @@
+@import '../../../assets/main-styles/theme.scss';
+@import '../../../assets/main-styles/main.scss';
+
+#content-body-main {
+  background: $color-body;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}

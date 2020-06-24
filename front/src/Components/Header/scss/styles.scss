@@ -1,58 +1,9 @@
 @import '../../../assets/main-styles/theme.scss';
 @import '../../../assets/main-styles/main.scss';
 
-#content-header-main {
-  background: $color-header-bar;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-  height: 250px;
-  width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 3px;
-
-  #logo {
-    margin-left: 10px;
-    width: 43px;
-    height: 43px;
-  }
-
-  #username {
-    color: $color-username;
-    height: 100%;
-    margin-top: 10px;
-    float: right;
-    z-index: 10;
-
-    .icon-action-help {
-      @extend .clickable;
-      width: 19px;
-      height: 19px;
-      background-repeat: no-repeat;
-      vertical-align: middle;
-      background-position: center;
-      background-image: url('/assets/img/icons/help.svg');
-      margin-top: -3px;
-      margin-right: 10px;
-    }
-
-    .icon-action-logout {
-      @extend .clickable;
-      margin: 0px;
-      width: 18px;
-      height: 18px;
-      background-repeat: no-repeat;
-      vertical-align: middle;
-      background-position: center;
-      background-image: url('/assets/img/icons/logout.svg');
-      margin-top: -4px;
-      margin-left: 10px;
-    }
-
-    img {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
-      vertical-align: text-bottom;
-    }
-  }
+header {
+  margin-top: 3rem;
+}
+header h1 {
+  color: white;
 }

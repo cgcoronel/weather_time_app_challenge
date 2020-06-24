@@ -1,32 +1,5 @@
-@import "../../../assets/main-styles/main.scss";
+@import '../../../assets/main-styles/main.scss';
 
-#main-dashboard {
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-
-  .aside {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 10;
-    top: 53px;
-    left: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    transition: 0.5s;
-    box-shadow: 5px 10px 18px #888888;
-    width: 300px;
-    left: -400px;
-  }
-
-  .hidden-menu {
-    left: -400px;
-  }
-
-  .show-menu {
-    left: 0px;
-  }
+.col-form-label {
+  font-size: 12px;
 }

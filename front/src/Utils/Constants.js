@@ -1,2 +1,2 @@
 // Gateway
-export const Gateway = process.env.APP_GATEWAY_BASE_URL
+export const api = process.env.API_BASE_URL
