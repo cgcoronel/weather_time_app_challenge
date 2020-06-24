@@ -1,7 +1,5 @@
 /* 0 */
 
-/* 1 */
-
 /***/
 
 // contains in native
@@ -32,6 +30,8 @@
 
 // real proto method for `library`
 
+/* 1 */
+
 /* 2 */
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -48,23 +48,193 @@
 
 /* 7 */
 
-/* 8 */
-
 // 7.1.15 ToLength
 
 // pow(2, 53) - 1 == 9007199254740991
 
-/* 9 */
+/* 8 */
 
-/* 10 */
+/* 9 */
 
 // Thank's IE8 for his funny defineProperty
 
-/* 11 */
+/* 10 */
 
 /* empty */
 
+/* 11 */
+
+// 7.1.13 ToObject(argument)
+
 /* 12 */
+
+/* 13 */
+
+/* 14 */
+
+/* 15 */
+
+/* 16 */
+
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+
+/* 17 */
+
+// eslint-disable-next-line no-useless-call
+
+/* 18 */
+
+// optional / simple context binding
+
+/* 19 */
+
+/* 20 */
+
+// 7.1.4 ToInteger
+
+/* 21 */
+
+/* 22 */
+
+// most Object methods by ES6 should accept primitives
+
+/* 23 */
+
+// 0 -> Array#forEach
+
+// 1 -> Array#map
+
+// 2 -> Array#filter
+
+// 3 -> Array#some
+
+// 4 -> Array#every
+
+// 5 -> Array#find
+
+// 6 -> Array#findIndex
+
+// map
+
+// some
+
+// find
+
+// findIndex
+
+// filter
+
+// every
+
+/* 24 */
+
+/* 25 */
+
+// 7.2.1 RequireObjectCoercible(argument)
+
+/* 26 */
+
+// eslint-disable-next-line no-undef
+
+/* , mapfn, thisArg */
+
+/* , end */
+
+/* , thisArg */
+
+/* , start, end */
+
+// eslint-disable-line no-unused-vars
+
+/* , fromIndex */
+
+/* , initialValue */
+
+/* , offset */
+
+/* noop */
+
+// eslint-disable-next-line max-statements
+
+// eslint-disable-line no-new
+
+// `ws` module bug, temporarily remove validation length for Uint8Array
+
+// https://github.com/websockets/ws/pull/645
+
+/* 27 */
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+
+// and the second argument - flag - preferred type is a string
+
+/* 28 */
+
+// object ID
+
+// return primitive with prefix
+
+// can't set metadata to uncaught frozen object
+
+// not necessary to add metadata
+
+// add missing metadata
+
+/* 29 */
+
+/* 30 */
+
+/* 31 */
+
+/* 32 */
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+
+/* 33 */
+
+/* 34 */
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+
+// Thrash, waste and sodomy: IE GC bug
+
+// eslint-disable-line no-script-url
+
+// createDict = iframe.contentWindow.Object;
+
+// html.removeChild(iframe);
+
+// add "__proto__" for Object.getPrototypeOf polyfill
+
+/* 35 */
+
+// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
+
+/* 36 */
+
+// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+
+/* 37 */
+
+// 22.1.3.31 Array.prototype[@@unscopables]
+
+/* 38 */
+
+/* 39 */
+
+/* 40 */
+
+/* 41 */
+
+/* 42 */
+
+/* 43 */
+
+/* 44 */
+
+/* 45 */
 
 /*
   MIT License http://www.opensource.org/licenses/mit-license.php
@@ -87,7 +257,7 @@
 
 // I hope this will never occur (Hey this way we have smaller bundles)
 
-/* 13 */
+/* 46 */
 
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
@@ -142,203 +312,25 @@
 
 // http://stackoverflow.com/a/26603875
 
-/* 14 */
-
-/* 15 */
-
-// 7.1.13 ToObject(argument)
-
-/* 16 */
-
-/* 17 */
-
-/* 18 */
-
-/* 19 */
-
-/* 20 */
-
-// to indexed object, toObject with fallback for non-array-like ES3 strings
-
-/* 21 */
-
-// eslint-disable-next-line no-useless-call
-
-/* 22 */
-
-// optional / simple context binding
-
-/* 23 */
-
-/* 24 */
-
-// 7.1.4 ToInteger
-
-/* 25 */
-
-/* 26 */
-
-// most Object methods by ES6 should accept primitives
-
-/* 27 */
-
-// 0 -> Array#forEach
-
-// 1 -> Array#map
-
-// 2 -> Array#filter
-
-// 3 -> Array#some
-
-// 4 -> Array#every
-
-// 5 -> Array#find
-
-// 6 -> Array#findIndex
-
-// map
-
-// some
-
-// find
-
-// findIndex
-
-// filter
-
-// every
-
-/* 28 */
-
-/* 29 */
-
-// 7.2.1 RequireObjectCoercible(argument)
-
-/* 30 */
-
-// eslint-disable-next-line no-undef
-
-/* , mapfn, thisArg */
-
-/* , end */
-
-/* , thisArg */
-
-/* , start, end */
-
-// eslint-disable-line no-unused-vars
-
-/* , fromIndex */
-
-/* , initialValue */
-
-/* , offset */
-
-/* noop */
-
-// eslint-disable-next-line max-statements
-
-// eslint-disable-line no-new
-
-// `ws` module bug, temporarily remove validation length for Uint8Array
-
-// https://github.com/websockets/ws/pull/645
-
-/* 31 */
-
-// 7.1.1 ToPrimitive(input [, PreferredType])
-
-// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-
-// and the second argument - flag - preferred type is a string
-
-/* 32 */
-
-// object ID
-
-// return primitive with prefix
-
-// can't set metadata to uncaught frozen object
-
-// not necessary to add metadata
-
-// add missing metadata
-
-/* 33 */
-
-/* 34 */
-
-/* 35 */
-
-/* 36 */
-
-/* 37 */
-
-// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-
-/* 38 */
-
-/* 39 */
-
-// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-
-// Thrash, waste and sodomy: IE GC bug
-
-// eslint-disable-line no-script-url
-
-// createDict = iframe.contentWindow.Object;
-
-// html.removeChild(iframe);
-
-// add "__proto__" for Object.getPrototypeOf polyfill
-
-/* 40 */
-
-// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-
-/* 41 */
-
-// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-
-/* 42 */
-
-// 22.1.3.31 Array.prototype[@@unscopables]
-
-/* 43 */
-
-/* 44 */
-
-/* 45 */
-
-/* 46 */
-
 /* 47 */
-
-/* 48 */
-
-/* 49 */
-
-/* 50 */
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
 
 // eslint-disable-next-line no-prototype-builtins
 
-/* 51 */
+/* 48 */
 
-/* 52 */
+/* 49 */
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
 
-/* 53 */
+/* 50 */
 
 // 7.3.20 SpeciesConstructor(O, defaultConstructor)
 
-/* 54 */
+/* 51 */
 
-/* 55 */
-
-/* 56 */
+/* 52 */
 
 // false -> Array#indexOf
 
@@ -350,27 +342,27 @@
 
 // Array#indexOf ignores holes, Array#includes - not
 
-/* 57 */
+/* 53 */
 
-/* 58 */
+/* 54 */
 
 // 7.2.2 IsArray(argument)
 
-/* 59 */
+/* 55 */
 
 // eslint-disable-next-line no-throw-literal
 
-/* 60 */
+/* 56 */
 
 // 21.2.5.3 get RegExp.prototype.flags
 
-/* 61 */
+/* 57 */
 
 // `RegExpExec` abstract operation
 
 // https://tc39.github.io/ecma262/#sec-regexpexec
 
-/* 62 */
+/* 58 */
 
 // #replace needs built-in support for named groups.
 
@@ -392,13 +384,13 @@
 
 // 21.2.5.9 RegExp.prototype[@@search](string)
 
-/* 63 */
+/* 59 */
 
 // fast case for arrays with default iterator
 
-/* 64 */
+/* 60 */
 
-/* 65 */
+/* 61 */
 
 // V8 ~ Chromium 42- fails only with 5+ elements
 
@@ -408,21 +400,21 @@
 
 // create collection constructor
 
+/* 62 */
+
+/* 63 */
+
+/* 64 */
+
+/* 65 */
+
 /* 66 */
+
+// IE 8- don't enum bug keys
 
 /* 67 */
 
 /* 68 */
-
-/* 69 */
-
-/* 70 */
-
-// IE 8- don't enum bug keys
-
-/* 71 */
-
-/* 72 */
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 
@@ -430,27 +422,27 @@
 
 // eslint-disable-line
 
-/* 73 */
+/* 69 */
 
-/* 74 */
+/* 70 */
 
-/* 75 */
+/* 71 */
 
-/* 76 */
+/* 72 */
 
 // 20.2.2.28 Math.sign(x)
 
-/* 77 */
+/* 73 */
 
 // 20.2.2.14 Math.expm1(x)
 
-/* 78 */
+/* 74 */
 
 // true  -> String#at
 
 // false -> String#codePointAt
 
-/* 79 */
+/* 75 */
 
 // Fix native
 
@@ -464,31 +456,31 @@
 
 // Plug for library
 
-/* 80 */
+/* 76 */
 
 // helper for String#{startsWith, endsWith, includes}
 
-/* 81 */
+/* 77 */
 
 // 7.2.8 IsRegExp(argument)
 
-/* 82 */
+/* 78 */
 
-/* 83 */
+/* 79 */
 
 // check on default Array iterator
 
-/* 84 */
+/* 80 */
 
-/* 85 */
+/* 81 */
 
-/* 86 */
+/* 82 */
 
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 
 /* , start = 0, end = @length */
 
-/* 87 */
+/* 83 */
 
 // 22.1.3.4 Array.prototype.entries()
 
@@ -504,7 +496,7 @@
 
 // argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
 
-/* 88 */
+/* 84 */
 
 // Fix browsers whose `exec` methods don't consistently return `undefined`
 
@@ -512,13 +504,13 @@
 
 // eslint-disable-next-line no-loop-func
 
-/* 89 */
+/* 85 */
 
 // `AdvanceStringIndex` abstract operation
 
 // https://tc39.github.io/ecma262/#sec-advancestringindex
 
-/* 90 */
+/* 86 */
 
 // Node.js 0.9+ & IE10+ has setImmediate, otherwise:
 
@@ -526,7 +518,7 @@
 
 // Node.js 0.8-
 
-/* 91 */
+/* 87 */
 
 // IEEE754 conversions based on https://github.com/feross/ieee754
 
@@ -534,79 +526,77 @@
 
 /* , littleEndian */
 
+/* 88 */
+
+/* 89 */
+
+/* 90 */
+
+/* 91 */
+
 /* 92 */
 
 /* 93 */
 
 /* 94 */
 
+// Don't enum bug & hidden keys
+
 /* 95 */
 
 /* 96 */
 
-/* 97 */
-
-/* 98 */
-
-/* 99 */
-
-// Don't enum bug & hidden keys
-
-/* 100 */
-
-/* 101 */
-
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 
-/* 102 */
+/* 97 */
 
 // 19.1.2.1 Object.assign(target, source, ...)
 
 // should work with symbols and should have deterministic property order (V8 bug)
 
-/* 103 */
+/* 98 */
 
 // 7.2.9 SameValue(x, y)
 
-/* 104 */
+/* 99 */
 
 /* , ...args */
 
-/* 105 */
+/* 100 */
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
 
-/* 106 */
+/* 101 */
 
-/* 107 */
+/* 102 */
 
-/* 108 */
+/* 103 */
 
-/* 109 */
+/* 104 */
 
 // 20.1.2.3 Number.isInteger(number)
 
-/* 110 */
+/* 105 */
 
 // 20.2.2.20 Math.log1p(x)
 
-/* 111 */
+/* 106 */
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
 
-/* 112 */
+/* 107 */
 
 // call something on iterator step with safe closing on error
 
 // 7.4.6 IteratorClose(iterator, completion)
 
-/* 113 */
+/* 108 */
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
 
-/* 114 */
+/* 109 */
 
-/* 115 */
+/* 110 */
 
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 
@@ -614,15 +604,15 @@
 
 /* = 0, end = @length */
 
-/* 116 */
+/* 111 */
 
-/* 117 */
+/* 112 */
 
-/* 118 */
+/* 113 */
 
 // 21.2.5.3 get RegExp.prototype.flags()
 
-/* 119 */
+/* 114 */
 
 // correct subclassing with @@species support
 
@@ -668,13 +658,13 @@
 
 // 25.4.4.4 Promise.race(iterable)
 
-/* 120 */
+/* 115 */
 
 // 25.4.1.5 NewPromiseCapability(C)
 
-/* 121 */
+/* 116 */
 
-/* 122 */
+/* 117 */
 
 // fast case
 
@@ -736,7 +726,7 @@
 
 // add [@@species], 23.1.2.2, 23.2.2.2
 
-/* 123 */
+/* 118 */
 
 // collection id
 
@@ -750,17 +740,27 @@
 
 // 23.4.3.4 WeakSet.prototype.has(value)
 
-/* 124 */
+/* 119 */
 
 // https://tc39.github.io/ecma262/#sec-toindex
 
-/* 125 */
+/* 120 */
 
 // all object keys, includes non-enumerable and symbols
 
-/* 126 */
+/* 121 */
 
 // https://github.com/tc39/proposal-string-pad-start-end
+
+/* 122 */
+
+/* 123 */
+
+/* 124 */
+
+/* 125 */
+
+/* 126 */
 
 /* 127 */
 
@@ -769,59 +769,6 @@
 /* 129 */
 
 /* 130 */
-
-/* 131 */
-
-/* harmony export (binding) */
-
-/* harmony import */
-
-// eslint-disable-line import/no-unresolved
-
-/* 132 */
-
-/* 133 */
-
-/* 134 */
-
-/* 135 */
-
-/* 136 */
-
-/* 137 */
-
-/* 138 */
-
-/**
- * @type {Locale}
- * @category Locales
- * @summary Spanish locale.
- * @language Spanish
- * @iso-639-2 spa
- * @author Juan Angosto [@juanangosto]{@link https://github.com/juanangosto}
- * @author Guillermo Grau [@guigrpa]{@link https://github.com/guigrpa}
- * @author Fernando Agüero [@fjaguero]{@link https://github.com/fjaguero}
- * @author Gastón Haro [@harogaston]{@link https://github.com/harogaston}
- * @author Yago Carballo [@YagoCarballo]{@link https://github.com/YagoCarballo}
- */
-
-/* Monday */
-
-/* 139 */
-
-/* 140 */
-
-/* 141 */
-
-/* 142 */
-
-/* 143 */
-
-/* 144 */
-
-/* 145 */
-
-/* 146 */
 
 // ECMAScript 6 symbols shim
 
@@ -867,97 +814,97 @@
 
 // 24.3.3 JSON[@@toStringTag]
 
-/* 147 */
+/* 131 */
 
-/* 148 */
+/* 132 */
 
 // all enumerable object keys, includes symbols
 
-/* 149 */
+/* 133 */
 
-/* 150 */
+/* 134 */
 
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
 
-/* 151 */
+/* 135 */
 
 // 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
 
-/* 152 */
+/* 136 */
 
-/* 153 */
+/* 137 */
 
 // 19.1.2.9 Object.getPrototypeOf(O)
 
-/* 154 */
+/* 138 */
 
 // 19.1.2.14 Object.keys(O)
 
-/* 155 */
+/* 139 */
 
-/* 156 */
+/* 140 */
 
 // 19.1.2.5 Object.freeze(O)
 
-/* 157 */
+/* 141 */
 
 // 19.1.2.17 Object.seal(O)
 
-/* 158 */
+/* 142 */
 
 // 19.1.2.15 Object.preventExtensions(O)
 
-/* 159 */
+/* 143 */
 
 // 19.1.2.12 Object.isFrozen(O)
 
-/* 160 */
+/* 144 */
 
 // 19.1.2.13 Object.isSealed(O)
 
-/* 161 */
+/* 145 */
 
 // 19.1.2.11 Object.isExtensible(O)
 
-/* 162 */
+/* 146 */
 
 // 19.1.3.1 Object.assign(target, source)
 
-/* 163 */
+/* 147 */
 
 // 19.1.3.10 Object.is(value1, value2)
 
-/* 164 */
+/* 148 */
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
 
-/* 165 */
+/* 149 */
 
 // 19.1.3.6 Object.prototype.toString()
 
-/* 166 */
+/* 150 */
 
 // 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
 
-/* 167 */
+/* 151 */
 
 // 19.2.4.2 name
 
-/* 168 */
+/* 152 */
 
 // 19.2.3.6 Function.prototype[@@hasInstance](V)
 
 // for environment w/o native `@@hasInstance` logic enough `instanceof`, but add this:
 
-/* 169 */
+/* 153 */
 
 // 18.2.5 parseInt(string, radix)
 
-/* 170 */
+/* 154 */
 
 // 18.2.4 parseFloat(string)
 
-/* 171 */
+/* 155 */
 
 // Number('+0x1') should be NaN, old V8 fix
 
@@ -971,239 +918,239 @@
 
 // ES3:
 
-/* 172 */
+/* 156 */
 
 // V8 ~ Android 4.3-
 
-/* 173 */
+/* 157 */
 
 // IE7-
 
-/* 174 */
+/* 158 */
 
 // 20.1.2.1 Number.EPSILON
 
-/* 175 */
+/* 159 */
 
 // 20.1.2.2 Number.isFinite(number)
 
-/* 176 */
+/* 160 */
 
-/* 177 */
+/* 161 */
 
 // 20.1.2.4 Number.isNaN(number)
 
-/* 178 */
+/* 162 */
 
 // 20.1.2.5 Number.isSafeInteger(number)
 
-/* 179 */
+/* 163 */
 
 // 20.1.2.6 Number.MAX_SAFE_INTEGER
 
-/* 180 */
+/* 164 */
 
 // 20.1.2.10 Number.MIN_SAFE_INTEGER
 
-/* 181 */
+/* 165 */
 
 // 20.1.2.12 Number.parseFloat(string)
 
-/* 182 */
+/* 166 */
 
 // 20.1.2.13 Number.parseInt(string, radix)
 
-/* 183 */
+/* 167 */
 
 // 20.2.2.3 Math.acosh(x)
 
-/* 184 */
+/* 168 */
 
 // 20.2.2.5 Math.asinh(x)
 
 // Tor Browser bug: Math.asinh(0) -> -0
 
-/* 185 */
+/* 169 */
 
 // 20.2.2.7 Math.atanh(x)
 
 // Tor Browser bug: Math.atanh(-0) -> 0
 
-/* 186 */
+/* 170 */
 
 // 20.2.2.9 Math.cbrt(x)
 
-/* 187 */
+/* 171 */
 
 // 20.2.2.11 Math.clz32(x)
 
-/* 188 */
+/* 172 */
 
 // 20.2.2.12 Math.cosh(x)
 
-/* 189 */
+/* 173 */
 
-/* 190 */
+/* 174 */
 
 // 20.2.2.16 Math.fround(x)
 
-/* 191 */
+/* 175 */
 
-/* 192 */
+/* 176 */
 
 // 20.2.2.17 Math.hypot([value1[, value2[, … ]]])
 
-/* 193 */
+/* 177 */
 
 // 20.2.2.18 Math.imul(x, y)
 
 // some WebKit versions fails with big numbers, some has wrong arity
 
-/* 194 */
+/* 178 */
 
 // 20.2.2.21 Math.log10(x)
 
-/* 195 */
+/* 179 */
 
-/* 196 */
+/* 180 */
 
 // 20.2.2.22 Math.log2(x)
 
-/* 197 */
+/* 181 */
 
-/* 198 */
+/* 182 */
 
 // 20.2.2.30 Math.sinh(x)
 
 // V8 near Chromium 38 has a problem with very small numbers
 
-/* 199 */
+/* 183 */
 
 // 20.2.2.33 Math.tanh(x)
 
-/* 200 */
+/* 184 */
 
 // 20.2.2.34 Math.trunc(x)
 
-/* 201 */
+/* 185 */
 
 // length should be 1, old FF problem
 
 // 21.1.2.2 String.fromCodePoint(...codePoints)
 
-/* 202 */
+/* 186 */
 
 // 21.1.2.4 String.raw(callSite, ...substitutions)
 
-/* 203 */
+/* 187 */
 
 // 21.1.3.25 String.prototype.trim()
 
-/* 204 */
+/* 188 */
 
 // 21.1.3.27 String.prototype[@@iterator]()
 
-/* 205 */
+/* 189 */
 
 // 21.1.3.3 String.prototype.codePointAt(pos)
 
-/* 206 */
+/* 190 */
 
 // 21.1.3.6 String.prototype.endsWith(searchString [, endPosition])
 
 /* , endPosition = @length */
 
-/* 207 */
+/* 191 */
 
 // 21.1.3.7 String.prototype.includes(searchString, position = 0)
 
 /* , position = 0 */
 
-/* 208 */
+/* 192 */
 
 // 21.1.3.13 String.prototype.repeat(count)
 
-/* 209 */
+/* 193 */
 
 // 21.1.3.18 String.prototype.startsWith(searchString [, position ])
 
-/* 210 */
+/* 194 */
 
 // B.2.3.2 String.prototype.anchor(name)
 
-/* 211 */
+/* 195 */
 
 // B.2.3.3 String.prototype.big()
 
-/* 212 */
+/* 196 */
 
 // B.2.3.4 String.prototype.blink()
 
-/* 213 */
+/* 197 */
 
 // B.2.3.5 String.prototype.bold()
 
-/* 214 */
+/* 198 */
 
 // B.2.3.6 String.prototype.fixed()
 
-/* 215 */
+/* 199 */
 
 // B.2.3.7 String.prototype.fontcolor(color)
 
-/* 216 */
+/* 200 */
 
 // B.2.3.8 String.prototype.fontsize(size)
 
-/* 217 */
+/* 201 */
 
 // B.2.3.9 String.prototype.italics()
 
-/* 218 */
+/* 202 */
 
 // B.2.3.10 String.prototype.link(url)
 
-/* 219 */
+/* 203 */
 
 // B.2.3.11 String.prototype.small()
 
-/* 220 */
+/* 204 */
 
 // B.2.3.12 String.prototype.strike()
 
-/* 221 */
+/* 205 */
 
 // B.2.3.13 String.prototype.sub()
 
-/* 222 */
+/* 206 */
 
 // B.2.3.14 String.prototype.sup()
 
-/* 223 */
+/* 207 */
 
 // 20.3.3.1 / 15.9.4.4 Date.now()
 
-/* 224 */
+/* 208 */
 
-/* 225 */
+/* 209 */
 
 // 20.3.4.36 / 15.9.5.43 Date.prototype.toISOString()
 
 // PhantomJS / old WebKit has a broken implementations
 
-/* 226 */
+/* 210 */
 
-/* 227 */
+/* 211 */
 
-/* 228 */
+/* 212 */
 
-/* 229 */
+/* 213 */
 
-/* 230 */
+/* 214 */
 
 // 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
 
-/* 231 */
+/* 215 */
 
 // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
 
@@ -1211,23 +1158,23 @@
 
 // if object isn't iterable or it's array with default iterator - use simple case
 
-/* 232 */
+/* 216 */
 
 // WebKit Array.of isn't generic
 
 // 22.1.2.3 Array.of( ...items)
 
-/* 233 */
+/* 217 */
 
 // 22.1.3.13 Array.prototype.join(separator)
 
 // fallback for not array-like strings
 
-/* 234 */
+/* 218 */
 
 // fallback for not array-like ES3 strings and DOM objects
 
-/* 235 */
+/* 219 */
 
 // IE8-
 
@@ -1237,45 +1184,45 @@
 
 // 22.1.3.25 Array.prototype.sort(comparefn)
 
-/* 236 */
+/* 220 */
 
 // 22.1.3.10 / 15.4.4.18 Array.prototype.forEach(callbackfn [, thisArg])
 
-/* 237 */
+/* 221 */
 
 // cross-realm fallback
 
-/* 238 */
+/* 222 */
 
 // 22.1.3.15 / 15.4.4.19 Array.prototype.map(callbackfn [, thisArg])
 
-/* 239 */
+/* 223 */
 
 // 22.1.3.7 / 15.4.4.20 Array.prototype.filter(callbackfn [, thisArg])
 
-/* 240 */
+/* 224 */
 
 // 22.1.3.23 / 15.4.4.17 Array.prototype.some(callbackfn [, thisArg])
 
-/* 241 */
+/* 225 */
 
 // 22.1.3.5 / 15.4.4.16 Array.prototype.every(callbackfn [, thisArg])
 
-/* 242 */
+/* 226 */
 
 // 22.1.3.18 / 15.4.4.21 Array.prototype.reduce(callbackfn [, initialValue])
 
-/* 243 */
+/* 227 */
 
 // 22.1.3.19 / 15.4.4.22 Array.prototype.reduceRight(callbackfn [, initialValue])
 
-/* 244 */
+/* 228 */
 
 // 22.1.3.11 / 15.4.4.14 Array.prototype.indexOf(searchElement [, fromIndex])
 
 /* , fromIndex = 0 */
 
-/* 245 */
+/* 229 */
 
 // 22.1.3.14 / 15.4.4.15 Array.prototype.lastIndexOf(searchElement [, fromIndex])
 
@@ -1283,31 +1230,31 @@
 
 // convert -0 to +0
 
-/* 246 */
+/* 230 */
 
-/* 247 */
+/* 231 */
 
-/* 248 */
+/* 232 */
 
 // 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
 
 // Shouldn't skip holes
 
-/* 249 */
+/* 233 */
 
 // 22.1.3.9 Array.prototype.findIndex(predicate, thisArg = undefined)
 
-/* 250 */
+/* 234 */
 
-/* 251 */
+/* 235 */
 
 // RegExp constructor can alter flags and IsRegExp works correct with @@match
 
-/* 252 */
+/* 236 */
 
 // 21.2.5.14 RegExp.prototype.toString()
 
-/* 253 */
+/* 237 */
 
 // @@match logic
 
@@ -1319,7 +1266,7 @@
 
 // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@match
 
-/* 254 */
+/* 238 */
 
 // @@replace logic
 
@@ -1345,7 +1292,7 @@
 
 // \d\d?
 
-/* 255 */
+/* 239 */
 
 // @@search logic
 
@@ -1357,7 +1304,7 @@
 
 // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@search
 
-/* 256 */
+/* 240 */
 
 // @@split logic
 
@@ -1381,7 +1328,7 @@
 
 // the 'y' flag.
 
-/* 257 */
+/* 241 */
 
 // Node.js
 
@@ -1391,9 +1338,9 @@
 
 // strange IE + webpack dev server bug - use .call(global)
 
-/* 258 */
+/* 242 */
 
-/* 259 */
+/* 243 */
 
 // 23.1 Map Objects
 
@@ -1401,13 +1348,13 @@
 
 // 23.1.3.9 Map.prototype.set(key, value)
 
-/* 260 */
+/* 244 */
 
 // 23.2 Set Objects
 
 // 23.2.3.1 Set.prototype.add(value)
 
-/* 261 */
+/* 245 */
 
 // 23.3.3.3 WeakMap.prototype.get(key)
 
@@ -1419,13 +1366,13 @@
 
 // store all the rest on native weakmap
 
-/* 262 */
+/* 246 */
 
 // 23.4 WeakSet Objects
 
 // 23.4.3.1 WeakSet.prototype.add(value)
 
-/* 263 */
+/* 247 */
 
 // 24.1.3.1 ArrayBuffer.isView(arg)
 
@@ -1433,33 +1380,33 @@
 
 // FF fix
 
-/* 264 */
+/* 248 */
 
-/* 265 */
+/* 249 */
 
-/* 266 */
+/* 250 */
 
-/* 267 */
+/* 251 */
 
-/* 268 */
+/* 252 */
 
-/* 269 */
+/* 253 */
 
-/* 270 */
+/* 254 */
 
-/* 271 */
+/* 255 */
 
-/* 272 */
+/* 256 */
 
-/* 273 */
+/* 257 */
 
-/* 274 */
+/* 258 */
 
 // 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
 
 // MS Edge argumentsList argument is optional
 
-/* 275 */
+/* 259 */
 
 // 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
 
@@ -1471,135 +1418,135 @@
 
 // with altered newTarget, not support built-in constructors
 
-/* 276 */
+/* 260 */
 
 // 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
 
 // MS Edge has broken Reflect.defineProperty - throwing instead of returning false
 
-/* 277 */
+/* 261 */
 
 // 26.1.4 Reflect.deleteProperty(target, propertyKey)
 
-/* 278 */
+/* 262 */
 
 // 26.1.5 Reflect.enumerate(target)
 
 // keys
 
-/* 279 */
+/* 263 */
 
 // 26.1.6 Reflect.get(target, propertyKey [, receiver])
 
 /* , receiver */
 
-/* 280 */
+/* 264 */
 
 // 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 
-/* 281 */
+/* 265 */
 
 // 26.1.8 Reflect.getPrototypeOf(target)
 
-/* 282 */
+/* 266 */
 
 // 26.1.9 Reflect.has(target, propertyKey)
 
-/* 283 */
+/* 267 */
 
 // 26.1.10 Reflect.isExtensible(target)
 
-/* 284 */
+/* 268 */
 
 // 26.1.11 Reflect.ownKeys(target)
 
-/* 285 */
+/* 269 */
 
 // 26.1.12 Reflect.preventExtensions(target)
 
-/* 286 */
+/* 270 */
 
 // 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
 
-/* 287 */
+/* 271 */
 
 // 26.1.14 Reflect.setPrototypeOf(target, proto)
 
-/* 288 */
+/* 272 */
 
-/* 289 */
+/* 273 */
 
 // https://github.com/tc39/Array.prototype.includes
 
-/* 290 */
+/* 274 */
 
-/* 291 */
+/* 275 */
 
 // https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap
 
-/* 292 */
+/* 276 */
 
 // https://tc39.github.io/proposal-flatMap/#sec-FlattenIntoArray
+
+/* 277 */
+
+/* 278 */
+
+/* , fillString = ' ' */
+
+/* 279 */
+
+/* 280 */
+
+/* 281 */
+
+/* 282 */
+
+// https://github.com/sebmarkbage/ecmascript-string-left-right-trim
+
+/* 283 */
+
+/* 284 */
+
+/* 285 */
+
+/* 286 */
+
+/* 287 */
+
+/* 288 */
+
+// https://github.com/tc39/proposal-object-getownpropertydescriptors
+
+/* 289 */
+
+/* 290 */
+
+// https://github.com/tc39/proposal-object-values-entries
+
+/* 291 */
+
+/* 292 */
 
 /* 293 */
 
 /* 294 */
 
-/* , fillString = ' ' */
+// https://github.com/tc39/proposal-promise-finally
 
 /* 295 */
 
 /* 296 */
 
+// ie9- setTimeout & setInterval additional parameters fix
+
 /* 297 */
 
 /* 298 */
 
-// https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-
-/* 299 */
-
-/* 300 */
-
-/* 301 */
-
-/* 302 */
-
-/* 303 */
-
-/* 304 */
-
-// https://github.com/tc39/proposal-object-getownpropertydescriptors
-
-/* 305 */
-
-/* 306 */
-
-// https://github.com/tc39/proposal-object-values-entries
-
-/* 307 */
-
-/* 308 */
-
-/* 309 */
-
-/* 310 */
-
-// https://github.com/tc39/proposal-promise-finally
-
-/* 311 */
-
-/* 312 */
-
-// ie9- setTimeout & setInterval additional parameters fix
-
-/* 313 */
-
-/* 314 */
-
 // TODO: Not spec compliant, should be false.
 
-/* 315 */
+/* 299 */
 
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -1858,13 +1805,13 @@
 
 // problems, please detail your unique predicament in a GitHub issue.
 
-/* 316 */
+/* 300 */
 
-/* 317 */
+/* 301 */
 
 // https://github.com/tc39/proposal-global
 
-/* 318 */
+/* 302 */
 
 // prevent global pollution for namespaces
 
@@ -1874,37 +1821,33 @@
 
 // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
 
-/* 319 */
+/* 303 */
 
-/* 320 */
+/* 304 */
 
-/* 321 */
+/* 305 */
 
-/* 322 */
+/* 306 */
 
-/* 323 */
+/* 307 */
 
-/* 324 */
+/* 308 */
 
-/* 325 */
+/* 309 */
 
-/* 326 */
+/* 310 */
 
-/* 327 */
+/* 311 */
 
-/* 328 */
+/* 312 */
 
-/* 329 */
+/* 313 */
 
-/* 330 */
-
-/* 331 */
-
-/* 332 */
+/* 314 */
 
 // Module
 
-/* 333 */
+/* 315 */
 
 /**
  * When source maps are enabled, `style-loader` uses a link element with a data-uri to
@@ -1933,7 +1876,7 @@
 
 // convert the url to a full url
 
-/* 334 */
+/* 316 */
 
 /*!
   * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -1943,7 +1886,7 @@
 
 //# sourceMappingURL=bootstrap.min.js.map
 
-/* 335 */
+/* 317 */
 
 /*!
  * jQuery JavaScript Library v3.4.1
@@ -5069,46 +5012,1177 @@
 
 // and CommonJS for browser emulators (#13566)
 
-/* 336 */
+/* 318 */
 
-/* 337 */
+/* WEBPACK VAR INJECTION */
 
-/* 338 */
+/**!
+ * @fileOverview Kickass library to create and place poppers near their reference elements.
+ * @version 1.16.1
+ * @license
+ * Copyright (c) 2016 Federico Zivolo and contributors
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
 
-/* 339 */
+/**
+* Create a debounced version of a method, that's asynchronously deferred
+* but called in the minimum time possible.
+*
+* @method
+* @memberof Popper.Utils
+* @argument {Function} fn
+* @returns {Function}
+*/
 
-/* 340 */
+/**
+ * Check if the given variable is a function
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Any} functionToCheck - variable to check
+ * @returns {Boolean} answer to: is a function?
+ */
 
-/* 341 */
+/**
+ * Get CSS computed property of the given element
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Eement} element
+ * @argument {String} property
+ */
 
-/* 342 */
+// NOTE: 1 DOM access here
 
-/* 343 */
+/**
+ * Returns the parentNode or the host of the element
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element
+ * @returns {Element} parent
+ */
 
-/* 344 */
+/**
+ * Returns the scrolling parent of the given element
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element
+ * @returns {Element} scroll parent
+ */
 
-/* 345 */
+// Return body, `getScroll` will take care to get the correct `scrollTop` from it
 
-/* 346 */
+// Firefox want us to check `-x` and `-y` variations as well
 
-/* 347 */
+/**
+ * Returns the reference node of the reference object, or the reference object itself.
+ * @method
+ * @memberof Popper.Utils
+ * @param {Element|Object} reference - the reference element (the popper will be relative to this)
+ * @returns {Element} parent
+ */
 
-/* 348 */
+/**
+ * Determines if the browser is Internet Explorer
+ * @method
+ * @memberof Popper.Utils
+ * @param {Number} version to check
+ * @returns {Boolean} isIE
+ */
 
-/* 349 */
+/**
+ * Returns the offset parent of the given element
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element
+ * @returns {Element} offset parent
+ */
 
-/* 350 */
+// Skip hidden elements which don't have an offsetParent
 
-/* 351 */
+// .offsetParent will return the closest TH, TD or TABLE in case
 
-/* 352 */
+// no offsetParent is present, I hate this job...
 
-/* 353 */
+/**
+ * Finds the root node (document, shadowDOM root) of the given element
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} node
+ * @returns {Element} root node
+ */
 
-/* 354 */
+/**
+ * Finds the offset parent common to the two provided nodes
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element1
+ * @argument {Element} element2
+ * @returns {Element} common offset parent
+ */
 
-/* 355 */
+// This check is needed to avoid errors in case one of the elements isn't defined for any reason
 
-/* 356 */
+// Here we make sure to give as "start" the element that comes first in the DOM
 
-/* 357 */
+// Both nodes are inside #document
+
+// one of the nodes is inside shadowDOM, find which one
+
+/**
+ * Gets the scroll value of the given element in the given side (top and left)
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element
+ * @argument {String} side `top` or `left`
+ * @returns {number} amount of scrolled pixels
+ */
+
+/*
+ * Sum or subtract the element scroll values (left and top) from a given rect object
+ * @method
+ * @memberof Popper.Utils
+ * @param {Object} rect - Rect object you want to change
+ * @param {HTMLElement} element - The element from the function reads the scroll values
+ * @param {Boolean} subtract - set to true if you want to subtract the scroll values
+ * @return {Object} rect - The modifier rect object
+ */
+
+/*
+ * Helper to detect borders of a given element
+ * @method
+ * @memberof Popper.Utils
+ * @param {CSSStyleDeclaration} styles
+ * Result of `getStyleComputedProperty` on the given element
+ * @param {String} axis - `x` or `y`
+ * @return {number} borders - The borders size of the given axis
+ */
+
+/**
+ * Given element offsets, generate an output similar to getBoundingClientRect
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Object} offsets
+ * @returns {Object} ClientRect like output
+ */
+
+/**
+ * Get bounding client rect of given element
+ * @method
+ * @memberof Popper.Utils
+ * @param {HTMLElement} element
+ * @return {Object} client rect
+ */
+
+// IE10 10 FIX: Please, don't ask, the element isn't
+
+// considered in DOM in some circumstances...
+
+// This isn't reproducible in IE10 compatibility mode of IE11
+
+// subtract scrollbar size from sizes
+
+// if an hypothetical scrollbar is detected, we must be sure it's not a `border`
+
+// we make this check conditional for performance reasons
+
+// In cases where the parent is fixed, we must ignore negative scroll in offset calc
+
+// Subtract margins of documentElement in case it's being used as parent
+
+// we do this only on HTML because it's the only element that behaves
+
+// differently when margins are applied to it. The margins are included in
+
+// the box of the documentElement, in the other cases not.
+
+// Attach marginTop and marginLeft because in some circumstances we may need them
+
+/**
+ * Finds the first parent of an element that has a transformed property defined
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element
+ * @returns {Element} first transformed parent or documentElement
+ */
+
+/**
+ * Computed the boundaries limits and return them
+ * @method
+ * @memberof Popper.Utils
+ * @param {HTMLElement} popper
+ * @param {HTMLElement} reference
+ * @param {number} padding
+ * @param {HTMLElement} boundariesElement - Element used to define the boundaries
+ * @param {Boolean} fixedPosition - Is in fixed position mode
+ * @returns {Object} Coordinates of the boundaries
+ */
+
+// Handle viewport case
+
+/**
+ * Check if the given element is fixed or is inside a fixed parent
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element
+ * @argument {Element} customContainer
+ * @returns {Boolean} answer to "isFixed?"
+ */
+
+// Handle other cases based on DOM element used as boundaries
+
+// In case of HTML, we need a different computation
+
+// for all the other DOM elements, this one is good
+
+// Add paddings
+
+/**
+ * Utility used to transform the `auto` placement to the placement with more
+ * available space.
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Object} data - The data object generated by update method
+ * @argument {Object} options - Modifiers configuration and options
+ * @returns {Object} The data object, properly modified
+ */
+
+/**
+ * Get offsets to the reference element
+ * @method
+ * @memberof Popper.Utils
+ * @param {Object} state
+ * @param {Element} popper - the popper element
+ * @param {Element} reference - the reference element (the popper will be relative to this)
+ * @param {Element} fixedPosition - is in fixed position mode
+ * @returns {Object} An object containing the offsets which will be applied to the popper
+ */
+
+/**
+ * Get the outer sizes of the given element (offset size + margins)
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element
+ * @returns {Object} object containing width and height properties
+ */
+
+/**
+ * Get the opposite placement of the given one
+ * @method
+ * @memberof Popper.Utils
+ * @argument {String} placement
+ * @returns {String} flipped placement
+ */
+
+/**
+ * Get offsets to the popper
+ * @method
+ * @memberof Popper.Utils
+ * @param {Object} position - CSS position the Popper will get applied
+ * @param {HTMLElement} popper - the popper element
+ * @param {Object} referenceOffsets - the reference offsets (the popper will be relative to this)
+ * @param {String} placement - one of the valid placement options
+ * @returns {Object} popperOffsets - An object containing the offsets which will be applied to the popper
+ */
+
+// Get popper node sizes
+
+// Add position, width and height to our offsets object
+
+/**
+ * Mimics the `find` method of Array
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Array} arr
+ * @argument prop
+ * @argument value
+ * @returns index or -1
+ */
+
+// use native find if supported
+
+// use `filter` to obtain the same behavior of `find`
+
+/**
+ * Return the index of the matching object
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Array} arr
+ * @argument prop
+ * @argument value
+ * @returns index or -1
+ */
+
+/**
+ * Loop trough the list of modifiers and run them in order,
+ * each of them will then edit the data object.
+ * @method
+ * @memberof Popper.Utils
+ * @param {dataObject} data
+ * @param {Array} modifiers
+ * @param {String} ends - Optional modifier name used as stopper
+ * @returns {dataObject}
+ */
+
+// use native findIndex if supported
+
+// use `find` + `indexOf` if `findIndex` isn't supported
+
+// eslint-disable-line dot-notation
+
+// Add properties to offsets to make them a complete clientRect object
+
+// we do this before each modifier to make sure the previous one doesn't
+
+// mess with these values
+
+/**
+ * Updates the position of the popper, computing the new offsets and applying
+ * the new style.<br />
+ * Prefer `scheduleUpdate` over `update` because of performance reasons.
+ * @method
+ * @memberof Popper
+ */
+
+// if popper is destroyed, don't perform any further update
+
+// compute reference element offsets
+
+// compute auto placement, store placement inside the data object,
+
+// modifiers will be able to edit `placement` if needed
+
+// and refer to originalPlacement to know the original value
+
+// store the computed placement inside `originalPlacement`
+
+// compute the popper offsets
+
+// run the modifiers
+
+// the first `update` will call `onCreate` callback
+
+// the other ones will call `onUpdate` callback
+
+/**
+ * Helper used to know if the given modifier is enabled.
+ * @method
+ * @memberof Popper.Utils
+ * @returns {Boolean}
+ */
+
+/**
+ * Get the prefixed supported property name
+ * @method
+ * @memberof Popper.Utils
+ * @argument {String} property (camelCase)
+ * @returns {String} prefixed property (camelCase or PascalCase, depending on the vendor prefix)
+ */
+
+/**
+ * Destroys the popper.
+ * @method
+ * @memberof Popper
+ */
+
+// touch DOM only if `applyStyle` modifier is enabled
+
+// remove the popper if user explicitly asked for the deletion on destroy
+
+// do not use `remove` because IE11 doesn't support it
+
+/**
+ * Get the window associated with the element
+ * @argument {Element} element
+ * @returns {Window}
+ */
+
+/**
+ * Setup needed event listeners used to update the popper position
+ * @method
+ * @memberof Popper.Utils
+ * @private
+ */
+
+// Resize event listener on window
+
+// Scroll event listener on scroll parents
+
+/**
+ * It will add resize/scroll events and start recalculating
+ * position of the popper element when they are triggered.
+ * @method
+ * @memberof Popper
+ */
+
+/**
+ * Remove event listeners used to update the popper position
+ * @method
+ * @memberof Popper.Utils
+ * @private
+ */
+
+/**
+ * It will remove resize/scroll events and won't recalculate popper position
+ * when they are triggered. It also won't trigger `onUpdate` callback anymore,
+ * unless you call `update` method manually.
+ * @method
+ * @memberof Popper
+ */
+
+// Remove resize event listener on window
+
+// Remove scroll event listener on scroll parents
+
+// Reset state
+
+/**
+ * Tells if a given input is a number
+ * @method
+ * @memberof Popper.Utils
+ * @param {*} input to check
+ * @return {Boolean}
+ */
+
+/**
+ * Set the style to the given popper
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element - Element to apply the style to
+ * @argument {Object} styles
+ * Object with a list of properties and values which will be applied to the element
+ */
+
+// add unit if the value is numeric and is one of the following
+
+/**
+ * Set the attributes to the given popper
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element - Element to apply the attributes to
+ * @argument {Object} styles
+ * Object with a list of properties and values which will be applied to the element
+ */
+
+/**
+ * @function
+ * @memberof Modifiers
+ * @argument {Object} data - The data object generated by `update` method
+ * @argument {Object} options - Modifiers configuration and options
+ * @returns {Object} The data object, properly modified
+ */
+
+/**
+ * Helper used to know if the given modifier depends from another one.<br />
+ * It checks if the needed modifier is listed and enabled.
+ * @method
+ * @memberof Popper.Utils
+ * @param {Array} modifiers - list of modifiers
+ * @param {String} requestingName - name of requesting modifier
+ * @param {String} requestedName - name of requested modifier
+ * @returns {Boolean}
+ */
+
+/**
+ * @function
+ * @memberof Modifiers
+ * @argument {Object} data - The data object generated by update method
+ * @argument {Object} options - Modifiers configuration and options
+ * @returns {Object} The data object, properly modified
+ */
+
+/**
+ * List of accepted placements to use as values of the `placement` option.<br />
+ * Valid placements are:
+ * - `auto`
+ * - `top`
+ * - `right`
+ * - `bottom`
+ * - `left`
+ *
+ * Each placement can have a variation from this list:
+ * - `-start`
+ * - `-end`
+ *
+ * Variations are interpreted easily if you think of them as the left to right
+ * written languages. Horizontally (`top` and `bottom`), `start` is left and `end`
+ * is right.<br />
+ * Vertically (`left` and `right`), `start` is top and `end` is bottom.
+ *
+ * Some valid examples are:
+ * - `top-end` (on top of reference, right aligned)
+ * - `right-start` (on right of reference, top aligned)
+ * - `bottom` (on bottom, centered)
+ * - `auto-end` (on the side with more space available, alignment depends by placement)
+ *
+ * @static
+ * @type {Array}
+ * @enum {String}
+ * @readonly
+ * @method placements
+ * @memberof Popper
+ */
+
+// Get rid of `auto` `auto-start` and `auto-end`
+
+/**
+ * Given an initial placement, returns all the subsequent placements
+ * clockwise (or counter-clockwise).
+ *
+ * @method
+ * @memberof Popper.Utils
+ * @argument {String} placement - A valid placement (it accepts variations)
+ * @argument {Boolean} counter - Set to true to walk the placements counterclockwise
+ * @returns {Array} placements including their variations
+ */
+
+/**
+ * Parse an `offset` string to extrapolate `x` and `y` numeric offsets.
+ * @function
+ * @memberof {modifiers~offset}
+ * @private
+ * @argument {String} offset
+ * @argument {Object} popperOffsets
+ * @argument {Object} referenceOffsets
+ * @argument {String} basePlacement
+ * @returns {Array} a two cells array with x and y offsets in numbers
+ */
+
+// Use height if placement is left or right and index is 0 otherwise use width
+
+// in this way the first offset will use an axis and the second one
+
+// will use the other one
+
+// If divider is found, we divide the list of values and operands to divide
+
+// them by ofset X and Y.
+
+// Convert the values with units to absolute pixels to allow our computations
+
+// Loop trough the offsets arrays and execute the operations
+
+// Most of the units rely on the orientation of the popper
+
+/**
+ * Converts a string containing value + unit into a px value number
+ * @function
+ * @memberof {modifiers~offset}
+ * @private
+ * @argument {String} str - Value + unit string
+ * @argument {String} measurement - `height` or `width`
+ * @argument {Object} popperOffsets
+ * @argument {Object} referenceOffsets
+ * @returns {Number|String}
+ * Value in pixels, or original string if no values were extracted
+ */
+
+// separate value from unit
+
+// If it's not a number it's an operator, I guess
+
+// if is an explicit pixel unit, we get rid of the unit and keep the value
+
+// if is an implicit unit, it's px, and we return just the value
+
+/**
+ * @function
+ * @memberof Modifiers
+ * @argument {Object} data - The data object generated by update method
+ * @argument {Object} options - Modifiers configuration and options
+ * @argument {Number|String} options.offset=0
+ * The offset value as described in the modifier description
+ * @returns {Object} The data object, properly modified
+ */
+
+/**
+ * Modifier function, each modifier can have a function of this type assigned
+ * to its `fn` property.<br />
+ * These functions will be called on each update, this means that you must
+ * make sure they are performant enough to avoid performance bottlenecks.
+ *
+ * @function ModifierFn
+ * @argument {dataObject} data - The data object generated by `update` method
+ * @argument {Object} options - Modifiers configuration and options
+ * @returns {dataObject} The data object, properly modified
+ */
+
+/**
+ * Modifiers are plugins used to alter the behavior of your poppers.<br />
+ * Popper.js uses a set of 9 modifiers to provide all the basic functionalities
+ * needed by the library.
+ *
+ * Usually you don't want to override the `order`, `fn` and `onLoad` props.
+ * All the other properties are configurations that could be tweaked.
+ * @namespace modifiers
+ */
+
+/**
+   * Popper's placement.
+   * @prop {Popper.placements} placement='bottom'
+   */
+
+/**
+   * Set this to true if you want popper to position it self in 'fixed' mode
+   * @prop {Boolean} positionFixed=false
+   */
+
+/**
+   * Whether events (resize, scroll) are initially enabled.
+   * @prop {Boolean} eventsEnabled=true
+   */
+
+/**
+   * Set to true if you want to automatically remove the popper when
+   * you call the `destroy` method.
+   * @prop {Boolean} removeOnDestroy=false
+   */
+
+/**
+   * Callback called when the popper is created.<br />
+   * By default, it is set to no-op.<br />
+   * Access Popper.js instance with `data.instance`.
+   * @prop {onCreate}
+   */
+
+/**
+   * Callback called when the popper is updated. This callback is not called
+   * on the initialization/creation of the popper, but only on subsequent
+   * updates.<br />
+   * By default, it is set to no-op.<br />
+   * Access Popper.js instance with `data.instance`.
+   * @prop {onUpdate}
+   */
+
+/**
+   * List of modifiers used to modify the offsets before they are applied to the popper.
+   * They provide most of the functionalities of Popper.js.
+   * @prop {modifiers}
+   */
+
+/**
+   * Modifier used to shift the popper on the start or end of its reference
+   * element.<br />
+   * It will read the variation of the `placement` property.<br />
+   * It can be one either `-end` or `-start`.
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=100 - Index used to define the order of execution */
+
+/** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
+
+/** @prop {ModifierFn} */
+
+// if shift shiftvariation is specified, run the modifier
+
+/**
+   * The `offset` modifier can shift your popper on both its axis.
+   *
+   * It accepts the following units:
+   * - `px` or unit-less, interpreted as pixels
+   * - `%` or `%r`, percentage relative to the length of the reference element
+   * - `%p`, percentage relative to the length of the popper element
+   * - `vw`, CSS viewport width unit
+   * - `vh`, CSS viewport height unit
+   *
+   * For length is intended the main axis relative to the placement of the popper.<br />
+   * This means that if the placement is `top` or `bottom`, the length will be the
+   * `width`. In case of `left` or `right`, it will be the `height`.
+   *
+   * You can provide a single value (as `Number` or `String`), or a pair of values
+   * as `String` divided by a comma or one (or more) white spaces.<br />
+   * The latter is a deprecated method because it leads to confusion and will be
+   * removed in v2.<br />
+   * Additionally, it accepts additions and subtractions between different units.
+   * Note that multiplications and divisions aren't supported.
+   *
+   * Valid examples are:
+   * ```
+   * 10
+   * '10%'
+   * '10, 10'
+   * '10%, 10'
+   * '10 + 10%'
+   * '10 - 5vh + 3%'
+   * '-10px + 5vh, 5px - 6%'
+   * ```
+   * > **NB**: If you desire to apply offsets to your poppers in a way that may make them overlap
+   * > with their reference element, unfortunately, you will have to disable the `flip` modifier.
+   * > You can read more on this at this [issue](https://github.com/FezVrasta/popper.js/issues/373).
+   *
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=200 - Index used to define the order of execution */
+
+/** @prop {Number|String} offset=0
+     * The offset value as described in the modifier description
+     */
+
+/**
+   * Modifier used to prevent the popper from being positioned outside the boundary.
+   *
+   * A scenario exists where the reference itself is not within the boundaries.<br />
+   * We can say it has "escaped the boundaries" — or just "escaped".<br />
+   * In this case we need to decide whether the popper should either:
+   *
+   * - detach from the reference and remain "trapped" in the boundaries, or
+   * - if it should ignore the boundary and "escape with its reference"
+   *
+   * When `escapeWithReference` is set to`true` and reference is completely
+   * outside its boundaries, the popper will overflow (or completely leave)
+   * the boundaries in order to remain attached to the edge of the reference.
+   *
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=300 - Index used to define the order of execution */
+
+// If offsetParent is the reference element, we really want to
+
+// go one step up and use the next offsetParent as reference to
+
+// avoid to make this modifier completely useless and look like broken
+
+// NOTE: DOM access here
+
+// resets the popper's position so that the document size can be calculated excluding
+
+// the size of the popper element itself
+
+// restores the original style properties after the offsets have been computed
+
+/**
+     * @prop {Array} [priority=['left','right','top','bottom']]
+     * Popper will try to prevent overflow following these priorities by default,
+     * then, it could overflow on the left and on top of the `boundariesElement`
+     */
+
+/**
+     * @prop {number} padding=5
+     * Amount of pixel used to define a minimum distance between the boundaries
+     * and the popper. This makes sure the popper always has a little padding
+     * between the edges of its container
+     */
+
+/**
+     * @prop {String|HTMLElement} boundariesElement='scrollParent'
+     * Boundaries used by the modifier. Can be `scrollParent`, `window`,
+     * `viewport` or any DOM element.
+     */
+
+/**
+   * Modifier used to make sure the reference and its popper stay near each other
+   * without leaving any gap between the two. Especially useful when the arrow is
+   * enabled and you want to ensure that it points to its reference element.
+   * It cares only about the first axis. You can still have poppers with margin
+   * between the popper and its reference element.
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=400 - Index used to define the order of execution */
+
+/**
+   * This modifier is used to move the `arrowElement` of the popper to make
+   * sure it is positioned between the reference element and its popper element.
+   * It will read the outer size of the `arrowElement` node to detect how many
+   * pixels of conjunction are needed.
+   *
+   * It has no effect if no `arrowElement` is provided.
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=500 - Index used to define the order of execution */
+
+// arrow depends on keepTogether in order to work
+
+// if arrowElement is a string, suppose it's a CSS selector
+
+// if arrowElement is not found, don't run the modifier
+
+// if the arrowElement isn't a query selector we must check that the
+
+// provided DOM node is child of its popper node
+
+// extends keepTogether behavior making sure the popper and its
+
+// reference have enough pixels in conjunction
+
+// top/left side
+
+// bottom/right side
+
+// compute center of the popper
+
+// Compute the sideValue using the updated popper offsets
+
+// take popper margin in account because we don't have this info available
+
+// prevent arrowElement from being placed not contiguously to its popper
+
+/**
+ * Get the opposite placement variation of the given one
+ * @method
+ * @memberof Popper.Utils
+ * @argument {String} placement variation
+ * @returns {String} flipped placement variation
+ */
+
+/** @prop {String|HTMLElement} element='[x-arrow]' - Selector or node used as arrow */
+
+/**
+   * Modifier used to flip the popper's placement when it starts to overlap its
+   * reference element.
+   *
+   * Requires the `preventOverflow` modifier before it in order to work.
+   *
+   * **NOTE:** this modifier will interrupt the current update cycle and will
+   * restart it if it detects the need to flip the placement.
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=600 - Index used to define the order of execution */
+
+// if `inner` modifier is enabled, we can't use the `flip` modifier
+
+// seems like flip is trying to loop, probably there's not enough space on any of the flippable sides
+
+// this boolean to detect any flip loop
+
+// this object contains `position`, we want to preserve it along with
+
+// any additional property we may add in the future
+
+/**
+     * @prop {String|Array} behavior='flip'
+     * The behavior used to change the popper's placement. It can be one of
+     * `flip`, `clockwise`, `counterclockwise` or an array with a list of valid
+     * placements (with optional variations)
+     */
+
+/**
+     * @prop {number} padding=5
+     * The popper will flip if it hits the edges of the `boundariesElement`
+     */
+
+/**
+     * @prop {String|HTMLElement} boundariesElement='viewport'
+     * The element which will define the boundaries of the popper position.
+     * The popper will never be placed outside of the defined boundaries
+     * (except if `keepTogether` is enabled)
+     */
+
+/**
+     * @prop {Boolean} flipVariations=false
+     * The popper will switch placement variation between `-start` and `-end` when
+     * the reference element overlaps its boundaries.
+     *
+     * The original placement should have a set variation.
+     */
+
+/**
+     * @prop {Boolean} flipVariationsByContent=false
+     * The popper will switch placement variation between `-start` and `-end` when
+     * the popper element overlaps its reference boundaries.
+     *
+     * The original placement should have a set variation.
+     */
+
+/**
+   * Modifier used to make the popper flow toward the inner of the reference element.
+   * By default, when this modifier is disabled, the popper will be placed outside
+   * the reference element.
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=700 - Index used to define the order of execution */
+
+/** @prop {Boolean} enabled=false - Whether the modifier is enabled or not */
+
+/**
+   * Modifier used to hide the popper when its reference element is outside of the
+   * popper boundaries. It will set a `x-out-of-boundaries` attribute which can
+   * be used to hide with a CSS selector the popper when its reference is
+   * out of boundaries.
+   *
+   * Requires the `preventOverflow` modifier before it in order to work.
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=800 - Index used to define the order of execution */
+
+// Avoid unnecessary DOM access if visibility hasn't changed
+
+/**
+   * Computes the style that will be applied to the popper element to gets
+   * properly positioned.
+   *
+   * Note that this modifier will not touch the DOM, it just prepares the styles
+   * so that `applyStyle` modifier can apply it. This separation is useful
+   * in case you need to replace `applyStyle` with a custom implementation.
+   *
+   * This modifier has `850` as `order` value to maintain backward compatibility
+   * with previous versions of Popper.js. Expect the modifiers ordering method
+   * to change in future major versions of the library.
+   *
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=850 - Index used to define the order of execution */
+
+/**
+ * @function
+ * @memberof Popper.Utils
+ * @argument {Object} data - The data object generated by `update` method
+ * @argument {Boolean} shouldRound - If the offsets should be rounded at all
+ * @returns {Object} The popper's position offsets rounded
+ *
+ * The tale of pixel-perfect positioning. It's still not 100% perfect, but as
+ * good as it can be within reason.
+ * Discussion here: https://github.com/FezVrasta/popper.js/pull/715
+ *
+ * Low DPI screens cause a popper to be blurry if not using full pixels (Safari
+ * as well on High DPI screens).
+ *
+ * Firefox prefers no rounding for positioning and does not have blurriness on
+ * high DPI screens.
+ *
+ * Only horizontal placement and left/right values need to be considered.
+ */
+
+// when offsetParent is <html> the positioning is relative to the bottom of the screen (excluding the scrollbar)
+
+// and not the bottom of the html element
+
+// othwerise, we use the standard `top`, `left`, `bottom` and `right` properties
+
+// Attributes
+
+// Update `data` attributes, styles and arrowStyles
+
+/**
+     * @prop {Boolean} gpuAcceleration=true
+     * If true, it uses the CSS 3D transformation to position the popper.
+     * Otherwise, it will use the `top` and `left` properties
+     */
+
+/**
+     * @prop {string} [x='bottom']
+     * Where to anchor the X axis (`bottom` or `top`). AKA X offset origin.
+     * Change this if your popper should grow in a direction different from `bottom`
+     */
+
+/**
+     * @prop {string} [x='left']
+     * Where to anchor the Y axis (`left` or `right`). AKA Y offset origin.
+     * Change this if your popper should grow in a direction different from `right`
+     */
+
+/**
+   * Applies the computed styles to the popper element.
+   *
+   * All the DOM manipulations are limited to this modifier. This is useful in case
+   * you want to integrate Popper.js inside a framework or view library and you
+   * want to delegate all the DOM manipulations to it.
+   *
+   * Note that if you disable this modifier, you must make sure the popper element
+   * has its position set to `absolute` before Popper.js can do its work!
+   *
+   * Just disable this modifier and define your own to achieve the desired effect.
+   *
+   * @memberof modifiers
+   * @inner
+   */
+
+/** @prop {number} order=900 - Index used to define the order of execution */
+
+/**
+ * @function
+ * @memberof Modifiers
+ * @argument {Object} data - The data object generated by `update` method
+ * @argument {Object} data.styles - List of style properties - values to apply to popper element
+ * @argument {Object} data.attributes - List of attribute properties - values to apply to popper element
+ * @argument {Object} options - Modifiers configuration and options
+ * @returns {Object} The same data object
+ */
+
+// any property present in `data.styles` will be applied to the popper,
+
+// in this way we can make the 3rd party modifiers add custom styles to it
+
+// Be aware, modifiers could override the properties defined in the previous
+
+// lines of this modifier!
+
+// any property present in `data.attributes` will be applied to the popper,
+
+// they will be set as HTML attributes of the element
+
+// if arrowElement is defined and arrowStyles has some properties
+
+/**
+ * Set the x-placement attribute before everything else because it could be used
+ * to add margins to the popper margins needs to be calculated to get the
+ * correct popper offsets.
+ * @method
+ * @memberof Popper.modifiers
+ * @param {HTMLElement} reference - The reference element used to position the popper
+ * @param {HTMLElement} popper - The HTML element used as popper
+ * @param {Object} options - Popper.js options
+ */
+
+/** @prop {Function} */
+
+// Apply `position` to popper before anything else because
+
+// without the position applied we can't guarantee correct computations
+
+/**
+     * @deprecated since version 1.10.0, the property moved to `computeStyle` modifier
+     * @prop {Boolean} gpuAcceleration=true
+     * If true, it uses the CSS 3D transformation to position the popper.
+     * Otherwise, it will use the `top` and `left` properties
+     */
+
+/**
+   * Creates a new Popper.js instance.
+   * @class Popper
+   * @param {Element|referenceObject} reference - The reference element used to position the popper
+   * @param {Element} popper - The HTML / XML element used as the popper
+   * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
+   * @return {Object} instance - The generated Popper.js instance
+   */
+
+// make update() debounced, so that it only runs at most once-per-tick
+
+// with {} we create a new object with the options inside it
+
+// init state
+
+// get reference and popper elements (allow jQuery wrappers)
+
+// Deep merge modifiers options
+
+// Refactoring modifiers' list (Object => Array)
+
+// modifiers have the ability to execute arbitrary code when Popper.js get inited
+
+// such code is executed in the same order of its modifier
+
+// they could add new properties to their options configuration
+
+// BE AWARE: don't add options to `options.modifiers.name` but to `modifierOptions`!
+
+// fire the first update to position the popper in the right place
+
+// setup event listeners, they will take care of update the position in specific situations
+
+// We can't use class properties because they don't get listed in the
+
+// class prototype and break stuff like Sinon stubs
+
+/**
+     * Schedules an update. It will run on the next UI update available.
+     * @method scheduleUpdate
+     * @memberof Popper
+     */
+
+/**
+     * Collection of utilities useful when writing custom modifiers.
+     * Starting from version 1.7, this method is available only if you
+     * include `popper-utils.js` before `popper.js`.
+     *
+     * **DEPRECATION**: This way to access PopperUtils is deprecated
+     * and will be removed in v2! Use the PopperUtils module directly instead.
+     * Due to the high instability of the methods contained in Utils, we can't
+     * guarantee them to follow semver. Use them at your own risk!
+     * @static
+     * @private
+     * @type {Object}
+     * @deprecated since version 1.8
+     * @member Utils
+     * @memberof Popper
+     */
+
+/**
+ * The `dataObject` is an object containing all the information used by Popper.js.
+ * This object is passed to modifiers and to the `onCreate` and `onUpdate` callbacks.
+ * @name dataObject
+ * @property {Object} data.instance The Popper.js instance
+ * @property {String} data.placement Placement applied to popper
+ * @property {String} data.originalPlacement Placement originally defined on init
+ * @property {Boolean} data.flipped True if popper has been flipped by flip modifier
+ * @property {Boolean} data.hide True if the reference element is out of boundaries, useful to know when to hide the popper
+ * @property {HTMLElement} data.arrowElement Node used as arrow by arrow modifier
+ * @property {Object} data.styles Any CSS property defined here will be applied to the popper. It expects the JavaScript nomenclature (eg. `marginBottom`)
+ * @property {Object} data.arrowStyles Any CSS property defined here will be applied to the popper arrow. It expects the JavaScript nomenclature (eg. `marginBottom`)
+ * @property {Object} data.boundaries Offsets of the popper boundaries
+ * @property {Object} data.offsets The measurements of popper, reference and arrow elements
+ * @property {Object} data.offsets.popper `top`, `left`, `width`, `height` values
+ * @property {Object} data.offsets.reference `top`, `left`, `width`, `height` values
+ * @property {Object} data.offsets.arrow] `top` and `left` offsets, only one of them will be different from 0
+ */
+
+/**
+ * Default options provided to Popper.js constructor.<br />
+ * These can be overridden using the `options` argument of Popper.js.<br />
+ * To override an option, simply pass an object with the same
+ * structure of the `options` object, as the 3rd argument. For example:
+ * ```
+ * new Popper(ref, pop, {
+ *   modifiers: {
+ *     preventOverflow: { enabled: false }
+ *   }
+ * })
+ * ```
+ * @type {Object}
+ * @static
+ * @memberof Popper
+ */
+
+/**
+ * The `referenceObject` is an object that provides an interface compatible with Popper.js
+ * and lets you use it as replacement of a real DOM node.<br />
+ * You can use this method to position a popper relatively to a set of coordinates
+ * in case you don't have a DOM node to use as reference.
+ *
+ * ```
+ * new Popper(referenceObject, popperNode);
+ * ```
+ *
+ * NB: This feature isn't supported in Internet Explorer 10.
+ * @name referenceObject
+ * @property {Function} data.getBoundingClientRect
+ * A function that returns a set of coordinates compatible with the native `getBoundingClientRect` method.
+ * @property {number} data.clientWidth
+ * An ES6 getter that will return the width of the virtual reference element.
+ * @property {number} data.clientHeight
+ * An ES6 getter that will return the height of the virtual reference element.
+ */
+
+/* harmony default export */

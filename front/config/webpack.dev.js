@@ -22,32 +22,19 @@ const envKeys = Object.keys(EnvParsed).reduce((prev, next) => {
  * Exportamos la configuración de webpack.
  */
 module.exports = {
-  // Observa los cambios del webpack.
   watch: true,
-
-  // Mapa del codigo
   devtool: 'cheap-module-eval-source-map',
-
-  // Archivo principal de la aplicación.
   entry: ['@babel/polyfill', Path.resolve(__dirname, '../src/index.jsx')],
-
-  // Configuración de salida.
   output: {
-    // Carpeta de salida
     path: Path.resolve(__dirname, '../public'),
-
-    // Nombre del archivo compilado.
     filename: 'assets/js/bundle.js',
-
     publicPath: '/',
   },
 
-  // Resolvemos las extensiones comunes
   resolve: {
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'],
   },
 
-  // Modulos
   module: {
     rules: [
       // Loader: Js
@@ -114,66 +101,29 @@ module.exports = {
     ],
   },
 
-  // Recarga en vivo.
   devServer: {
-    // Observa las modificaciones de la carpeta public.
     watchContentBase: false,
-
-    // Contenido servido.
     contentBase: Path.join(__dirname, '../public'),
-
-    // Archivo de entrada para el servidor.
     index: 'index.html',
-
-    // Puerto
     port: 3000,
-
-    // Https
     https: false,
-
-    // Recarga en vivo.
     hot: true,
-
-    // Fallback del api de history
     historyApiFallback: true,
 
-    // Esta propiedad activa la apertura de
-    // el navegador al estar compilando.
+    // Open Browser
     open: true,
-
-    // Redirección de las rutas.
-    proxy: {
-      '/gateway': {
-        target: 'http://localhost:3001',
-        secure: false,
-        changeOrigin: 'true',
-        pathRewrite: { '^/gateway': '/gateway' },
-        logLevel: 'debug',
-      },
-    },
   },
 
-  // Plugin"s
   plugins: [
-    // Progress Bar Elegant B=)
     new WebpackBar({
-      name: 'Menu Listados - Desarrollo',
+      name: 'Weather Time - Desarrollo',
     }),
 
     new Webpack.DefinePlugin(envKeys),
-
-    // Verifica si hay versiones duplicadas.
     new DuplicatePackageCheckerPlugin(),
-
-    // Genera el index.html
     new HtmlWebpackPlugin({
-      // Nombre del archivo de salida.
       filename: 'index.html',
-
-      // Permiso de injección para script
       inject: true,
-
-      // Template
       template: Path.resolve(__dirname, '../template/index.html'),
     }),
 
@@ -185,18 +135,12 @@ module.exports = {
         vendor: [
           'react',
           'react-dom',
-          'react-redux',
-          'react-datepicker',
           'react-router-dom',
-          'react-bootstrap-table-next',
-          'react-bootstrap-table2-paginator',
-          'react-bootstrap-table2-toolkit',
           'redux',
           'redux-persist',
           'redux-devtools-extension',
           'redux-logger',
           'connected-react-router',
-          'moment',
         ],
       },
     }),

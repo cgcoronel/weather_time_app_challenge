@@ -24,29 +24,18 @@ const envKeys = Object.keys(EnvParsed).reduce((prev, next) => {
 
 // Exportamos la configuración de webpack.
 module.exports = {
-  // Modo de compilaciòn
   mode: 'production',
-
-  // Archivo principal de la aplicación.
   entry: ['@babel/polyfill', Path.resolve(__dirname, '../src/index.jsx')],
-
-  // Configuración de salida.
   output: {
-    // Carpeta de salida
     path: Path.resolve(__dirname, '../public'),
-
-    // Nombre del archivo compilado.
     filename: 'assets/js/bundle.js',
-
     publicPath: '/',
   },
 
-  // Resolvemos las extensiones comunes
   resolve: {
     extensions: ['.js', '.jsx', '.scss', '.json'],
   },
 
-  // Modulos
   module: {
     rules: [
       // Loader: Js
@@ -102,17 +91,13 @@ module.exports = {
     ],
   },
 
-  // Plugin"s
   plugins: [
-    // Progress Bar Elegant B=)
     new WebpackBar({
-      name: 'Menu Listados - Producción',
+      name: 'Weather Time / Production',
     }),
 
-    // Limpia las compilaciones previas
     new CleanWebpackPlugin(),
 
-    // Copiamos los lenguajes
     new CopyWebpackPlugin([
       {
         from: Path.resolve(__dirname, '../template/assets'),
@@ -124,22 +109,14 @@ module.exports = {
       },
     ]),
 
-    // Define las variables de entorno
     new Webpack.DefinePlugin(envKeys),
 
-    // Genera el index.html
     new HtmlWebpackPlugin({
-      // Nombre del archivo de salida.
       filename: 'index.html',
-
-      // Permiso de injección para script
       inject: true,
-
-      // Template
       template: Path.resolve(__dirname, '../template/index.html'),
     }),
 
-    // Pre-compilaciòn de dependencias.
     new AutoDllPlugin({
       inject: true,
       filename: '[name]_[hash].js',
@@ -147,8 +124,6 @@ module.exports = {
         vendor: [
           'react',
           'react-dom',
-          'react-redux',
-          'react-datepicker',
           'react-router-dom',
           'react-bootstrap-table-next',
           'react-bootstrap-table2-paginator',
@@ -158,13 +133,11 @@ module.exports = {
           'redux-devtools-extension',
           'redux-logger',
           'connected-react-router',
-          'moment',
         ],
       },
     }),
   ],
 
-  // Optimizaciones
   optimization: {
     // Divide el peso en diferentes archivos para evitar duplicación
     splitChunks: {
