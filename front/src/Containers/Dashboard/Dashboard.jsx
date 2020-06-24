@@ -21,6 +21,11 @@ const Dashboard = () => {
     weather: {
       main: {},
       wind: {},
+      weather: [
+        {
+          description: '',
+        },
+      ],
     },
   })
 
