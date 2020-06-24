@@ -1,0 +1,105 @@
+@mixin content-report-list-global {
+  .react-bs-table-no-data {
+    text-align: center;
+    vertical-align: middle;
+    height: 150px;
+  }
+
+  .list-table {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+
+    th {
+      color: $color-items;
+      text-align: center !important;
+    }
+
+    th,
+    td {
+      line-height: 1.6em !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    td {
+      color: $color-text;
+    }
+  }
+
+  #reports-filter {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .fa-sort-asc::before {
+    content: "\25B4\25BF";
+  }
+
+  .fa-sort-desc::after {
+    content: "\25B5\25BE";
+  }
+
+  .react-bootstrap-table-pagination {
+    padding: 0px;
+
+    margin-left: 5%;
+    margin-right: 5%;
+
+    .col-md-6.col-xs-6.col-sm-6.col-lg-6,
+    .react-bootstrap-table-pagination-list.col-md-6.col-xs-6.col-sm-6.col-lg-6 {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+
+  .react-bootstrap-table-page-btns-ul {
+    padding: 0px;
+    padding-bottom: 10px;
+    float: right;
+  }
+
+  .react-bootstrap-table-pagination-list {
+    height: 40px;
+  }
+
+  .table {
+    display: inline-table;
+    background-color: white;
+
+    tbody {
+      td {
+        button {
+          background: transparent;
+          border: 0px;
+          outline: 0px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+#content-report-list {
+  @include content-report-list-global;
+
+  table {
+    width: 100% !important;
+    margin: 0px !important;
+  }
+
+  .react-bootstrap-table-pagination {
+    margin: 10px 0px !important;
+  }
+}
+
+#content-report-list-horizontal-scroll {
+  @include content-report-list-global;
+
+  .table {
+    overflow: auto;
+    display: block;
+    table-layout: auto;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "server",
+      "script": "npm",
+      "args": "start",
+      "log_file": "log/server.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "merge_logs": true
+    }
+  ]
+}

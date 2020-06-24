@@ -1,0 +1,440 @@
+@mixin btn {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+// Botones del menu de la izquierda (Horarios de Servicios, Comprobantes...etc)
+.button-main-menu {
+  @include btn;
+  border-radius: 0px;
+  text-align: left;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 35px;
+  border-bottom: 1px solid $color-button-main-menu-border;
+  color: $color-button-main-menu-font;
+  background-color: $color-button-main-menu;
+
+  &:hover {
+    color: $color-button-main-menu-font-hover;
+    background-color: $color-button-main-menu-hover;
+  }
+}
+
+.button-main-menu-active button {
+  color: $color-button-main-menu-font-active;
+  background-color: $color-button-main-menu-active;
+}
+
+// Botones de acciones (Carga Manual, Exportar, Sincronización)
+.button-action {
+  @include btn;
+  color: $color-button-action-font;
+  background-color: $color-button-action;
+  border: 1px solid $color-button-action-border;
+
+  &:hover {
+    color: $color-button-action-font-hover;
+    background-color: $color-button-action-hover;
+  }
+}
+
+// Boton de Login
+.button-action-login {
+  @include btn;
+  border-radius: 5px;
+  margin-top: 35px !important;
+  color: $color-button-action-login-font;
+  background-color: $color-button-action-login;
+
+  &:hover {
+    color: $color-button-action-login-font;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    //color: $color-button-action-login-font-hover;
+    //background-color: $color-button-action-login-hover;
+  }
+}
+
+// Boton de Guardar, Probar, Aceptar...
+.button-success {
+  @include btn;
+  color: $color-button-success-font;
+  background-color: $color-button-success;
+  border: 1px solid $color-button-success-border;
+
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: $color-button-success-font-hover;
+    //background-color: $color-button-success-hover;
+  }
+}
+
+// Botones de acciones de cuadros modales
+.button-action-modal {
+  @include btn;
+  color: $color-button-action-modal-font;
+  background-color: $color-button-action-modal;
+  border: 1px solid $color-button-action-modal-border;
+
+  &:hover {
+    color: $color-button-action-modal-font-hover;
+    //background-color: $color-button-action-modal-hover;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+// Boton de Cancelar acción
+.button-cancel {
+  @include btn;
+  color: $color-button-cancel-font;
+  background-color: $color-button-cancel;
+  border: 1px solid $color-button-cancel-border;
+
+  &:hover {
+    color: $color-button-cancel-font-hover;
+    //background-color: $color-button-cancel-hover;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+// Boton por defecto
+.button-default {
+  @include btn;
+  color: $color-button-default-font;
+  background-color: $color-button-default;
+  border: 1px solid $color-button-default-border;
+
+  &:hover {
+    color: $color-button-default-font-hover;
+    //background-color: $color-button-default-hover;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+// Boton imprimir
+.button-action-printer {
+  @include btn;
+  color: $color-button-action-modal-font;
+  background-color: $color-button-action-modal;
+  border: 1px solid $color-button-action-modal-border;
+  text-align: left;
+
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-position: right;
+  background-image: url("/img/icons/printer.svg");
+  background-size: 25px 25px;
+  background-position: 110px center;
+
+  &:hover {
+    color: $color-button-action-modal-font-hover;
+    background-color: $color-button-action-modal-hover;
+  }
+}
+
+// Boton Exportar
+.button-action-export {
+  @include btn;
+  color: $color-button-action-modal-font;
+  background-color: $color-button-action-modal;
+  border: 1px solid $color-button-action-modal-border;
+  text-align: left;
+
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-position: right;
+  background-image: url("/img/icons/report.svg");
+  background-size: 25px 25px;
+  background-position: 110px center;
+
+  &:hover {
+    color: $color-button-action-modal-font-hover;
+    background-color: $color-button-action-modal-hover;
+  }
+}
+
+.btn-action-export {
+  text-align: center;
+  font-size: 0.8em !important;
+  color: $color-items;
+  background-color: #ffffff;
+  border: 1px solid $color-items;
+
+  &:hover {
+    color: $color-button-action-modal-font-hover;
+    background-color: $color-items;
+  }
+}
+
+// Boton check Si/No
+#button-toggle {
+  .btn-toggle {
+    top: 14px;
+    transform: translateY(-60%);
+  }
+  .btn-toggle {
+    margin: 0 !important;
+    padding: 0;
+    position: relative;
+    border: none;
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    color: #6b7381;
+    background: #bdc1c8 !important;
+  }
+  .btn-toggle:focus,
+  .btn-toggle.focus,
+  .btn-toggle:focus.active,
+  .btn-toggle.focus.active {
+    outline: none;
+  }
+  .btn-toggle:before,
+  .btn-toggle:after {
+    line-height: 1.5rem;
+    width: 4rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    transition: opacity 0.25s;
+  }
+  .btn-toggle:before {
+    content: "No";
+    left: -4rem;
+  }
+  .btn-toggle:after {
+    content: "Si";
+    right: -4rem;
+    opacity: 0.5;
+  }
+  .btn-toggle > .handle {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 1.125rem;
+    background: #fff;
+    transition: left 0.25s;
+  }
+  .btn-toggle.active {
+    transition: background-color 0.25s;
+  }
+  .btn-toggle.active > .handle {
+    left: 1.6875rem;
+    transition: left 0.25s;
+  }
+  .btn-toggle.active:before {
+    opacity: 0.5;
+  }
+  .btn-toggle.active:after {
+    opacity: 1;
+  }
+  .btn-toggle.btn-sm:before,
+  .btn-toggle.btn-sm:after {
+    line-height: -0.5rem;
+    color: #fff;
+    letter-spacing: 0.75px;
+    left: 0.4125rem;
+    width: 2.325rem;
+  }
+  .btn-toggle.btn-sm:before {
+    text-align: right;
+  }
+  .btn-toggle.btn-sm:after {
+    text-align: left;
+    opacity: 0;
+  }
+  .btn-toggle.btn-sm.active:before {
+    opacity: 0;
+  }
+  .btn-toggle.btn-sm.active:after {
+    opacity: 1;
+  }
+  .btn-toggle:before,
+  .btn-toggle:after {
+    color: #6b7381;
+  }
+  .btn-toggle.active {
+    background-color: $color-red !important;
+  }
+  .btn-toggle.btn-sm {
+    margin: 0 0.5rem;
+    padding: 0;
+    position: relative;
+    border: none;
+    height: 1.5rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+  }
+  .btn-toggle.btn-sm:focus,
+  .btn-toggle.btn-sm.focus,
+  .btn-toggle.btn-sm:focus.active,
+  .btn-toggle.btn-sm.focus.active {
+    outline: none;
+  }
+  .btn-toggle.btn-sm:before,
+  .btn-toggle.btn-sm:after {
+    line-height: 1.5rem;
+    width: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    transition: opacity 0.25s;
+  }
+  .btn-toggle.btn-sm:before {
+    content: "No";
+    left: -0.5rem;
+  }
+  .btn-toggle.btn-sm:after {
+    content: "Si";
+    right: -0.5rem;
+    opacity: 0.5;
+  }
+  .btn-toggle.btn-sm > .handle {
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 1.125rem;
+    background: #fff;
+    transition: left 0.25s;
+  }
+  .btn-toggle.btn-sm.active {
+    transition: background-color 0.25s;
+  }
+  .btn-toggle.btn-sm.active > .handle {
+    left: 1.6875rem;
+    transition: left 0.25s;
+  }
+  .btn-toggle.btn-sm.active:before {
+    opacity: 0.5;
+  }
+  .btn-toggle.btn-sm.active:after {
+    opacity: 1;
+  }
+  .btn-toggle.btn-sm.btn-sm:before,
+  .btn-toggle.btn-sm.btn-sm:after {
+    line-height: -0.5rem;
+    color: #fff;
+    letter-spacing: 0.75px;
+    left: 0.4125rem;
+    width: 2.325rem;
+  }
+  .btn-toggle.btn-sm.btn-sm:before {
+    text-align: right;
+  }
+  .btn-toggle.btn-sm.btn-sm:after {
+    text-align: left;
+    opacity: 0;
+  }
+  .btn-toggle.btn-sm.btn-sm.active:before {
+    opacity: 0;
+  }
+  .btn-toggle.btn-sm.btn-sm.active:after {
+    opacity: 1;
+  }
+}
+
+@mixin badge-info {
+  width: 40px;
+  height: 18px;
+}
+
+.badge-on {
+  @include badge-info;
+  background-color: $color-red !important;
+}
+
+.badge-off {
+  @include badge-info;
+  background-color: #bdc1c8 !important;
+}
+
+//
+// Paginado de reportes y listados
+//
+
+// Limite de registros a mostrar
+
+.react-bs-table-sizePerPage-dropdown .btn-secondary {
+  @include btn;
+
+  font-size: 0.8em !important;
+  color: $color-items;
+  background-color: $color-button-main-menu;
+  border: 1px solid $color-items;
+
+  &:hover {
+    color: $color-button-main-menu-font-hover;
+    background-color: $color-items;
+  }
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+  color: $color-white;
+  background-color: $color-items;
+  border-color: $color-items;
+}
+
+// Paginador
+.pagination {
+  font-size: 0.8em !important;
+}
+
+.page-link {
+  color: $color-items;
+
+  &:hover {
+    background-color: $color-items !important;
+    border-color: $color-items !important;
+    color: $color-white;
+  }
+}
+
+.page-item.active .page-link {
+  background-color: $color-items !important;
+  border-color: $color-items !important;
+}
+
+.dropdown-menu {
+  min-width: 10px !important;
+}
+
+.react-bs-table-pagination .row {
+  margin-top: 10px !important;
+}
+
+// Drop Downs
+.dropdown-input-check {
+  .dropdown-toggle {
+    background-color: $color-white !important;
+    border: 1px solid $color-lightgray !important;
+    color: $color-text !important;
+
+    &::after {
+      margin-top: 8px;
+      margin-left: 1.3em;
+      vertical-align: 0.255em;
+      border-top: 0.4em solid;
+      border-right: 0.25em solid transparent;
+      border-left: 0.25em solid transparent;
+      float: right;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

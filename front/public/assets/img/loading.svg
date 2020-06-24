@@ -1,0 +1,57 @@
+<svg class="lds-spin" width="200px"  height="200px"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" style="background: none;"><g transform="translate(85,50)">
+<g transform="rotate(0)">
+<circle cx="0" cy="0" r="3" fill="#b2b2b2" fill-opacity="1" transform="scale(3.55174 3.55174)">
+  <animateTransform attributeName="transform" type="scale" begin="-1.4875s" values="4 4;1 1" keyTimes="0;1" dur="1.7s" repeatCount="indefinite"></animateTransform>
+  <animate attributeName="fill-opacity" keyTimes="0;1" dur="1.7s" repeatCount="indefinite" values="1;0" begin="-1.4875s"></animate>
+</circle>
+</g>
+</g><g transform="translate(74.74873734152916,74.74873734152916)">
+<g transform="rotate(45)">
+<circle cx="0" cy="0" r="3" fill="#b2b2b2" fill-opacity="0.875" transform="scale(3.92674 3.92674)">
+  <animateTransform attributeName="transform" type="scale" begin="-1.275s" values="4 4;1 1" keyTimes="0;1" dur="1.7s" repeatCount="indefinite"></animateTransform>
+  <animate attributeName="fill-opacity" keyTimes="0;1" dur="1.7s" repeatCount="indefinite" values="1;0" begin="-1.275s"></animate>
+</circle>
+</g>
+</g><g transform="translate(50,85)">
+<g transform="rotate(90)">
+<circle cx="0" cy="0" r="3" fill="#b2b2b2" fill-opacity="0.75" transform="scale(1.30174 1.30174)">
+  <animateTransform attributeName="transform" type="scale" begin="-1.0625s" values="4 4;1 1" keyTimes="0;1" dur="1.7s" repeatCount="indefinite"></animateTransform>
+  <animate attributeName="fill-opacity" keyTimes="0;1" dur="1.7s" repeatCount="indefinite" values="1;0" begin="-1.0625s"></animate>
+</circle>
+</g>
+</g><g transform="translate(25.25126265847084,74.74873734152916)">
+<g transform="rotate(135)">
+<circle cx="0" cy="0" r="3" fill="#b2b2b2" fill-opacity="0.625" transform="scale(1.67674 1.67674)">
+  <animateTransform attributeName="transform" type="scale" begin="-0.85s" values="4 4;1 1" keyTimes="0;1" dur="1.7s" repeatCount="indefinite"></animateTransform>
+  <animate attributeName="fill-opacity" keyTimes="0;1" dur="1.7s" repeatCount="indefinite" values="1;0" begin="-0.85s"></animate>
+</circle>
+</g>
+</g><g transform="translate(15,50.00000000000001)">
+<g transform="rotate(180)">
+<circle cx="0" cy="0" r="3" fill="#b2b2b2" fill-opacity="0.5" transform="scale(2.05174 2.05174)">
+  <animateTransform attributeName="transform" type="scale" begin="-0.6375s" values="4 4;1 1" keyTimes="0;1" dur="1.7s" repeatCount="indefinite"></animateTransform>
+  <animate attributeName="fill-opacity" keyTimes="0;1" dur="1.7s" repeatCount="indefinite" values="1;0" begin="-0.6375s"></animate>
+</circle>
+</g>
+</g><g transform="translate(25.251262658470832,25.25126265847084)">
+<g transform="rotate(225)">
+<circle cx="0" cy="0" r="3" fill="#b2b2b2" fill-opacity="0.375" transform="scale(2.42674 2.42674)">
+  <animateTransform attributeName="transform" type="scale" begin="-0.425s" values="4 4;1 1" keyTimes="0;1" dur="1.7s" repeatCount="indefinite"></animateTransform>
+  <animate attributeName="fill-opacity" keyTimes="0;1" dur="1.7s" repeatCount="indefinite" values="1;0" begin="-0.425s"></animate>
+</circle>
+</g>
+</g><g transform="translate(49.99999999999999,15)">
+<g transform="rotate(270)">
+<circle cx="0" cy="0" r="3" fill="#b2b2b2" fill-opacity="0.25" transform="scale(2.80174 2.80174)">
+  <animateTransform attributeName="transform" type="scale" begin="-0.2125s" values="4 4;1 1" keyTimes="0;1" dur="1.7s" repeatCount="indefinite"></animateTransform>
+  <animate attributeName="fill-opacity" keyTimes="0;1" dur="1.7s" repeatCount="indefinite" values="1;0" begin="-0.2125s"></animate>
+</circle>
+</g>
+</g><g transform="translate(74.74873734152916,25.251262658470832)">
+<g transform="rotate(315)">
+<circle cx="0" cy="0" r="3" fill="#b2b2b2" fill-opacity="0.125" transform="scale(3.17674 3.17674)">
+  <animateTransform attributeName="transform" type="scale" begin="0s" values="4 4;1 1" keyTimes="0;1" dur="1.7s" repeatCount="indefinite"></animateTransform>
+  <animate attributeName="fill-opacity" keyTimes="0;1" dur="1.7s" repeatCount="indefinite" values="1;0" begin="0s"></animate>
+</circle>
+</g>
+</g></svg>

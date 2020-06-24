@@ -1,0 +1,34 @@
+select {
+  color: $color-text !important;
+  font-size: 1em !important;
+
+  option {
+    font-size: 1.2em !important;
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border-color: $color-veryLightGrey !important;
+  box-shadow: none !important;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.page-link:focus {
+  z-index: 2;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}

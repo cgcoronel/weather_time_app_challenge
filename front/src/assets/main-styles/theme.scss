@@ -1,0 +1,75 @@
+/**
+ * COLORES
+ */
+$color-text: #a6aaaf;
+$color-darkgray: #a6aaaf;
+$color-lightgray: #dcdee0;
+$color-veryLightGrey: #cdcdcd;
+$color-white: #ffffff;
+$color-darkWhite: #f7f7f7;
+$color-red: #49ad8f;
+$color-silver: #c5c5c5;
+$color-steel: #647687;
+
+// Interface general
+$color-main-content-background: #f6f6f6;
+$color-company: $color-lightgray;
+$color-username: #fff;
+$color-company-subtitle: #6d6d6d;
+$color-title-menu-bar: #6d6d6d;
+$color-items: $color-darkgray;
+$color-header-bar: #4bb696;
+
+// Botones del menu de la izquierda (Horarios de Servicios, Comprobantes...etc)
+$color-button-main-menu: $color-white;
+$color-button-main-menu-font: #1c3643;
+$color-button-main-menu-border: $color-lightgray;
+$color-button-main-menu-hover: #494f51;
+$color-button-main-menu-font-hover: $color-white;
+$color-button-main-menu-font-active: $color-white;
+$color-button-main-menu-active: $color-red;
+
+// Boton de Guardar, Probar, Aceptar...
+$color-button-success: $color-red;
+$color-button-success-font: $color-white;
+$color-button-success-border: $color-red;
+$color-button-success-hover: #aabb4d;
+$color-button-success-font-hover: $color-white;
+
+// Botones de acciones (Carga Manual, Exportar, Sincronización)
+$color-button-action: $color-white;
+$color-button-action-font: $color-darkgray;
+$color-button-action-border: $color-darkgray;
+$color-button-action-hover: $color-darkgray;
+$color-button-action-font-hover: $color-white;
+
+// Boton de Login
+$color-button-action-login: $color-red;
+$color-button-action-login-font: $color-white;
+$color-button-action-login-border: $color-white;
+$color-button-action-login-hover: $color-lightgray;
+$color-button-action-login-font-hover: $color-steel;
+
+// Botones de acciones de cuadros modales
+$color-button-action-modal: $color-darkgray;
+$color-button-action-modal-font: $color-white;
+$color-button-action-modal-border: $color-darkgray;
+$color-button-action-modal-hover: $color-darkgray;
+$color-button-action-modal-font-hover: $color-white;
+
+// Boton de Cancelar acción
+$color-button-cancel: #1c3643;
+$color-button-cancel-font: $color-white;
+$color-button-cancel-border: #1c3643;
+$color-button-cancel-hover: #b78301;
+$color-button-cancel-font-hover: $color-white;
+
+// Boton por defecto
+$color-button-default: $color-items;
+$color-button-default-font: $color-white;
+$color-button-default-border: $color-darkgray;
+$color-button-default-hover: $color-darkgray;
+$color-button-default-font-hover: $color-white;
+
+// Color Mensajes de errores en inputs
+$color-input-message-error: $color-red;

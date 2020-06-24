@@ -1,0 +1,1135 @@
+/******/
+
+// webpackBootstrap
+
+// install a JSONP callback for chunk loading
+
+// add entry modules from loaded chunk to deferred list
+
+// run deferred modules when all chunks ready
+
+// The module cache
+
+// object to store loaded and loading chunks
+
+// undefined = chunk not loaded, null = chunk preloaded/prefetched
+
+// Promise = chunk loading, 0 = chunk loaded
+
+// The require function
+
+// Check if module is in cache
+
+// Create a new module (and put it into the cache)
+
+// Execute the module function
+
+// Return the exports of the module
+
+// Flag the module as loaded
+
+// expose the modules object (__webpack_modules__)
+
+// expose the module cache
+
+// define getter function for harmony exports
+
+// define __esModule on exports
+
+// create a fake namespace object
+
+// mode & 1: value is a module id, require it
+
+// mode & 2: merge all properties of value into the ns
+
+// mode & 4: return value when already ns object
+
+// mode & 8|1: behave like require
+
+// getDefaultExport function for compatibility with non-harmony modules
+
+// Object.prototype.hasOwnProperty.call
+
+// __webpack_public_path__
+
+// add entry module to deferred list
+
+// run deferred modules when ready
+
+/************************************************************************/
+
+/***/
+
+// Module
+
+// EXTERNAL MODULE: delegated ./node_modules/react/index.js from dll-reference vendor_455e2ae03c929f4f74bd
+
+/*#__PURE__*/
+
+// Almacenamos los datos
+
+// Obtengo el valor
+
+// Validamos el valor a mostrar.
+
+// Lanzamos el mensaje de error
+
+// CONCATENATED MODULE: ./src/Reducers/UserReducer.js
+
+/* eslint-disable indent */
+
+// Importamos las acciones
+
+// Utilidades
+
+// Estado inicial
+
+// Limpiamos los datos preservados.
+
+/**
+ * Reducer del Login.
+ */
+
+// CONCATENATED MODULE: ./src/Reducers/UsersReducer.js
+
+/**
+ * Reducer de los usuarios.
+ */
+
+// CONCATENATED MODULE: ./src/Reducers/ProfilesReducer.js
+
+// CONCATENATED MODULE: ./src/Reducers/FoodsReducer.js
+
+/**
+ * Reducer del Foods.
+ */
+
+// Dependencias
+
+// Middleware
+
+// Reductores
+
+// Obtenemos el usuario
+
+// Validamos el usuario
+
+/**
+ * Obtiene el estado general
+ */
+
+// CONCATENATED MODULE: ./src/Utils/Objects.js
+
+/**
+ * Verifica el tipo de un elemento.
+ *
+ * @param { Any } data
+ *
+ * @return { Boolean }
+ */
+
+/**
+ * Realiza una copia sin referencia.
+ *
+ * @param { Any } value
+ *
+ * @return { Object }
+ */
+
+// CONCATENATED MODULE: ./src/Components/Commons/js/CommonsUI.js
+
+// Acciones
+
+// Componente Commons.
+
+/**
+   * Metodo inicializador de la clase.
+   *
+   */
+
+// Estado del component
+
+// Datos del modal
+
+/**
+   * Permite el acceso asincronico al setState de react.
+   */
+
+/**
+     * Muestra un modal.
+     */
+
+// Actualizamos el estado.
+
+// Informamos de los errores.
+
+/**
+     * Oculta un modal.
+     */
+
+/**
+     * Metodo para administrar los codigos Http
+     */
+
+// Validamos los casos de fallos.
+
+/**
+     * Ciclo de vida: Componente montado
+     */
+
+// Fecha de expiración del token
+
+// Verifico si el token expiro y deslogueo
+
+/**
+     * Cierra la session.
+     */
+
+// Mandamos a cerrar la session
+
+// Informamos el error.
+
+/* harmony default export */
+
+// CONCATENATED MODULE: ./src/Components/Commons/Commons.jsx
+
+// Controlador
+
+/**
+ * Contenedor de la pantalla de "Consulta de saldos".
+ */
+
+/**
+     * Renderizador
+     *
+     * @return { null }
+     */
+
+// CONCATENATED MODULE: ./src/Utils/Requests.js
+
+/**
+ * Solicitudes.
+ */
+
+/**
+   * Realiza una solicitud de metodo GET
+   *
+   * @param { String } endpoint
+   * @param { String } responseType
+   *
+   * @return { Promise }
+   */
+
+// Cabeceras.
+
+// Armamos el requester
+
+// Almacenamos las cabeceras de la respuesta.
+
+// Realizamos la solicitud
+
+// Almacenamos las cabecera de la respuesta.
+
+// Parseamos la respuesta.
+
+// Asignamos a la respuesta las cabeceras.
+
+// Codigo
+
+/**
+   * Realiza una solicitud de metodo POST
+   *
+   * @param { String } endpoint
+   * @param { String } responseType
+   *
+   * @return { Promise }
+   */
+
+// Si la petición es de un formdata, elimino las cabeceras
+
+/**
+   * Realiza una solicitud de metodo DELETE
+   *
+   * @param { String } endpoint
+   * @param { String } responseType
+   *
+   * @return { Promise }
+   */
+
+/**
+   * Metodo para administrar los codigos Http
+   */
+
+// Evaluamos el argumento requerido.
+
+// Validamos que se haya procesado correctamente.
+
+/**
+   * Retorna la interfaz de error.
+   *
+   * @param { Number } code
+   * @param { Object } exceptions
+   *
+   * @return { Object }
+   */
+
+// Conjunto de cabeceras
+
+// Cabeceras
+
+// Alias del usuario.
+
+// Validamos que exista el usuario.
+
+// Alias del usuario
+
+// Validamos si tiene un token de autenticación.
+
+// CONCATENATED MODULE: ./src/Services/UserService.js
+
+/**
+ * Modelo
+ */
+
+/**
+   * Login
+   */
+
+/**
+   * Logout
+   */
+
+/**
+   * Busca todos los usuarios
+   */
+
+/**
+   * Elimina un usuario
+   */
+
+/**
+   * Crea un nuevo usuario
+   */
+
+/**
+   * Actualiza un nuevo usuario
+   */
+
+// CONCATENATED MODULE: ./src/Services/ProfilesService.js
+
+/**
+ * Utilidades
+ */
+
+/**
+ * Modelo de perfiles
+ */
+
+/**
+   * Obtiene todos los perfiles.
+   */
+
+/**
+   * Añade un nuevo perfil.
+   */
+
+/**
+   * Actualiza un perfil.
+   */
+
+/**
+   * Elimina un perfil.
+   */
+
+/*****  Login / Menu Principal *****/
+
+/***** Titulos de paginas *****/
+
+/***** Items Menu Principal *****/
+
+/***** Items Estadistica aceptada por limite *****/
+
+/**** Items Header */
+
+/*** Perfiles */
+
+/*** Usuario */
+
+/*** Platos */
+
+/*** Botones Globales */
+
+// Traducciòn
+
+// Verificamos la traducción.
+
+// CONCATENATED MODULE: ./src/Containers/Users/js/UsersListviewUI.js
+
+// Servicios
+
+/**
+ * Controlador de la pantalla de usuarios.
+ */
+
+// Estado inicial.
+
+// Filtros
+
+// Rango de fechas.
+
+// Fecha desde.
+
+// Tabla de usuarios
+
+/**
+   *  Columnas de la tabla de usuarios.
+   */
+
+/**
+     *  Ciclo de vida: Componente montado.
+     */
+
+// Limpiamos las disposiciònes de los usuarios
+
+// Buscamos los usuarios.
+
+// Generamos los datos de la tabla.
+
+/**
+     *  Obtiene todos los usuarios.
+     */
+
+// Alias de la respuesta
+
+// Asignamos los usuarios al estado
+
+// Informamos del error.
+
+/**
+     *  Obtiene todos los perfiles.
+     */
+
+// Opcion por defecto.
+
+// Filtramos los datos necesarios.
+
+// Validamos si hay datos que recorrer
+
+// Filtramos los perfiles
+
+// Actualizamos los perfiles de los filtros.
+
+/**
+     *  Genera la estructura del listado
+     */
+
+// Validamos los datos de usuarios
+
+// Listado
+
+// Informamos del error
+
+/**
+     *  Actualiza los filtros
+     */
+
+// Validamos si no hay selector de perfiles.
+
+// Actualizamos el estado del filtro.
+
+/**
+     *  Actualiza el filtro con los perfiles.
+     */
+
+// Validamos el filtro.
+
+// Verificamos que los selectores esten.
+
+// Asignamos al selector del filtro los datos de los perfiles.
+
+// Actualizamos el estado
+
+/**
+     *  Elimina un usuario.
+     */
+
+// Ocultamos el modal
+
+// Obtenemos los perfiles restantes.
+
+/**
+     *  Pregunta si acepta la eliminación
+     */
+
+// Datos del modal.
+
+// Mostramos el modal con la pregunta.
+
+/**
+     *  Crea un nuevo usuario.
+     */
+
+// Redireccionamos.
+
+// Devolvemos los datos obtenidos.
+
+/**
+     *  Edita un usuario.
+     */
+
+// Obtenemos todos los datos del usuario.
+
+// Indicamos que perfil se editara.
+
+// Redireccionamos
+
+/**
+     *  Visualiza un usuario.
+     */
+
+/**
+     *  Busca los usuarios aplicando el filtro.
+     */
+
+// Alias del estado
+
+// Alias de los filtros
+
+// Alias del selector
+
+// Recorremos los usuarios.
+
+// Busqueda
+
+// Se encontro resultado.
+
+// Validamos si hay un perfil seleccionado
+
+// Actualizamos el selector
+
+/**
+   * Renderiza las opciones del selector.
+   */
+
+// Obtenemos el valor del input
+
+// Informamos del cambio
+
+// Alias del argumento
+
+// Propiedades
+
+// Establezco el idioma
+
+// CONCATENATED MODULE: ./src/Components/Filters/Filters.jsx
+
+// Dependencies
+
+// Components
+
+/**
+ * Componente de Filtros de busqueda
+ */
+
+/**
+   * Renderiza los buscadores.
+   */
+
+// Buscamos el buscador
+
+/**
+   * Renderiza el rango de fechas
+   */
+
+// CONCATENATED MODULE: ./src/Components/Table/Table.jsx
+
+// Componentes.
+
+// Styles
+
+/**
+ * Componente de tabla.
+ */
+
+// Alias de los parametros.
+
+/**
+   * Retorna la leyenda correspondiente cuando el reporte esta vacio
+   */
+
+// Filtro la columna actions
+
+// Alias de los datos
+
+/**
+ * Redux
+ */
+
+/**
+ * Verifica los permisos a un modulo.
+ */
+
+// CONCATENATED MODULE: ./src/Utils/Security.js
+
+/**
+     * Verifica los privilejios a una acciòn.
+     *
+     * @param { String } module
+     * @param { String } action
+     *
+     * @return { Boolean }
+     */
+
+// Verificamos que tenga permisos.
+
+//console.log(error);
+
+/**
+     * Verifica el acceso de un usuario a un modulo
+     *
+     * @param { String } module
+     *
+     * @return { Boolean }
+     */
+
+// CONCATENATED MODULE: ./src/Containers/Users/UsersListview.jsx
+
+// Componentes
+
+// Estilos
+
+/**
+ * Contenedor de la pantalla de login
+ */
+
+/**
+     * Retorna los iconos de acción
+     */
+
+/**
+     * Renderiza el contenedor.
+     */
+
+// CONCATENATED MODULE: ./src/Containers/Users/js/UsersFormUI.js
+
+/**
+ * Controlador de la pantalla de "Crear usuario."
+ */
+
+// Indicamos cual es el nuevo valor
+
+// Actualizamos el nombre.
+
+// Datos del formulario.
+
+// Perfiles
+
+// Perfil seleccionado
+
+/**
+     * Obtiene todos los perfiles.
+     */
+
+/**
+     * Ciclo de vida: Componente montado.
+     */
+
+// Buscamos los perfiles.
+
+// Detectamos si hay usuario para editar.
+
+// Detectamos si hay usuario para ver.
+
+/**
+     * Actualiza el campo de "Perfil"
+     */
+
+/**
+     * Verifica la validez del formulario.
+     */
+
+// Limpiamos los errores.
+
+// Alias del formulario.
+
+// Indica si hay algun error.
+
+// Indicamos que hay un error.
+
+// Verificamos la coincidencia de las contraseñas
+
+/**
+     * Verifica la coincidencia de las contraseñas
+     */
+
+// Alias del formulario
+
+// Comparamos las contraseñas
+
+// Indicamos que no hay un problema.
+
+/**
+     * Crea un usuario,
+     */
+
+// Verificamos el formulario.
+
+// Obtenemos los datos para ser enviados
+
+// Solicitamos la creaciòn del usuario.
+
+/**
+     * Actualiza un usuario.
+     */
+
+/**
+     * Cancela la creación de un usuario.
+     */
+
+// Limpiamos el usuario disponibilizado por las acciones.
+
+/**
+     * Obtenemos los datos a enviar.
+     */
+
+// Generamos los datos a enviar.
+
+/**
+     * Modo de visualización
+     */
+
+// Insertamos los datos del usuario
+
+// Perfil.
+
+// Informamos el error
+
+/**
+     * Modo de edición
+     */
+
+/**
+     * Ciclo de vida: Cuando se desmonta el componente.
+     */
+
+// Limpiamos el formulario
+
+/**
+     * Metodo de guardado, verifica que caso es.
+     */
+
+// Validamos si hay un usuario en ediciòn.
+
+// CONCATENATED MODULE: ./src/Containers/Users/UsersForm.jsx
+
+// Controladores
+
+/**
+ * Contenedor del formulario de usuarios.
+ */
+
+/**
+     * Renderizamos el contenedor.
+     */
+
+// CONCATENATED MODULE: ./src/Services/ModulesService.js
+
+/**
+ * Modelo de Unidades del negocio
+ */
+
+/**
+   * Obtenemos las unidades de negocio.
+   */
+
+// CONCATENATED MODULE: ./src/Containers/Profiles/js/ProfilesFormUI.js
+
+/**
+ * Contenedor
+ */
+
+/**
+   * Permisos
+   */
+
+// Modulos
+
+// Id del perfil.
+
+// Nombre del perfil.
+
+// Descripción del perfil
+
+/**
+   * Obtiene todos los modulos.
+   */
+
+// Recorremos los modulos
+
+/**
+     * Obtiene los datos del formulario.
+     */
+
+// Datos de la request.
+
+// Recorremos los modulos.
+
+/**
+     * Verifica los datos del formulario.
+     */
+
+// Verificamos el nombre de perfil.
+
+// Indicamos que hubo un error.
+
+// Verificamos la descripcion del perfil.
+
+/**
+     * Crea un perfil
+     */
+
+/**
+     * Actualiza un perfil.
+     */
+
+// Cambiamos el modo
+
+// Buscamos los modulos
+
+// Descripción
+
+// Recorremos los perfiles.
+
+// Verificamos si es el mismo modulo.
+
+// Desabilitamos los modulos.
+
+/**
+     * Cancelamos el formulario.
+     */
+
+// Despachamos el cancelado.
+
+// CONCATENATED MODULE: ./src/Containers/Profiles/ProfilesForm.jsx
+
+// CONCATENATED MODULE: ./src/Containers/Profiles/js/ProfilesListviewUI.js
+
+/**
+ * Controlador
+ */
+
+/**
+   * Columnas del reporte.
+   */
+
+// Estado inicial de la aplicación
+
+// Filtro
+
+// Tabla de los perfiles
+
+// Perfiles buscados
+
+/**
+   * Busca los perfiles aplicando el filtro.
+   */
+
+/**
+     * Obtiene todos los perfiles.
+     *
+     * @return { Promise<Boolean> }
+     */
+
+// Generamos el listado.
+
+/**
+     * Busca los perfiles.
+     */
+
+// Data del filtro
+
+// Generamos el listado
+
+/**
+     * Genera los datos del listado.
+     */
+
+// Indicamos los perfiles a mostrar.
+
+/**
+     * Detecta los cambios de los filtros.
+     */
+
+/**
+     * Cambia la pantalla de perfiles.
+     */
+
+/**
+     * Pregunta si acepta la eliminaciòn
+     */
+
+/**
+     * Elimina un rol.
+     */
+
+/**
+     * Edita un perfil.
+     */
+
+/**
+     * Visualiza un usuario.
+     */
+
+// CONCATENATED MODULE: ./src/Containers/Profiles/ProfilesListview.jsx
+
+/**
+     *  Renderiza las acciones de los perfiles.
+     */
+
+/**
+     * Renderizador de la pantalla de inicio.
+     */
+
+// CONCATENATED MODULE: ./src/Services/FoodsService.js
+
+/**
+ * Modelo de plato
+ */
+
+/**
+   * Obtiene todos los plato.
+   */
+
+/**
+   * Añade un nuevo plato.
+   */
+
+/**
+   * Actualiza un plato.
+   */
+
+/**
+   * Elimina un plato.
+   */
+
+// CONCATENATED MODULE: ./src/Containers/Foods/js/FoodsFormUI.js
+
+// Servicios / Acciones
+
+// Nombre del plato.
+
+// Descripción del plato
+
+// con Hooks!
+
+// const handleChange = event => {
+
+//   try {
+
+//     const { name, value } = event.target
+
+//     // Indicamos cual es el nuevo valor
+
+//     formData[name].value = value
+
+//     // Actualizamos el valor
+
+//     setFormData(formData)
+
+//     return true
+
+//   } catch (error) {
+
+//     onError(error)
+
+//     return false
+
+//   }
+
+// }
+
+/**
+     * Crea un plato
+     */
+
+/**
+     * Actualiza un plato.
+     */
+
+// Solicitamos la creaciòn del plato.
+
+// Validamos si hay un plato en ediciòn.
+
+// Detectamos si hay plato para editar.
+
+// Alias del estado.
+
+// ID Foodo
+
+// Insertamos los datos del plato
+
+// CONCATENATED MODULE: ./src/Containers/Foods/FoodsForm.jsx
+
+/**
+     * Renderizador del contenedor.
+     */
+
+// CONCATENATED MODULE: ./src/Containers/Foods/js/FoodsListviewUI.js
+
+// Buscador.
+
+// Platos
+
+// Tabla de los platos
+
+// Platos buscados
+
+// Tipo de plato
+
+/**
+   * Busca los platos aplicando el filtro.
+   */
+
+// Recorremos los platos.
+
+// Validamos si hay un plato seleccionado
+
+/**
+     * Actualiza las columnas.
+     */
+
+/**
+     * Obtiene todos los platos.
+     */
+
+// Asignamos los platos al estado
+
+/**
+     * Busca los platos.
+     */
+
+// Alias del filtro
+
+// Buscamos los platos.
+
+// Filtramos los platos
+
+// Indicamos los platos a mostrar.
+
+/**
+     * Cambia la pantalla de platos.
+     */
+
+// Obtenemos los platos restantes.
+
+/**
+     * Edita un plato.
+     */
+
+// Indicamos que plato se editara.
+
+// CONCATENATED MODULE: ./src/Containers/Foods/FoodsListview.jsx
+
+/**
+     * Renderiza las acciones de los perfiles.
+     */
+
+// CONCATENATED MODULE: ./src/Services/ReportsService.js
+
+// Respuesta
+
+//return await Requests.get(`${Gateway}/audit${query}`);
+
+// CONCATENATED MODULE: ./src/Services/CommerceService.js
+
+//  Utilidades
+
+// CONCATENATED MODULE: ./src/Services/BranchOfficeService.js
+
+// getMonth() is zero-based
+
+// CONCATENATED MODULE: ./src/Containers/Reports/AcceptedStatistics/js/AcceptedStatisticsUI.js
+
+// Dependencias.
+
+// Modelo
+
+// Registros de estadisticas
+
+// Busqueda de estadisticas
+
+// Selectores de Comercios y Sucursales
+
+// Tabla de Estadisticas
+
+/**
+   * Columnas de la tabla de Estadisticas.
+   */
+
+/**
+     * Obtiene todas las estadisticas
+     */
+
+// Obtenemos los rangos de fechas a buscar.
+
+// Filtros de las busquedas.
+
+/**
+     * Genera la estructura del listado
+     */
+
+// Validamos los datos
+
+// Recorremos los resultados.
+
+/**
+     * Busca los usuarios aplicando el filtro.
+     */
+
+// Recorremos las estadisticas.
+
+/**
+     * Obtiene todos los comercios
+     */
+
+// Actualizamos los comercios de los filtros.
+
+/**
+     * Obtiene todas las sucursales
+     */
+
+/**
+     * Actualiza los filtros
+     */
+
+// CONCATENATED MODULE: ./src/Containers/Reports/AcceptedStatistics/AcceptedStatistics.jsx
+
+/**
+ * Contenedor de la pantalla.
+ */
+
+// CONCATENATED MODULE: ./src/Components/PrivateRoute/PrivateRoute.jsx
+
+/**
+ * Componente de rutas privadas
+ */
+
+// CONCATENATED MODULE: ./src/Containers/Dashboard/Dashboard.jsx
+
+// CONCATENATED MODULE: ./src/index.jsx
+
+/**
+ * Dependencias
+ */
+
+/**
+ * Resources
+ */
+
+/**
+ * Rutas.
+ */
+
+/**
+ * Renderiza la aplicación.
+ */

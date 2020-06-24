@@ -1,0 +1,131 @@
+// Iconos de acciones de ABMs
+.icon-action {
+  width: 20px;
+  height: 20px;
+  margin-right: 5%;
+  margin-left: 5%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-position: center;
+}
+
+.icon-action-md {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-action-export {
+  @extend .icon-action;
+  background-image: url("/assets/img/icons/report.svg");
+
+  &:hover {
+    background-color: $color-lightgray;
+    border-radius: 3px;
+  }
+}
+
+.icon-action-garbage {
+  @extend .icon-action;
+  background-image: url("/assets/img/icons/garbage.svg");
+
+  &:hover {
+    background-color: $color-lightgray;
+    border-radius: 3px;
+  }
+}
+
+.icon-action-edit {
+  @extend .icon-action;
+  background-image: url("/assets/img/icons/edit.svg");
+
+  &:hover {
+    background-color: $color-lightgray;
+    border-radius: 3px;
+  }
+}
+
+.icon-action-view {
+  @extend .icon-action;
+  background-image: url("/assets/img/icons/view.svg");
+
+  &:hover {
+    background-color: $color-lightgray;
+    border-radius: 3px;
+  }
+}
+
+.icon-action-key {
+  @extend .icon-action;
+  background-image: url("/assets/img/icons/key.svg");
+
+  &:hover {
+    background-color: $color-lightgray;
+    border-radius: 3px;
+  }
+}
+
+.icon-action-check {
+  @extend .icon-action;
+  background-image: url("/assets/img/icons/check.svg");
+  display: inline-block;
+}
+
+.icon-action-download {
+  @extend .icon-action;
+  background-image: url("/assets/img/icons/download.svg");
+  display: inline-block;
+
+  &:hover {
+    background-color: $color-lightgray;
+    border-radius: 3px;
+  }
+}
+
+.icon-action-upload {
+  @extend .icon-action;
+  background-image: url("/assets/img/icons/upload.svg");
+  display: inline-block;
+
+  &:hover {
+    background-color: $color-lightgray;
+    border-radius: 3px;
+  }
+}
+
+.icon-action-qr {
+  @extend .icon-action;
+  background-image: url("/assets/img/icons/qr.svg");
+
+  &:hover {
+    background-color: $color-lightgray;
+    border-radius: 3px;
+  }
+}
+
+.icon-action-menu {
+  @extend .clickable;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-position: center;
+  background-image: url("/assets/img/icons/menu.svg");
+}
+
+.icon-action-upload-md {
+  @extend .clickable;
+  @extend .icon-action-upload;
+  @extend .icon-action-md;
+}
+
+.loading {
+  width: 150px;
+  height: 150px;
+  margin-right: 40%;
+  margin-left: 40%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  background-position: center;
+  background-image: url("/assets/img/loading.svg");
+  background-size: 50%;
+}
