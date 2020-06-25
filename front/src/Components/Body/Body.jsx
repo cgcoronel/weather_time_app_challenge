@@ -1,5 +1,6 @@
 // Dependencias
 import React from 'react'
+import City from './Components/City'
 
 // Estilo
 import './scss/styles.scss'
@@ -7,46 +8,30 @@ import './scss/styles.scss'
 /**
  * Renderizador de la cabecera.
  */
-const Body = () => (
-  <div className="card mt-5">
-    <div className="card-body">
-      <h2 className="card-title text-center mb-5">Agrega las citas aqui</h2>
-      <form>
-        <div className="form-group row">
-          <label className="col-sm-4 col-lg-2 col-form-label">Nombre Mascota</label>
-          <div className="col-sm-8 col-lg-10">
-            <input type="text" className="form-control" placeholder="Nombre Mascota" />
-          </div>
-        </div>
-        <div className="form-group row">
-          <label className="col-sm-4 col-lg-2 col-form-label">Nombre Dueño</label>
-          <div className="col-sm-8 col-lg-10">
-            <input type="text" className="form-control" placeholder="Nombre Dueño de la Mascota" />
-          </div>
-        </div>
+const Body = () => {
+  const cities = ['Buenos Aires', 'Cordoba', 'Los Angeles', 'Mar del Plata', 'New York', 'Detroit']
+  const selected = []
 
-        <div className="form-group row">
-          <label className="col-sm-4 col-lg-2 col-form-label">Fecha</label>
-          <div className="col-sm-8 col-lg-4  mb-4 mb-lg-0"></div>
+  // Obtengo 5 ciudades al azar
+  ;[0, 1, 2, 3, 4].map(value => {
+    const s = getRandomNotExist(selected)
 
-          <label className="col-sm-4 col-lg-2 col-form-label">Hora</label>
-          <div className="col-sm-8 col-lg-4"></div>
-        </div>
+    selected.push(s)
+  })
 
-        <div className="form-group row">
-          <label className="col-sm-4 col-lg-2 col-form-label">Sintomas</label>
-          <div className="col-sm-8 col-lg-10"></div>
-        </div>
-        <div className="form-group row justify-content-end">
-          <div className="col-sm-3">
-            <button type="submit" className="btn btn-success w-100">
-              Agregar
-            </button>
-          </div>
-        </div>
-      </form>
+  return (
+    <div className="others-cities">
+      {selected.map(i => (
+        <City city={cities[i]} />
+      ))}
     </div>
-  </div>
-)
+  )
+}
+
+function getRandomNotExist(exist) {
+  const random = Math.floor(Math.random() * 5)
+
+  return exist.includes(random) ? getRandomNotExist(exist) : random
+}
 
 export default Body

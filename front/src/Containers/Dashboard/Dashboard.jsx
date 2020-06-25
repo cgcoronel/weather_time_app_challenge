@@ -6,7 +6,7 @@ import Header from '../../Components/Header/Header'
 import Aside from '../../Components/Aside/Aside'
 import Body from '../../Components/Body/Body'
 
-// Serfvicios
+// Servicios
 import weatherService from '../../Services/weather'
 
 // Estilos
