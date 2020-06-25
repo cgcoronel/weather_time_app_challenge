@@ -3,7 +3,7 @@
     "start:dev": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.dev.js --color --watch",
     "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js -p",
     "docker:build": "docker build -t app .",
-    "docker:start": "docker run -p 8080:8080 -name app -d app"
+    "docker:start": "docker run -p 8080:80  --name app -d app"
   },
   "dependencies": {
     "autodll-webpack-plugin": "^0.4.2",
