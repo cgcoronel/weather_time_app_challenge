@@ -99,7 +99,9 @@
  *
  */
 
-// EXTERNAL MODULE: ./src/Components/Body/scss/styles.scss
+// CONCATENATED MODULE: ./src/Utils/Constants.js
+
+// Gateway
 
 // CONCATENATED MODULE: ./src/Services/weather.js
 
@@ -123,11 +125,15 @@
    * Obtiene la locacion actual y el clima extendido.
    */
 
+// CONCATENATED MODULE: ./src/Components/Body/Components/City.jsx
+
+// Servicios
+
+// EXTERNAL MODULE: ./src/Containers/Dashboard/scss/styles.scss
+
 // CONCATENATED MODULE: ./src/Containers/Dashboard/Dashboard.jsx
 
 // Componentes
-
-// Serfvicios
 
 // Estilos
 
