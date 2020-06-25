@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  api:
+    container_name: api
+    build:
+      context: api-back
+      dockerfile: Dockerfile
+    networks:
+      - weather
+    ports:
+      - "3977:3977"
+    volumes:
+      - ./log/:/opt/app/log
+
+  nginx:
+    container_name: nginx
+    build:
+      context: front
+      dockerfile: Dockerfile
+    networks:
+      - weather
+    ports:
+      - "80:80"
+
+networks:
+  weather:
+    driver: "bridge"
