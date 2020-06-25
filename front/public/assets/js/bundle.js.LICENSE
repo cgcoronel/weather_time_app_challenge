@@ -83,7 +83,7 @@
 /**
  * Obtiene una fecha en formato legible
  *
- * @param date                en formato YYYYMMDD o YYYYMMDDHHMMSS (numero)
+ * @param date                en formato YYYY-MM-DD o YYYY-MM-DD HH:MM:SS
  * @param full                true si incluye la hora (default false)
  *
  * @return                    Día
