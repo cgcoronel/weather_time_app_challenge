@@ -9,4 +9,16 @@
     background-color: #ffffff8f;
     border-radius: 2.25rem;
   }
+
+  .loading {
+    width: 150px;
+    height: 150px;
+    margin-right: 40%;
+    margin-left: 40%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-position: center;
+    background-image: url('/assets/img/loading.svg');
+    background-size: 50%;
+  }
 }

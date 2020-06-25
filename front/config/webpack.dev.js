@@ -132,16 +132,7 @@ module.exports = {
       inject: true,
       filename: '[name]_[hash].js',
       entry: {
-        vendor: [
-          'react',
-          'react-dom',
-          'react-router-dom',
-          'redux',
-          'redux-persist',
-          'redux-devtools-extension',
-          'redux-logger',
-          'connected-react-router',
-        ],
+        vendor: ['react', 'react-dom'],
       },
     }),
 

@@ -1,8 +1,8 @@
 /**
  * Utilidades
  */
-import Requests from '../Utils/Requests'
 import { api } from '../Utils/Constants'
+import axios from 'axios'
 
 /**
  * Weather Services
@@ -13,8 +13,10 @@ const weather = {
    */
   getLocation: async () => {
     try {
-      return await Requests.get(`${api}/location`)
+      const { data } = await axios.get(`${api}/location`)
+      return data
     } catch (error) {
+      console.log(error)
       return false
     }
   },
@@ -25,8 +27,12 @@ const weather = {
   getCurrent: async data => {
     try {
       const params = ''
-      return await Requests.get(`${api}/current/${params}`)
+
+      const { data } = await axios.get(`${api}/current`)
+
+      return data
     } catch (error) {
+      console.log(error)
       return false
     }
   },
@@ -37,8 +43,12 @@ const weather = {
   getForecast: async data => {
     try {
       const params = ''
-      return await Requests.get(`${api}/forecast/${params}`)
+
+      const { data } = await axios.get(`${api}/forecast`)
+
+      return data
     } catch (error) {
+      console.log(error)
       return false
     }
   },

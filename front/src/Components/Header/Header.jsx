@@ -34,14 +34,14 @@ const Header = ({ current }) => {
 
         <div className="col-md-5">
           <div className="card-body">
-            <p className="card-text">Sensacion térmica {feels_like}°</p>
+            <p className="card-text">Sensación térmica {feels_like}°</p>
             <p className="card-text">Mín {temp_min}°</p>
             <p className="card-text">Máx {temp_max}°</p>
           </div>
         </div>
         <div className="col-md-5">
           <div className="card-body">
-            <p className="card-text">Presion {pressure} hPa</p>
+            <p className="card-text">Presión {pressure} hPa</p>
             <p className="card-text">Humedad {humidity}%</p>
             <p className="card-text">Viento {weather.wind.speed} km</p>
           </div>

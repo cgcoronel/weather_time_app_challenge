@@ -40,7 +40,7 @@ function getNextDays(list) {
     }
   })
 
-  return days
+  return days.filter(day => day.length !== 0)
 }
 
 export default Aside

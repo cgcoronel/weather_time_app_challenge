@@ -16,25 +16,8 @@ import './scss/styles.scss'
  * Contenedor de la pantalla de login
  */
 const Dashboard = () => {
-  const [current, setCurrent] = useState({
-    cty: '',
-    weather: {
-      main: {},
-      wind: {},
-      weather: [
-        {
-          description: '',
-        },
-      ],
-    },
-  })
-
-  const [forecast, setForecast] = useState({
-    cty: '',
-    weather: {
-      list: [],
-    },
-  })
+  const [current, setCurrent] = useState(null)
+  const [forecast, setForecast] = useState(null)
 
   const getCurrent = async () => {
     const data = await weatherService.getCurrent('')
@@ -53,10 +36,11 @@ const Dashboard = () => {
 
   return (
     <div className="container" id="dashboard">
-      <Header current={current} />
+      {(current === null && <div className="loading"></div>) || <Header current={current} />}
+
       <div className="row">
         <div className="col-md-6">
-          <Aside forecast={forecast} />
+          {(forecast === null && <div className="loading"></div>) || <Aside forecast={forecast} />}
         </div>
         <div className="col-md-6">
           <Body />
