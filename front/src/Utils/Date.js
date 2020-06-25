@@ -44,7 +44,7 @@ export function getNowYYYMMDD() {
 /**
  * Obtiene una fecha en formato legible
  *
- * @param date                en formato YYYYMMDD o YYYYMMDDHHMMSS (numero)
+ * @param date                en formato YYYY-MM-DD o YYYY-MM-DD HH:MM:SS
  * @param full                true si incluye la hora (default false)
  *
  * @return                    Día
@@ -59,10 +59,9 @@ export function getDay(date) {
     } else {
       _date = date.toString()
     }
-
     const year = _date.substring(0, 4)
-    const month = _date.substring(4, 6)
-    const day = _date.substring(6, 8)
+    const month = _date.substring(5, 7)
+    const day = _date.substring(8, 10)
 
     const newDate = new Date(year, month - 1, day)
 

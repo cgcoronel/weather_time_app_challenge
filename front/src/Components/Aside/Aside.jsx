@@ -38,9 +38,7 @@ function getNextDays(list) {
       days[day] = []
     }
 
-    if (day !== now && (time == '12' || time == '18' || time == '21')) {
-      console.log(day, now, day !== now)
-
+    if (day !== now && (time == '15' || time == '18' || time == '21')) {
       days[day].push(value)
     }
   })

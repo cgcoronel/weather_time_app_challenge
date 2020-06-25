@@ -4,6 +4,7 @@ import Day from './Day'
 
 const Days = ({ days }) => (
   <form>
+    {console.log(days)}
     <div className="form-group row moment-of-day">
       <div className="col-sm-4 col-lg-4"></div>
 
@@ -14,8 +15,8 @@ const Days = ({ days }) => (
       <div className="col-sm-2 col-lg-2">Noche</div>
     </div>
 
-    {days.map((day, date) => (
-      <Day day={day} date={date} />
+    {days.map(day => (
+      <Day day={day} />
     ))}
   </form>
 )
