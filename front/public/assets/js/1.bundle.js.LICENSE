@@ -72,33 +72,226 @@
 
 /* 14 */
 
+/*global toString:true*/
+
+// utils is a library of generic helper functions non-specific to axios
+
+/**
+ * Determine if a value is an Array
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Array, otherwise false
+ */
+
+/**
+ * Determine if a value is undefined
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if the value is undefined, otherwise false
+ */
+
+/**
+ * Determine if a value is a Buffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Buffer, otherwise false
+ */
+
+/**
+ * Determine if a value is an Object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an Object, otherwise false
+ */
+
+/**
+ * Determine if a value is a Date
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Date, otherwise false
+ */
+
+/**
+ * Determine if a value is a Function
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Function, otherwise false
+ */
+
+/**
+ * Determine if a value is a Stream
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Stream, otherwise false
+ */
+
+/**
+ * Iterate over an Array or an Object invoking a function for each item.
+ *
+ * If `obj` is an Array callback will be called passing
+ * the value, index, and complete array for each item.
+ *
+ * If 'obj' is an Object callback will be called passing
+ * the value, key, and complete object for each property.
+ *
+ * @param {Object|Array} obj The object to iterate
+ * @param {Function} fn The callback to invoke for each item
+ */
+
+// Don't bother if no value provided
+
+// Force an array if not already something iterable
+
+/*eslint no-param-reassign:0*/
+
+// Iterate over array values
+
+// Iterate over object keys
+
+/**
+ * Accepts varargs expecting each argument to be an object, then
+ * immutably merges the properties of each object and returns result.
+ *
+ * When multiple objects contain the same key the later object in
+ * the arguments list will take precedence.
+ *
+ * Example:
+ *
+ * ```js
+ * var result = merge({foo: 123}, {foo: 456});
+ * console.log(result.foo); // outputs 456
+ * ```
+ *
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+
+/**
+ * Determine if a value is an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an ArrayBuffer, otherwise false
+ */
+
+/**
+ * Determine if a value is a FormData
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is an FormData, otherwise false
+ */
+
+/**
+ * Determine if a value is a view on an ArrayBuffer
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
+ */
+
+/**
+ * Determine if a value is a String
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a String, otherwise false
+ */
+
+/**
+ * Determine if a value is a Number
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Number, otherwise false
+ */
+
+/**
+ * Determine if a value is a File
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a File, otherwise false
+ */
+
+/**
+ * Determine if a value is a Blob
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a Blob, otherwise false
+ */
+
+/**
+ * Determine if a value is a URLSearchParams object
+ *
+ * @param {Object} val The value to test
+ * @returns {boolean} True if value is a URLSearchParams object, otherwise false
+ */
+
+/**
+ * Trim excess whitespace off the beginning and end of a string
+ *
+ * @param {String} str The String to trim
+ * @returns {String} The String freed of excess whitespace
+ */
+
+/**
+ * Determine if we're running in a standard browser environment
+ *
+ * This allows axios to run in a web worker, and react-native.
+ * Both environments support XMLHttpRequest, but not fully standard globals.
+ *
+ * web workers:
+ *  typeof window -> undefined
+ *  typeof document -> undefined
+ *
+ * react-native:
+ *  navigator.product -> 'ReactNative'
+ * nativescript
+ *  navigator.product -> 'NativeScript' or 'NS'
+ */
+
+/**
+ * Function equal to merge with the difference being that no reference
+ * to original objects is kept.
+ *
+ * @see merge
+ * @param {Object} obj1 Object to merge
+ * @returns {Object} Result of all merge properties
+ */
+
+/**
+ * Extends object a by mutably adding to it the properties of object b.
+ *
+ * @param {Object} a The object to be extended
+ * @param {Object} b The object to copy properties from
+ * @param {Object} thisArg The object to bind function to
+ * @return {Object} The resulting value of object a
+ */
+
 /* 15 */
 
 /* 16 */
 
-// to indexed object, toObject with fallback for non-array-like ES3 strings
-
 /* 17 */
 
-// eslint-disable-next-line no-useless-call
+// to indexed object, toObject with fallback for non-array-like ES3 strings
 
 /* 18 */
 
-// optional / simple context binding
+// eslint-disable-next-line no-useless-call
 
 /* 19 */
 
-/* 20 */
+// optional / simple context binding
 
-// 7.1.4 ToInteger
+/* 20 */
 
 /* 21 */
 
+// 7.1.4 ToInteger
+
 /* 22 */
+
+/* 23 */
 
 // most Object methods by ES6 should accept primitives
 
-/* 23 */
+/* 24 */
 
 // 0 -> Array#forEach
 
@@ -126,13 +319,13 @@
 
 // every
 
-/* 24 */
-
 /* 25 */
+
+/* 26 */
 
 // 7.2.1 RequireObjectCoercible(argument)
 
-/* 26 */
+/* 27 */
 
 // eslint-disable-next-line no-undef
 
@@ -162,7 +355,7 @@
 
 // https://github.com/websockets/ws/pull/645
 
-/* 27 */
+/* 28 */
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
 
@@ -170,7 +363,7 @@
 
 // and the second argument - flag - preferred type is a string
 
-/* 28 */
+/* 29 */
 
 // object ID
 
@@ -182,19 +375,19 @@
 
 // add missing metadata
 
-/* 29 */
-
 /* 30 */
 
 /* 31 */
 
 /* 32 */
 
-// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-
 /* 33 */
 
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+
 /* 34 */
+
+/* 35 */
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 
@@ -208,19 +401,17 @@
 
 // add "__proto__" for Object.getPrototypeOf polyfill
 
-/* 35 */
+/* 36 */
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
 
-/* 36 */
+/* 37 */
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 
-/* 37 */
+/* 38 */
 
 // 22.1.3.31 Array.prototype[@@unscopables]
-
-/* 38 */
 
 /* 39 */
 
@@ -235,6 +426,8 @@
 /* 44 */
 
 /* 45 */
+
+/* 46 */
 
 /*
   MIT License http://www.opensource.org/licenses/mit-license.php
@@ -257,7 +450,7 @@
 
 // I hope this will never occur (Hey this way we have smaller bundles)
 
-/* 46 */
+/* 47 */
 
 /*
 	MIT License http://www.opensource.org/licenses/mit-license.php
@@ -312,25 +505,25 @@
 
 // http://stackoverflow.com/a/26603875
 
-/* 47 */
+/* 48 */
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
 
 // eslint-disable-next-line no-prototype-builtins
 
-/* 48 */
-
 /* 49 */
-
-// getting tag from 19.1.3.6 Object.prototype.toString()
 
 /* 50 */
 
-// 7.3.20 SpeciesConstructor(O, defaultConstructor)
+// getting tag from 19.1.3.6 Object.prototype.toString()
 
 /* 51 */
 
+// 7.3.20 SpeciesConstructor(O, defaultConstructor)
+
 /* 52 */
+
+/* 53 */
 
 // false -> Array#indexOf
 
@@ -342,27 +535,27 @@
 
 // Array#indexOf ignores holes, Array#includes - not
 
-/* 53 */
-
 /* 54 */
-
-// 7.2.2 IsArray(argument)
 
 /* 55 */
 
-// eslint-disable-next-line no-throw-literal
+// 7.2.2 IsArray(argument)
 
 /* 56 */
 
-// 21.2.5.3 get RegExp.prototype.flags
+// eslint-disable-next-line no-throw-literal
 
 /* 57 */
+
+// 21.2.5.3 get RegExp.prototype.flags
+
+/* 58 */
 
 // `RegExpExec` abstract operation
 
 // https://tc39.github.io/ecma262/#sec-regexpexec
 
-/* 58 */
+/* 59 */
 
 // #replace needs built-in support for named groups.
 
@@ -384,13 +577,13 @@
 
 // 21.2.5.9 RegExp.prototype[@@search](string)
 
-/* 59 */
+/* 60 */
 
 // fast case for arrays with default iterator
 
-/* 60 */
-
 /* 61 */
+
+/* 62 */
 
 // V8 ~ Chromium 42- fails only with 5+ elements
 
@@ -400,8 +593,6 @@
 
 // create collection constructor
 
-/* 62 */
-
 /* 63 */
 
 /* 64 */
@@ -410,11 +601,15 @@
 
 /* 66 */
 
-// IE 8- don't enum bug keys
-
 /* 67 */
 
 /* 68 */
+
+// IE 8- don't enum bug keys
+
+/* 69 */
+
+/* 70 */
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 
@@ -422,27 +617,27 @@
 
 // eslint-disable-line
 
-/* 69 */
-
-/* 70 */
-
 /* 71 */
 
 /* 72 */
 
+/* 73 */
+
+/* 74 */
+
 // 20.2.2.28 Math.sign(x)
 
-/* 73 */
+/* 75 */
 
 // 20.2.2.14 Math.expm1(x)
 
-/* 74 */
+/* 76 */
 
 // true  -> String#at
 
 // false -> String#codePointAt
 
-/* 75 */
+/* 77 */
 
 // Fix native
 
@@ -456,31 +651,31 @@
 
 // Plug for library
 
-/* 76 */
+/* 78 */
 
 // helper for String#{startsWith, endsWith, includes}
 
-/* 77 */
-
-// 7.2.8 IsRegExp(argument)
-
-/* 78 */
-
 /* 79 */
 
-// check on default Array iterator
+// 7.2.8 IsRegExp(argument)
 
 /* 80 */
 
 /* 81 */
 
+// check on default Array iterator
+
 /* 82 */
+
+/* 83 */
+
+/* 84 */
 
 // 22.1.3.6 Array.prototype.fill(value, start = 0, end = this.length)
 
 /* , start = 0, end = @length */
 
-/* 83 */
+/* 85 */
 
 // 22.1.3.4 Array.prototype.entries()
 
@@ -496,7 +691,7 @@
 
 // argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
 
-/* 84 */
+/* 86 */
 
 // Fix browsers whose `exec` methods don't consistently return `undefined`
 
@@ -504,13 +699,13 @@
 
 // eslint-disable-next-line no-loop-func
 
-/* 85 */
+/* 87 */
 
 // `AdvanceStringIndex` abstract operation
 
 // https://tc39.github.io/ecma262/#sec-advancestringindex
 
-/* 86 */
+/* 88 */
 
 // Node.js 0.9+ & IE10+ has setImmediate, otherwise:
 
@@ -518,17 +713,13 @@
 
 // Node.js 0.8-
 
-/* 87 */
+/* 89 */
 
 // IEEE754 conversions based on https://github.com/feross/ieee754
 
 // iOS Safari 7.x bug
 
 /* , littleEndian */
-
-/* 88 */
-
-/* 89 */
 
 /* 90 */
 
@@ -540,33 +731,33 @@
 
 /* 94 */
 
-// Don't enum bug & hidden keys
-
 /* 95 */
+
+// Don't enum bug & hidden keys
 
 /* 96 */
 
+/* 97 */
+
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 
-/* 97 */
+/* 98 */
 
 // 19.1.2.1 Object.assign(target, source, ...)
 
 // should work with symbols and should have deterministic property order (V8 bug)
 
-/* 98 */
+/* 99 */
 
 // 7.2.9 SameValue(x, y)
 
-/* 99 */
+/* 100 */
 
 /* , ...args */
 
-/* 100 */
+/* 101 */
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
-
-/* 101 */
 
 /* 102 */
 
@@ -574,29 +765,31 @@
 
 /* 104 */
 
-// 20.1.2.3 Number.isInteger(number)
-
 /* 105 */
 
-// 20.2.2.20 Math.log1p(x)
+// 20.1.2.3 Number.isInteger(number)
 
 /* 106 */
 
-// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+// 20.2.2.20 Math.log1p(x)
 
 /* 107 */
+
+// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+
+/* 108 */
 
 // call something on iterator step with safe closing on error
 
 // 7.4.6 IteratorClose(iterator, completion)
 
-/* 108 */
+/* 109 */
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
 
-/* 109 */
-
 /* 110 */
+
+/* 111 */
 
 // 22.1.3.3 Array.prototype.copyWithin(target, start, end = this.length)
 
@@ -604,15 +797,15 @@
 
 /* = 0, end = @length */
 
-/* 111 */
-
 /* 112 */
 
 /* 113 */
 
+/* 114 */
+
 // 21.2.5.3 get RegExp.prototype.flags()
 
-/* 114 */
+/* 115 */
 
 // correct subclassing with @@species support
 
@@ -658,13 +851,13 @@
 
 // 25.4.4.4 Promise.race(iterable)
 
-/* 115 */
+/* 116 */
 
 // 25.4.1.5 NewPromiseCapability(C)
 
-/* 116 */
-
 /* 117 */
+
+/* 118 */
 
 // fast case
 
@@ -726,7 +919,7 @@
 
 // add [@@species], 23.1.2.2, 23.2.2.2
 
-/* 118 */
+/* 119 */
 
 // collection id
 
@@ -740,19 +933,17 @@
 
 // 23.4.3.4 WeakSet.prototype.has(value)
 
-/* 119 */
+/* 120 */
 
 // https://tc39.github.io/ecma262/#sec-toindex
 
-/* 120 */
+/* 121 */
 
 // all object keys, includes non-enumerable and symbols
 
-/* 121 */
+/* 122 */
 
 // https://github.com/tc39/proposal-string-pad-start-end
-
-/* 122 */
 
 /* 123 */
 
@@ -766,9 +957,133 @@
 
 /* 128 */
 
+/**
+ * Build a URL by appending params to the end
+ *
+ * @param {string} url The base of the url (e.g., http://www.google.com)
+ * @param {object} [params] The params to be appended
+ * @returns {string} The formatted url
+ */
+
 /* 129 */
 
 /* 130 */
+
+/* WEBPACK VAR INJECTION */
+
+// For browsers use XHR adapter
+
+/* Ignore */
+
+/**
+   * A timeout in milliseconds to abort a request. If set to 0 (default) a
+   * timeout is not created.
+   */
+
+/* 131 */
+
+// HTTP basic authentication
+
+// Add xsrf header
+
+// This is only done if running in a standard browser environment.
+
+// Specifically not if we're in a web worker, or react-native.
+
+// Set the request timeout in MS
+
+// Listen for ready state
+
+// The request errored out and we didn't get a response, this will be
+
+// handled by onerror instead
+
+// With one exception: request that using file: protocol, most browsers
+
+// will return status as 0 even though it's a successful request
+
+// Prepare the response
+
+// Clean up request
+
+// Handle browser request cancellation (as opposed to a manual cancellation)
+
+// Handle low level network errors
+
+// Real errors are hidden from us by the browser
+
+// onerror should only fire if it's a network error
+
+// Handle timeout
+
+// Add headers to the request
+
+// Add responseType to request if needed
+
+// Remove Content-Type if data is undefined
+
+// Otherwise add header to the request
+
+// Add withCredentials to request if needed
+
+// Expected DOMException thrown by browsers not compatible XMLHttpRequest Level 2.
+
+// But, this can be suppressed for 'json' type as it can be parsed by default 'transformResponse' function.
+
+// Handle progress if needed
+
+// Not all browsers support upload events
+
+// Handle cancellation
+
+// Send the request
+
+/* 132 */
+
+/**
+ * Create an Error with the specified message, config, error code, request and response.
+ *
+ * @param {string} message The error message.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The created error.
+ */
+
+/* 133 */
+
+/**
+ * Config-specific merge-function which creates a new config-object
+ * by merging two configuration objects together.
+ *
+ * @param {Object} config1
+ * @param {Object} config2
+ * @returns {Object} New object resulting from merging config2 to config1
+ */
+
+// eslint-disable-next-line no-param-reassign
+
+/* 134 */
+
+/**
+ * A `Cancel` is an object that is thrown when an operation is canceled.
+ *
+ * @class
+ * @param {string=} message The message.
+ */
+
+/* 135 */
+
+/* 136 */
+
+/* 137 */
+
+/* 138 */
+
+/* 139 */
+
+/* 140 */
 
 // ECMAScript 6 symbols shim
 
@@ -814,97 +1129,97 @@
 
 // 24.3.3 JSON[@@toStringTag]
 
-/* 131 */
-
-/* 132 */
-
-// all enumerable object keys, includes symbols
-
-/* 133 */
-
-/* 134 */
-
-// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-
-/* 135 */
-
-// 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
-
-/* 136 */
-
-/* 137 */
-
-// 19.1.2.9 Object.getPrototypeOf(O)
-
-/* 138 */
-
-// 19.1.2.14 Object.keys(O)
-
-/* 139 */
-
-/* 140 */
-
-// 19.1.2.5 Object.freeze(O)
-
 /* 141 */
-
-// 19.1.2.17 Object.seal(O)
 
 /* 142 */
 
-// 19.1.2.15 Object.preventExtensions(O)
+// all enumerable object keys, includes symbols
 
 /* 143 */
 
-// 19.1.2.12 Object.isFrozen(O)
-
 /* 144 */
 
-// 19.1.2.13 Object.isSealed(O)
+// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
 
 /* 145 */
 
-// 19.1.2.11 Object.isExtensible(O)
+// 19.1.2.3 / 15.2.3.7 Object.defineProperties(O, Properties)
 
 /* 146 */
 
-// 19.1.3.1 Object.assign(target, source)
-
 /* 147 */
 
-// 19.1.3.10 Object.is(value1, value2)
+// 19.1.2.9 Object.getPrototypeOf(O)
 
 /* 148 */
 
-// 19.1.3.19 Object.setPrototypeOf(O, proto)
+// 19.1.2.14 Object.keys(O)
 
 /* 149 */
 
-// 19.1.3.6 Object.prototype.toString()
-
 /* 150 */
 
-// 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
+// 19.1.2.5 Object.freeze(O)
 
 /* 151 */
 
-// 19.2.4.2 name
+// 19.1.2.17 Object.seal(O)
 
 /* 152 */
+
+// 19.1.2.15 Object.preventExtensions(O)
+
+/* 153 */
+
+// 19.1.2.12 Object.isFrozen(O)
+
+/* 154 */
+
+// 19.1.2.13 Object.isSealed(O)
+
+/* 155 */
+
+// 19.1.2.11 Object.isExtensible(O)
+
+/* 156 */
+
+// 19.1.3.1 Object.assign(target, source)
+
+/* 157 */
+
+// 19.1.3.10 Object.is(value1, value2)
+
+/* 158 */
+
+// 19.1.3.19 Object.setPrototypeOf(O, proto)
+
+/* 159 */
+
+// 19.1.3.6 Object.prototype.toString()
+
+/* 160 */
+
+// 19.2.3.2 / 15.3.4.5 Function.prototype.bind(thisArg, args...)
+
+/* 161 */
+
+// 19.2.4.2 name
+
+/* 162 */
 
 // 19.2.3.6 Function.prototype[@@hasInstance](V)
 
 // for environment w/o native `@@hasInstance` logic enough `instanceof`, but add this:
 
-/* 153 */
+/* 163 */
 
 // 18.2.5 parseInt(string, radix)
 
-/* 154 */
+/* 164 */
 
 // 18.2.4 parseFloat(string)
 
-/* 155 */
+/* 165 */
 
 // Number('+0x1') should be NaN, old V8 fix
 
@@ -918,239 +1233,239 @@
 
 // ES3:
 
-/* 156 */
+/* 166 */
 
 // V8 ~ Android 4.3-
 
-/* 157 */
+/* 167 */
 
 // IE7-
 
-/* 158 */
+/* 168 */
 
 // 20.1.2.1 Number.EPSILON
 
-/* 159 */
+/* 169 */
 
 // 20.1.2.2 Number.isFinite(number)
 
-/* 160 */
+/* 170 */
 
-/* 161 */
+/* 171 */
 
 // 20.1.2.4 Number.isNaN(number)
 
-/* 162 */
+/* 172 */
 
 // 20.1.2.5 Number.isSafeInteger(number)
 
-/* 163 */
+/* 173 */
 
 // 20.1.2.6 Number.MAX_SAFE_INTEGER
 
-/* 164 */
+/* 174 */
 
 // 20.1.2.10 Number.MIN_SAFE_INTEGER
 
-/* 165 */
+/* 175 */
 
 // 20.1.2.12 Number.parseFloat(string)
 
-/* 166 */
+/* 176 */
 
 // 20.1.2.13 Number.parseInt(string, radix)
 
-/* 167 */
+/* 177 */
 
 // 20.2.2.3 Math.acosh(x)
 
-/* 168 */
+/* 178 */
 
 // 20.2.2.5 Math.asinh(x)
 
 // Tor Browser bug: Math.asinh(0) -> -0
 
-/* 169 */
+/* 179 */
 
 // 20.2.2.7 Math.atanh(x)
 
 // Tor Browser bug: Math.atanh(-0) -> 0
 
-/* 170 */
+/* 180 */
 
 // 20.2.2.9 Math.cbrt(x)
 
-/* 171 */
+/* 181 */
 
 // 20.2.2.11 Math.clz32(x)
 
-/* 172 */
+/* 182 */
 
 // 20.2.2.12 Math.cosh(x)
 
-/* 173 */
+/* 183 */
 
-/* 174 */
+/* 184 */
 
 // 20.2.2.16 Math.fround(x)
 
-/* 175 */
+/* 185 */
 
-/* 176 */
+/* 186 */
 
 // 20.2.2.17 Math.hypot([value1[, value2[, … ]]])
 
-/* 177 */
+/* 187 */
 
 // 20.2.2.18 Math.imul(x, y)
 
 // some WebKit versions fails with big numbers, some has wrong arity
 
-/* 178 */
+/* 188 */
 
 // 20.2.2.21 Math.log10(x)
 
-/* 179 */
+/* 189 */
 
-/* 180 */
+/* 190 */
 
 // 20.2.2.22 Math.log2(x)
 
-/* 181 */
+/* 191 */
 
-/* 182 */
+/* 192 */
 
 // 20.2.2.30 Math.sinh(x)
 
 // V8 near Chromium 38 has a problem with very small numbers
 
-/* 183 */
+/* 193 */
 
 // 20.2.2.33 Math.tanh(x)
 
-/* 184 */
+/* 194 */
 
 // 20.2.2.34 Math.trunc(x)
 
-/* 185 */
+/* 195 */
 
 // length should be 1, old FF problem
 
 // 21.1.2.2 String.fromCodePoint(...codePoints)
 
-/* 186 */
+/* 196 */
 
 // 21.1.2.4 String.raw(callSite, ...substitutions)
 
-/* 187 */
+/* 197 */
 
 // 21.1.3.25 String.prototype.trim()
 
-/* 188 */
+/* 198 */
 
 // 21.1.3.27 String.prototype[@@iterator]()
 
-/* 189 */
+/* 199 */
 
 // 21.1.3.3 String.prototype.codePointAt(pos)
 
-/* 190 */
+/* 200 */
 
 // 21.1.3.6 String.prototype.endsWith(searchString [, endPosition])
 
 /* , endPosition = @length */
 
-/* 191 */
+/* 201 */
 
 // 21.1.3.7 String.prototype.includes(searchString, position = 0)
 
 /* , position = 0 */
 
-/* 192 */
+/* 202 */
 
 // 21.1.3.13 String.prototype.repeat(count)
 
-/* 193 */
+/* 203 */
 
 // 21.1.3.18 String.prototype.startsWith(searchString [, position ])
 
-/* 194 */
+/* 204 */
 
 // B.2.3.2 String.prototype.anchor(name)
 
-/* 195 */
+/* 205 */
 
 // B.2.3.3 String.prototype.big()
 
-/* 196 */
+/* 206 */
 
 // B.2.3.4 String.prototype.blink()
 
-/* 197 */
+/* 207 */
 
 // B.2.3.5 String.prototype.bold()
 
-/* 198 */
+/* 208 */
 
 // B.2.3.6 String.prototype.fixed()
 
-/* 199 */
+/* 209 */
 
 // B.2.3.7 String.prototype.fontcolor(color)
 
-/* 200 */
+/* 210 */
 
 // B.2.3.8 String.prototype.fontsize(size)
 
-/* 201 */
+/* 211 */
 
 // B.2.3.9 String.prototype.italics()
 
-/* 202 */
+/* 212 */
 
 // B.2.3.10 String.prototype.link(url)
 
-/* 203 */
+/* 213 */
 
 // B.2.3.11 String.prototype.small()
 
-/* 204 */
+/* 214 */
 
 // B.2.3.12 String.prototype.strike()
 
-/* 205 */
+/* 215 */
 
 // B.2.3.13 String.prototype.sub()
 
-/* 206 */
+/* 216 */
 
 // B.2.3.14 String.prototype.sup()
 
-/* 207 */
+/* 217 */
 
 // 20.3.3.1 / 15.9.4.4 Date.now()
 
-/* 208 */
+/* 218 */
 
-/* 209 */
+/* 219 */
 
 // 20.3.4.36 / 15.9.5.43 Date.prototype.toISOString()
 
 // PhantomJS / old WebKit has a broken implementations
 
-/* 210 */
+/* 220 */
 
-/* 211 */
+/* 221 */
 
-/* 212 */
+/* 222 */
 
-/* 213 */
+/* 223 */
 
-/* 214 */
+/* 224 */
 
 // 22.1.2.2 / 15.4.3.2 Array.isArray(arg)
 
-/* 215 */
+/* 225 */
 
 // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
 
@@ -1158,23 +1473,23 @@
 
 // if object isn't iterable or it's array with default iterator - use simple case
 
-/* 216 */
+/* 226 */
 
 // WebKit Array.of isn't generic
 
 // 22.1.2.3 Array.of( ...items)
 
-/* 217 */
+/* 227 */
 
 // 22.1.3.13 Array.prototype.join(separator)
 
 // fallback for not array-like strings
 
-/* 218 */
+/* 228 */
 
 // fallback for not array-like ES3 strings and DOM objects
 
-/* 219 */
+/* 229 */
 
 // IE8-
 
@@ -1184,45 +1499,45 @@
 
 // 22.1.3.25 Array.prototype.sort(comparefn)
 
-/* 220 */
+/* 230 */
 
 // 22.1.3.10 / 15.4.4.18 Array.prototype.forEach(callbackfn [, thisArg])
 
-/* 221 */
+/* 231 */
 
 // cross-realm fallback
 
-/* 222 */
+/* 232 */
 
 // 22.1.3.15 / 15.4.4.19 Array.prototype.map(callbackfn [, thisArg])
 
-/* 223 */
+/* 233 */
 
 // 22.1.3.7 / 15.4.4.20 Array.prototype.filter(callbackfn [, thisArg])
 
-/* 224 */
+/* 234 */
 
 // 22.1.3.23 / 15.4.4.17 Array.prototype.some(callbackfn [, thisArg])
 
-/* 225 */
+/* 235 */
 
 // 22.1.3.5 / 15.4.4.16 Array.prototype.every(callbackfn [, thisArg])
 
-/* 226 */
+/* 236 */
 
 // 22.1.3.18 / 15.4.4.21 Array.prototype.reduce(callbackfn [, initialValue])
 
-/* 227 */
+/* 237 */
 
 // 22.1.3.19 / 15.4.4.22 Array.prototype.reduceRight(callbackfn [, initialValue])
 
-/* 228 */
+/* 238 */
 
 // 22.1.3.11 / 15.4.4.14 Array.prototype.indexOf(searchElement [, fromIndex])
 
 /* , fromIndex = 0 */
 
-/* 229 */
+/* 239 */
 
 // 22.1.3.14 / 15.4.4.15 Array.prototype.lastIndexOf(searchElement [, fromIndex])
 
@@ -1230,31 +1545,31 @@
 
 // convert -0 to +0
 
-/* 230 */
+/* 240 */
 
-/* 231 */
+/* 241 */
 
-/* 232 */
+/* 242 */
 
 // 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
 
 // Shouldn't skip holes
 
-/* 233 */
+/* 243 */
 
 // 22.1.3.9 Array.prototype.findIndex(predicate, thisArg = undefined)
 
-/* 234 */
+/* 244 */
 
-/* 235 */
+/* 245 */
 
 // RegExp constructor can alter flags and IsRegExp works correct with @@match
 
-/* 236 */
+/* 246 */
 
 // 21.2.5.14 RegExp.prototype.toString()
 
-/* 237 */
+/* 247 */
 
 // @@match logic
 
@@ -1266,7 +1581,7 @@
 
 // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@match
 
-/* 238 */
+/* 248 */
 
 // @@replace logic
 
@@ -1292,7 +1607,7 @@
 
 // \d\d?
 
-/* 239 */
+/* 249 */
 
 // @@search logic
 
@@ -1304,7 +1619,7 @@
 
 // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@search
 
-/* 240 */
+/* 250 */
 
 // @@split logic
 
@@ -1328,7 +1643,7 @@
 
 // the 'y' flag.
 
-/* 241 */
+/* 251 */
 
 // Node.js
 
@@ -1338,9 +1653,9 @@
 
 // strange IE + webpack dev server bug - use .call(global)
 
-/* 242 */
+/* 252 */
 
-/* 243 */
+/* 253 */
 
 // 23.1 Map Objects
 
@@ -1348,13 +1663,13 @@
 
 // 23.1.3.9 Map.prototype.set(key, value)
 
-/* 244 */
+/* 254 */
 
 // 23.2 Set Objects
 
 // 23.2.3.1 Set.prototype.add(value)
 
-/* 245 */
+/* 255 */
 
 // 23.3.3.3 WeakMap.prototype.get(key)
 
@@ -1366,13 +1681,13 @@
 
 // store all the rest on native weakmap
 
-/* 246 */
+/* 256 */
 
 // 23.4 WeakSet Objects
 
 // 23.4.3.1 WeakSet.prototype.add(value)
 
-/* 247 */
+/* 257 */
 
 // 24.1.3.1 ArrayBuffer.isView(arg)
 
@@ -1380,33 +1695,33 @@
 
 // FF fix
 
-/* 248 */
-
-/* 249 */
-
-/* 250 */
-
-/* 251 */
-
-/* 252 */
-
-/* 253 */
-
-/* 254 */
-
-/* 255 */
-
-/* 256 */
-
-/* 257 */
-
 /* 258 */
+
+/* 259 */
+
+/* 260 */
+
+/* 261 */
+
+/* 262 */
+
+/* 263 */
+
+/* 264 */
+
+/* 265 */
+
+/* 266 */
+
+/* 267 */
+
+/* 268 */
 
 // 26.1.1 Reflect.apply(target, thisArgument, argumentsList)
 
 // MS Edge argumentsList argument is optional
 
-/* 259 */
+/* 269 */
 
 // 26.1.2 Reflect.construct(target, argumentsList [, newTarget])
 
@@ -1418,135 +1733,135 @@
 
 // with altered newTarget, not support built-in constructors
 
-/* 260 */
+/* 270 */
 
 // 26.1.3 Reflect.defineProperty(target, propertyKey, attributes)
 
 // MS Edge has broken Reflect.defineProperty - throwing instead of returning false
 
-/* 261 */
+/* 271 */
 
 // 26.1.4 Reflect.deleteProperty(target, propertyKey)
 
-/* 262 */
+/* 272 */
 
 // 26.1.5 Reflect.enumerate(target)
 
 // keys
 
-/* 263 */
+/* 273 */
 
 // 26.1.6 Reflect.get(target, propertyKey [, receiver])
 
 /* , receiver */
 
-/* 264 */
+/* 274 */
 
 // 26.1.7 Reflect.getOwnPropertyDescriptor(target, propertyKey)
 
-/* 265 */
+/* 275 */
 
 // 26.1.8 Reflect.getPrototypeOf(target)
 
-/* 266 */
+/* 276 */
 
 // 26.1.9 Reflect.has(target, propertyKey)
 
-/* 267 */
+/* 277 */
 
 // 26.1.10 Reflect.isExtensible(target)
 
-/* 268 */
+/* 278 */
 
 // 26.1.11 Reflect.ownKeys(target)
 
-/* 269 */
+/* 279 */
 
 // 26.1.12 Reflect.preventExtensions(target)
 
-/* 270 */
+/* 280 */
 
 // 26.1.13 Reflect.set(target, propertyKey, V [, receiver])
 
-/* 271 */
+/* 281 */
 
 // 26.1.14 Reflect.setPrototypeOf(target, proto)
 
-/* 272 */
-
-/* 273 */
-
-// https://github.com/tc39/Array.prototype.includes
-
-/* 274 */
-
-/* 275 */
-
-// https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap
-
-/* 276 */
-
-// https://tc39.github.io/proposal-flatMap/#sec-FlattenIntoArray
-
-/* 277 */
-
-/* 278 */
-
-/* , fillString = ' ' */
-
-/* 279 */
-
-/* 280 */
-
-/* 281 */
-
 /* 282 */
 
-// https://github.com/sebmarkbage/ecmascript-string-left-right-trim
-
 /* 283 */
+
+// https://github.com/tc39/Array.prototype.includes
 
 /* 284 */
 
 /* 285 */
 
+// https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flatMap
+
 /* 286 */
+
+// https://tc39.github.io/proposal-flatMap/#sec-FlattenIntoArray
 
 /* 287 */
 
 /* 288 */
 
-// https://github.com/tc39/proposal-object-getownpropertydescriptors
+/* , fillString = ' ' */
 
 /* 289 */
 
 /* 290 */
 
-// https://github.com/tc39/proposal-object-values-entries
-
 /* 291 */
 
 /* 292 */
+
+// https://github.com/sebmarkbage/ecmascript-string-left-right-trim
 
 /* 293 */
 
 /* 294 */
 
-// https://github.com/tc39/proposal-promise-finally
-
 /* 295 */
 
 /* 296 */
-
-// ie9- setTimeout & setInterval additional parameters fix
 
 /* 297 */
 
 /* 298 */
 
-// TODO: Not spec compliant, should be false.
+// https://github.com/tc39/proposal-object-getownpropertydescriptors
 
 /* 299 */
+
+/* 300 */
+
+// https://github.com/tc39/proposal-object-values-entries
+
+/* 301 */
+
+/* 302 */
+
+/* 303 */
+
+/* 304 */
+
+// https://github.com/tc39/proposal-promise-finally
+
+/* 305 */
+
+/* 306 */
+
+// ie9- setTimeout & setInterval additional parameters fix
+
+/* 307 */
+
+/* 308 */
+
+// TODO: Not spec compliant, should be false.
+
+/* 309 */
 
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
@@ -1805,13 +2120,13 @@
 
 // problems, please detail your unique predicament in a GitHub issue.
 
-/* 300 */
+/* 310 */
 
-/* 301 */
+/* 311 */
 
 // https://github.com/tc39/proposal-global
 
-/* 302 */
+/* 312 */
 
 // prevent global pollution for namespaces
 
@@ -1821,33 +2136,33 @@
 
 // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
 
-/* 303 */
-
-/* 304 */
-
-/* 305 */
-
-/* 306 */
-
-/* 307 */
-
-/* 308 */
-
-/* 309 */
-
-/* 310 */
-
-/* 311 */
-
-/* 312 */
-
 /* 313 */
 
 /* 314 */
 
+/* 315 */
+
+/* 316 */
+
+/* 317 */
+
+/* 318 */
+
+/* 319 */
+
+/* 320 */
+
+/* 321 */
+
+/* 322 */
+
+/* 323 */
+
+/* 324 */
+
 // Module
 
-/* 315 */
+/* 325 */
 
 /**
  * When source maps are enabled, `style-loader` uses a link element with a data-uri to
@@ -1876,7 +2191,7 @@
 
 // convert the url to a full url
 
-/* 316 */
+/* 326 */
 
 /*!
   * Bootstrap v4.5.0 (https://getbootstrap.com/)
@@ -1886,10 +2201,10 @@
 
 //# sourceMappingURL=bootstrap.min.js.map
 
-/* 317 */
+/* 327 */
 
 /*!
- * jQuery JavaScript Library v3.4.1
+ * jQuery JavaScript Library v3.5.1
  * https://jquery.com/
  *
  * Includes Sizzle.js
@@ -1899,7 +2214,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2019-05-01T21:04Z
+ * Date: 2020-05-04T22:49Z
  */
 
 // For CommonJS and CommonJS-like environments where a proper `window`
@@ -1967,10 +2282,6 @@
 // The jQuery object is actually just the init constructor 'enhanced'
 
 // Need init if jQuery is called (just allow error to be thrown if not included)
-
-// Support: Android <=4.0 only
-
-// Make sure we trim BOM and NBSP
 
 // Support: real iOS 8.2 only (not reproducible in simulator)
 
@@ -2044,7 +2355,9 @@
 
 // Objects with prototype are plain iff they were constructed by a global Object function
 
-// Evaluates a script in a global context
+// Evaluates a script in a provided context; falls back to the global one
+
+// if not specified.
 
 // results is for internal usage only
 
@@ -2073,14 +2386,14 @@
 // Populate the class2type map
 
 /*!
- * Sizzle CSS Selector Engine v2.3.4
+ * Sizzle CSS Selector Engine v2.3.5
  * https://sizzlejs.com/
  *
  * Copyright JS Foundation and other contributors
  * Released under the MIT license
  * https://js.foundation/
  *
- * Date: 2019-04-08
+ * Date: 2020-03-14
  */
 
 // Local document vars
@@ -2097,13 +2410,15 @@
 
 // http://www.w3.org/TR/css3-selectors/#whitespace
 
-// http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
+// https://www.w3.org/TR/css-syntax-3/#ident-token-diagram
 
 // Attribute selectors: http://www.w3.org/TR/selectors/#attribute-selectors
 
 // Operator (capture 2)
 
-// "Attribute values must be CSS identifiers [capture 5] or strings [capture 3 or capture 4]"
+// "Attribute values must be CSS identifiers [capture 5]
+
+// or strings [capture 3 or capture 4]"
 
 // Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
 
@@ -2117,15 +2432,13 @@
 
 // http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
 
-// NaN means non-codepoint
+// Replace a hexadecimal escape sequence with the encoded Unicode code point
 
-// Support: Firefox<24
+// Support: IE <=11+
 
-// Workaround erroneous numeric interpretation of +"0x"
+// For values outside the Basic Multilingual Plane (BMP), manually construct a
 
-// BMP codepoint
-
-// Supplemental Plane codepoint (surrogate pair)
+// surrogate pair
 
 // CSS string/identifier serialization
 
@@ -2148,6 +2461,8 @@
 // Support: Android<4.0
 
 // Detect silently failing push.apply
+
+// eslint-disable-next-line no-unused-expressions
 
 // Leverage slice if possible
 
@@ -2197,13 +2512,21 @@
 
 // list with an ID selector referencing the scope context.
 
+// The technique has to be used as well when a leading combinator is used
+
+// as such selectors are not recognized by querySelectorAll.
+
 // Thanks to Andrew Dupont for this technique.
+
+// Expand context for sibling selectors
+
+// We can use :scope instead of the ID hack if the browser
+
+// supports it & if we're not changing the context.
 
 // Capture the context ID, setting it first if necessary
 
 // Prefix every selector in the list
-
-// Expand context for sibling selectors
 
 // All others
 
@@ -2331,13 +2654,31 @@
 
 // Return early if doc is invalid or already selected
 
+// Support: IE 11+, Edge 17 - 18+
+
+// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
+
+// two documents; shallow comparisons work.
+
+// eslint-disable-next-line eqeqeq
+
 // Update global variables
 
-// Support: IE 9-11, Edge
+// Support: IE 9 - 11+, Edge 12 - 18+
 
 // Accessing iframe documents after unload throws "permission denied" errors (jQuery #13936)
 
 // Support: IE 11, Edge
+
+// Support: IE 8 - 11+, Edge 12 - 18+, Chrome <=16 - 25 only, Firefox <=3.6 - 31 only,
+
+// Safari 4 - 5 only, Opera <=11.6 - 12.x only
+
+// IE/Edge & older browsers don't support the :scope pseudo-class.
+
+// Support: Safari 6.0 only
+
+// Safari 6.0 supports :scope but it's an alias of :root there.
 
 /* Attributes
 	---------------------------------------------------------------------- */
@@ -2424,6 +2765,16 @@
 
 // Support: Chrome<29, Android<4.4, Safari<7.0+, iOS<7.0+, PhantomJS<1.9.8+
 
+// Support: IE 11+, Edge 15 - 18+
+
+// IE 11/Edge don't find elements on a `[name='']` query in some cases.
+
+// Adding a temporary attribute to the document before the selection works
+
+// around the issue.
+
+// Interestingly, IE 10 & older don't seem to have the issue.
+
 // Webkit/Opera - :checked should return selected option elements
 
 // http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
@@ -2436,6 +2787,10 @@
 
 // In-page `selector#id sibling-combinator selector` fails
 
+// Support: Firefox <=3.6 - 5 only
+
+// Old Firefox doesn't throw on a badly-escaped identifier.
+
 // Support: Windows 8 Native Apps
 
 // The type and name attributes are restricted during .innerHTML assignment
@@ -2447,6 +2802,8 @@
 // Support: IE9-11+
 
 // IE's :disabled selector does not pick up the children of disabled fieldsets
+
+// Support: Opera 10 - 11 only
 
 // Opera 10-11 does not throw on post-comma invalid pseudos
 
@@ -2488,6 +2845,10 @@
 
 // Parentless nodes are either documents or disconnected
 
+/* eslint-disable eqeqeq */
+
+/* eslint-enable eqeqeq */
+
 // If the nodes are siblings, we can do a quick check
 
 // Otherwise we need full lists of their ancestors for comparison
@@ -2498,13 +2859,13 @@
 
 // Otherwise nodes in our document sort first
 
-// Set document vars if needed
-
 // IE 9's matchesSelector returns false on disconnected nodes
 
 // As well, disconnected nodes are said to be in a document
 
 // fragment in IE 9
+
+// Set document vars if needed
 
 // Don't get fooled by Object.prototype properties (jQuery #13807)
 
@@ -2910,6 +3271,12 @@
 // Index in selector
 
 // If it receives a jQuery object, the first element is used
+
+// Support: IE 11+
+
+// <object> elements with no `data` attribute has an object
+
+// `contentDocument` with a `null` prototype.
 
 // Support: IE 9 - 11 only, iOS 7 only, Android Browser <=4.3 only
 
@@ -3406,10 +3773,6 @@
 
 // in the document.
 
-// Remember the old values, and insert the new ones
-
-// Revert the old values
-
 // Starting value computation is required for potential unit mismatches
 
 // Support: Firefox <=54
@@ -3440,7 +3803,29 @@
 
 // Set the display of the elements in a second loop to avoid constant reflow
 
+// Support: Android 4.0 - 4.3 only
+
+// Check state lost if the name is set (#11217)
+
+// Support: Windows Web Apps (WWA)
+
+// `name` and `type` must use .setAttribute for WWA (#14901)
+
+// Support: Android <=4.1 only
+
+// Older WebKit doesn't clone checked state correctly in fragments
+
+// Support: IE <=11 only
+
+// Make sure textarea (and checkbox) defaultValue is properly cloned
+
 // Support: IE <=9 only
+
+// IE <=9 replaces <option> tags with their contents when inserted outside of
+
+// the select element.
+
+// We have to close these tags to support XHTML (#13200)
 
 // XHTML parsers do not magically insert elements in the
 
@@ -3477,22 +3862,6 @@
 // Append to fragment
 
 // Preserve script evaluation history
-
-// Support: Android 4.0 - 4.3 only
-
-// Check state lost if the name is set (#11217)
-
-// Support: Windows Web Apps (WWA)
-
-// `name` and `type` must use .setAttribute for WWA (#14901)
-
-// Support: Android <=4.1 only
-
-// Older WebKit doesn't clone checked state correctly in fragments
-
-// Support: IE <=11 only
-
-// Make sure textarea (and checkbox) defaultValue is properly cloned
 
 // Support: IE <=9 - 11+
 
@@ -3583,7 +3952,7 @@
 
 // Abort handling of the native event
 
-// Don't attach events to noData or text/comment nodes (but allow plain objects)
+// Only attach events to objects that accept data
 
 // Caller can pass in an object of custom data in lieu of the handler
 
@@ -3763,12 +4132,6 @@
 
 // ( types [, fn] )
 
-/* eslint-disable max-len */
-
-// See https://github.com/eslint/eslint/issues/3229
-
-/* eslint-enable */
-
 // Support: IE <=10 - 11, Edge 12 - 13 only
 
 // In IE/Edge using regex groups here causes severe slowdowns.
@@ -3836,6 +4199,10 @@
 // IE throws on elements created in popups
 
 // FF meanwhile throws on frame elements through "defaultView.getComputedStyle"
+
+// Remember the old values, and insert the new ones
+
+// Revert the old values
 
 // Support: Firefox 51+
 
@@ -3909,6 +4276,16 @@
 
 // Style of cloned element affects source element cloned (#8908)
 
+// Support: IE 9 - 11+, Edge 15 - 18+
+
+// IE/Edge misreport `getComputedStyle` of table rows with width/height
+
+// set in CSS while `offset*` properties report correct values.
+
+// Behavior in IE 9 is more subtle than in newer versions & it passes
+
+// some versions of this test; make sure not to make it pass there!
+
 // Return a vendor-prefixed property or undefined
 
 // Return a potentially-mapped jQuery.cssProps or vendor prefixed property
@@ -3951,6 +4328,16 @@
 
 // Return a confounding non-pixel value or feign ignorance, as appropriate.
 
+// Use offsetWidth/offsetHeight for when box sizing is unreliable.
+
+// In those cases, the computed value can be trusted to be border-box.
+
+// Adjust for the element's box model
+
+// Support: IE 10 - 11+, Edge 15 - 18+
+
+// Interestingly, in some cases IE 9 doesn't suffer from this issue.
+
 // Fall back to offsetWidth/offsetHeight when value is "auto"
 
 // This happens for inline elements with no explicit setting (gh-3571)
@@ -3959,15 +4346,7 @@
 
 // Also use offsetWidth/offsetHeight for misreported inline dimensions (gh-3602)
 
-// Support: IE 9-11 only
-
-// Also use offsetWidth/offsetHeight for when box sizing is unreliable
-
-// We use getClientRects() to check for hidden/disconnected.
-
-// In those cases, the computed value can be trusted to be border-box
-
-// Adjust for the element's box model
+// Make sure the element is visible & connected
 
 // Where available, offsetWidth/offsetHeight approximate border box dimensions.
 
@@ -4377,6 +4756,10 @@
 
 // Attach a single capturing handler on the document while someone wants focusin/focusout
 
+// Handle: regular nodes (via `this.ownerDocument`), window
+
+// (via `this.document`) & document (via `this`).
+
 // Cross-browser xml parsing
 
 // IE throws on parseFromString with invalid input.
@@ -4680,6 +5063,8 @@
  * Also sets the responseXXX fields on the jqXHR instance
  */
 
+// Use a noop converter for missing script
+
 // Convert no matter what (that way responseXXX fields are always set)
 
 // Work with a copy of dataTypes in case we need to modify it for conversion
@@ -4888,8 +5273,6 @@
 
 // Otherwise use the full result
 
-// Attach a bunch of functions for handling common AJAX events
-
 // Set position first, in-case top/left are set even on static elem
 
 // Need to be able to calculate position if either
@@ -4970,9 +5353,13 @@
 
 // Set width or height on the element
 
+// ( namespace ) or ( selector, types [, fn] )
+
 // Handle event binding
 
-// ( namespace ) or ( selector, types [, fn] )
+// Support: Android <=4.0 only
+
+// Make sure we trim BOM and NBSP
 
 // Bind a function to a context, optionally partially applying any
 
@@ -5012,9 +5399,7 @@
 
 // and CommonJS for browser emulators (#13566)
 
-/* 318 */
-
-/* WEBPACK VAR INJECTION */
+/* 328 */
 
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
@@ -5214,6 +5599,15 @@
 // Attach marginTop and marginLeft because in some circumstances we may need them
 
 /**
+ * Check if the given element is fixed or is inside a fixed parent
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element
+ * @argument {Element} customContainer
+ * @returns {Boolean} answer to "isFixed?"
+ */
+
+/**
  * Finds the first parent of an element that has a transformed property defined
  * @method
  * @memberof Popper.Utils
@@ -5234,15 +5628,6 @@
  */
 
 // Handle viewport case
-
-/**
- * Check if the given element is fixed or is inside a fixed parent
- * @method
- * @memberof Popper.Utils
- * @argument {Element} element
- * @argument {Element} customContainer
- * @returns {Boolean} answer to "isFixed?"
- */
 
 // Handle other cases based on DOM element used as boundaries
 
@@ -6186,3 +6571,327 @@
  */
 
 /* harmony default export */
+
+/* 329 */
+
+// This works in non-strict mode
+
+// This works if eval is allowed (see CSP)
+
+// This works if the window reference is available
+
+// g can still be undefined, but nothing to do about it...
+
+// We return undefined, instead of nothing here, so it's
+
+// easier to handle this case. if(!global) { ...}
+
+/* 330 */
+
+/* 331 */
+
+/* 332 */
+
+/* 333 */
+
+/* 334 */
+
+/* 335 */
+
+/* 336 */
+
+/* 337 */
+
+/* 338 */
+
+/**
+ * Create an instance of Axios
+ *
+ * @param {Object} defaultConfig The default config for the instance
+ * @return {Axios} A new instance of Axios
+ */
+
+// Copy axios.prototype to instance
+
+// Copy context to instance
+
+// Create the default instance to be exported
+
+// Expose Axios class to allow class inheritance
+
+// Factory for creating new instances
+
+// Expose Cancel & CancelToken
+
+// Expose all/spread
+
+// Allow use of default import syntax in TypeScript
+
+/* 339 */
+
+/**
+ * Create a new instance of Axios
+ *
+ * @param {Object} instanceConfig The default config for the instance
+ */
+
+/**
+ * Dispatch a request
+ *
+ * @param {Object} config The config specific for this request (merged with this.defaults)
+ */
+
+// Allow for axios('example/url'[, config]) a la fetch API
+
+// Set config.method
+
+// Hook up interceptors middleware
+
+// Provide aliases for supported request methods
+
+/*eslint func-names:0*/
+
+/* 340 */
+
+/**
+ * Add a new interceptor to the stack
+ *
+ * @param {Function} fulfilled The function to handle `then` for a `Promise`
+ * @param {Function} rejected The function to handle `reject` for a `Promise`
+ *
+ * @return {Number} An ID used to remove interceptor later
+ */
+
+/**
+ * Remove an interceptor from the stack
+ *
+ * @param {Number} id The ID that was returned by `use`
+ */
+
+/**
+ * Iterate over all the registered interceptors
+ *
+ * This method is particularly useful for skipping over any
+ * interceptors that may have become `null` calling `eject`.
+ *
+ * @param {Function} fn The function to call for each interceptor
+ */
+
+/* 341 */
+
+/**
+ * Throws a `Cancel` if cancellation has been requested.
+ */
+
+/**
+ * Dispatch a request to the server using the configured adapter.
+ *
+ * @param {object} config The config that is to be used for the request
+ * @returns {Promise} The Promise to be fulfilled
+ */
+
+// Ensure headers exist
+
+// Transform request data
+
+// Flatten headers
+
+// Transform response data
+
+/* 342 */
+
+/**
+ * Transform the data for a request or a response
+ *
+ * @param {Object|String} data The data to be transformed
+ * @param {Array} headers The headers for the request or response
+ * @param {Array|Function} fns A single function or Array of functions
+ * @returns {*} The resulting transformed data
+ */
+
+/* 343 */
+
+// shim for using process in browser
+
+// cached from whatever global is present so that test runners that stub it
+
+// don't break things.  But we need to wrap it in a try catch in case it is
+
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+
+// function because try/catches deoptimize in certain engines.
+
+//normal enviroments in sane situations
+
+// if setTimeout wasn't available but was latter defined
+
+// when when somebody has screwed with setTimeout but no I.E. maddness
+
+// When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+
+// same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+
+// if clearTimeout wasn't available but was latter defined
+
+// When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+
+// same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+
+// Some versions of I.E. have different rules for clearTimeout vs setTimeout
+
+// v8 likes predictible objects
+
+// empty string to avoid regexp issues
+
+/* 344 */
+
+/* 345 */
+
+/**
+ * Resolve or reject a Promise based on response status.
+ *
+ * @param {Function} resolve A function that resolves the promise.
+ * @param {Function} reject A function that rejects the promise.
+ * @param {object} response The response.
+ */
+
+/* 346 */
+
+/**
+ * Update an Error with the specified config, error code, and response.
+ *
+ * @param {Error} error The error to update.
+ * @param {Object} config The config.
+ * @param {string} [code] The error code (for example, 'ECONNABORTED').
+ * @param {Object} [request] The request.
+ * @param {Object} [response] The response.
+ * @returns {Error} The error.
+ */
+
+// Standard
+
+// Microsoft
+
+// Mozilla
+
+// Axios
+
+/* 347 */
+
+/**
+ * Creates a new URL by combining the baseURL with the requestedURL,
+ * only when the requestedURL is not already an absolute URL.
+ * If the requestURL is absolute, this function returns the requestedURL untouched.
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} requestedURL Absolute or relative URL to combine
+ * @returns {string} The combined full path
+ */
+
+/* 348 */
+
+/**
+ * Determines whether the specified URL is absolute
+ *
+ * @param {string} url The URL to test
+ * @returns {boolean} True if the specified URL is absolute, otherwise false
+ */
+
+// A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
+
+// RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
+
+// by any combination of letters, digits, plus, period, or hyphen.
+
+/* 349 */
+
+/**
+ * Creates a new URL by combining the specified URLs
+ *
+ * @param {string} baseURL The base URL
+ * @param {string} relativeURL The relative URL
+ * @returns {string} The combined URL
+ */
+
+/* 350 */
+
+// Headers whose duplicates are ignored by node
+
+// c.f. https://nodejs.org/api/http.html#http_message_headers
+
+/**
+ * Parse headers into an object
+ *
+ * ```
+ * Date: Wed, 27 Aug 2014 08:58:49 GMT
+ * Content-Type: application/json
+ * Connection: keep-alive
+ * Transfer-Encoding: chunked
+ * ```
+ *
+ * @param {String} headers Headers needing to be parsed
+ * @returns {Object} Headers parsed into an object
+ */
+
+/* 351 */
+
+// Standard browser envs have full support of the APIs needed to test
+
+// whether the request URL is of the same origin as current location.
+
+/**
+    * Parse a URL to discover it's components
+    *
+    * @param {String} url The URL to be parsed
+    * @returns {Object}
+    */
+
+// urlParsingNode provides the UrlUtils interface - http://url.spec.whatwg.org/#urlutils
+
+// IE needs attribute set twice to normalize properties
+
+/**
+    * Determine if a URL shares the same origin as the current location
+    *
+    * @param {String} requestURL The URL to test
+    * @returns {boolean} True if URL shares the same origin, otherwise false
+    */
+
+/* 352 */
+
+/* 353 */
+
+/**
+ * A `CancelToken` is an object that can be used to request cancellation of an operation.
+ *
+ * @class
+ * @param {Function} executor The executor function.
+ */
+
+/**
+ * Returns an object that contains a new `CancelToken` and a function that, when called,
+ * cancels the `CancelToken`.
+ */
+
+/* 354 */
+
+/**
+ * Syntactic sugar for invoking a function and expanding an array for arguments.
+ *
+ * Common use case would be to use `Function.prototype.apply`.
+ *
+ *  ```js
+ *  function f(x, y, z) {}
+ *  var args = [1, 2, 3];
+ *  f.apply(null, args);
+ *  ```
+ *
+ * With `spread` this example can be re-written.
+ *
+ *  ```js
+ *  spread(function(x, y, z) {})([1, 2, 3]);
+ *  ```
+ *
+ * @param {Function} callback
+ * @returns {Function}
+ */

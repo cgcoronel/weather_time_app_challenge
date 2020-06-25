@@ -62,103 +62,37 @@
 
 // Module
 
-// EXTERNAL MODULE: delegated ./node_modules/react/index.js from dll-reference vendor_1c19d7ac9192a3896050
+// ESM COMPAT FLAG
+
+// EXTERNAL MODULE: delegated ./node_modules/react/index.js from dll-reference vendor_44407bb535d93c8c7f0f
 
 /*#__PURE__*/
 
-// CONCATENATED MODULE: ./src/Utils/Objects.js
+// EXTERNAL MODULE: ./src/Components/Header/scss/styles.scss
+
+// CONCATENATED MODULE: ./src/Components/Header/Header.jsx
+
+// Dependencias
+
+// Estilo
 
 /**
- * Verifica el tipo de un elemento.
- *
- * @param { Any } data
- *
- * @return { Boolean }
+ * Renderizador de la cabecera.
  */
 
 /**
- * Realiza una copia sin referencia.
+ * Obtiene una fecha en formato legible
  *
- * @param { Any } value
+ * @param date                en formato YYYYMMDD o YYYYMMDDHHMMSS (numero)
+ * @param full                true si incluye la hora (default false)
  *
- * @return { Object }
+ * @return                    Día
+ *
  */
 
-// CONCATENATED MODULE: ./src/Utils/Requests.js
+/* harmony default export */
 
-// Utilidades
-
-/**
- * Solicitudes.
- */
-
-/**
-   * Realiza una solicitud de metodo GET
-   *
-   * @param { String } endpoint
-   * @param { String } responseType
-   *
-   * @return { Promise }
-   */
-
-// Cabeceras.
-
-// Armamos el requester
-
-// Almacenamos las cabeceras de la respuesta.
-
-// Realizamos la solicitud
-
-// Almacenamos las cabecera de la respuesta.
-
-// Parseamos la respuesta.
-
-// Asignamos a la respuesta las cabeceras.
-
-// Codigo
-
-/**
-   * Realiza una solicitud de metodo POST
-   *
-   * @param { String } endpoint
-   * @param { String } responseType
-   *
-   * @return { Promise }
-   */
-
-// Si la petición es de un formdata, elimino las cabeceras
-
-/**
-   * Realiza una solicitud de metodo DELETE
-   *
-   * @param { String } endpoint
-   * @param { String } responseType
-   *
-   * @return { Promise }
-   */
-
-/**
-   * Metodo para administrar los codigos Http
-   */
-
-// Evaluamos el argumento requerido.
-
-// Validamos que se haya procesado correctamente.
-
-// Validamos los casos de fallos.
-
-/**
-   * Retorna la interfaz de error.
-   *
-   * @param { Number } code
-   * @param { Object } exceptions
-   *
-   * @return { Object }
-   */
-
-// Conjunto de cabeceras
-
-// Cabeceras
+// EXTERNAL MODULE: ./src/Components/Body/scss/styles.scss
 
 // CONCATENATED MODULE: ./src/Services/weather.js
 
@@ -182,11 +116,7 @@
    * Obtiene la locacion actual y el clima extendido.
    */
 
-/* harmony default export */
-
 // CONCATENATED MODULE: ./src/Containers/Dashboard/Dashboard.jsx
-
-// Dependencias
 
 // Componentes
 
