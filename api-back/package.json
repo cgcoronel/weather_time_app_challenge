@@ -31,7 +31,7 @@
     "start:dev": "cross-env DEBUG=true nodemon src/index.js",
     "start": "NODE_ENV=production node src/index.js",
     "docker:build": "docker build -t api_weather_time .",
-    "docker:start": "docker run -p 3977:3977 --name api_weather_time -d api_weather_time"
+    "docker:start": "docker run -p 3977:3977 --name api -d api_weather_time"
   },
   "author": "",
   "license": "ISC"
