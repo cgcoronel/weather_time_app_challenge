@@ -92,6 +92,13 @@
 
 /* harmony default export */
 
+/**
+ * Obtiene la fecha actual en formato legible
+ *
+ * @return                    Dia Letras, Dia de Mes de Año
+ *
+ */
+
 // EXTERNAL MODULE: ./src/Components/Body/scss/styles.scss
 
 // CONCATENATED MODULE: ./src/Services/weather.js
