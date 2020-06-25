@@ -12,7 +12,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const AutoDllPlugin = require('autodll-webpack-plugin')
 
 // Importamos el .env
-const EnvParsed = Dotenv.config({ path: __dirname + '/.env.dev' }).parsed
+const EnvParsed = Dotenv.config({ path: __dirname + '/.env.prod' }).parsed
 
 /**
  * Recopilamos los modulos.
