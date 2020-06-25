@@ -43,7 +43,7 @@ const Header = ({ current }) => {
           <div className="card-body">
             <p className="card-text">Presion {pressure} hPa</p>
             <p className="card-text">Humedad {humidity}%</p>
-            <p className="card-text">Viento {weather.wind.speed}</p>
+            <p className="card-text">Viento {weather.wind.speed} km</p>
           </div>
         </div>
       </div>

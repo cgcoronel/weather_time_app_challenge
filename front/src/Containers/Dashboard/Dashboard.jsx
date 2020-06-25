@@ -29,21 +29,34 @@ const Dashboard = () => {
     },
   })
 
+  const [forecast, setForecast] = useState({
+    cty: '',
+    weather: {
+      list: [],
+    },
+  })
+
   const getCurrent = async () => {
     const data = await weatherService.getCurrent('')
     setCurrent(data)
   }
 
+  const getForecast = async () => {
+    const data = await weatherService.getForecast('')
+    setForecast(data)
+  }
+
   useEffect(() => {
     getCurrent()
+    getForecast()
   }, [])
 
   return (
-    <div className="container">
+    <div className="container" id="dashboard">
       <Header current={current} />
       <div className="row">
         <div className="col-md-6">
-          <Aside />
+          <Aside forecast={forecast} />
         </div>
         <div className="col-md-6">
           <Body />

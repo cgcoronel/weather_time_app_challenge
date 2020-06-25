@@ -1,10 +1,20 @@
 @import '../../../assets/main-styles/theme.scss';
 @import '../../../assets/main-styles/main.scss';
 
-#content-aside-main {
+#aside {
   background: $color-aside-bar;
-  // height: 500px;
-  // width: 100%;
-  // padding: 0px;
-  // margin: 0px;
+
+  .days-next span {
+    margin-top: -12px;
+  }
+  .moment-of-day div {
+    white-space: nowrap;
+  }
+
+  .weather-icon {
+    margin-top: -14px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+  }
 }

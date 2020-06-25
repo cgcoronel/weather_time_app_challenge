@@ -1,5 +1,6 @@
 // Dependencias
 import React from 'react'
+import Days from './Components/Days'
 
 // Estilo
 import './scss/styles.scss'
@@ -7,39 +8,39 @@ import './scss/styles.scss'
 /**
  * Renderizador de la cabecera.
  */
-const Aside = () => (
-  <div className="card mt-5">
-    <div className="card-body">
-      <h4 className="card-title text-left mb-5">Pronostico extendido de Buenos Aires</h4>
+const Aside = ({ forecast }) => {
+  const { city, weather } = forecast
+  const { list } = weather
 
-      <form>
-        <div className="form-group row">
-          <label className="col-sm-4 col-lg-2 col-form-label">Lunes</label>
-          <div className="col-sm-8 col-lg-10"> 15° Lluvia</div>
-        </div>
+  const days = list ? getNextDays(list) : []
 
-        <div className="form-group row">
-          <label className="col-sm-4 col-lg-2 col-form-label">Martes</label>
-          <div className="col-sm-8 col-lg-10"> 15° Lluvia</div>
-        </div>
+  return (
+    <div className="card mt-5" id="aside">
+      <div className="card-body">
+        <h4 className="card-title text-center mb-5">Pronostico extendido de {city}</h4>
 
-        <div className="form-group row">
-          <label className="col-sm-4 col-lg-2 col-form-label">Miercoles</label>
-          <div className="col-sm-8 col-lg-10"> 15° Lluvia</div>
-        </div>
-
-        <div className="form-group row">
-          <label className="col-sm-4 col-lg-2 col-form-label">Jueves</label>
-          <div className="col-sm-8 col-lg-10"> 15° Lluvia</div>
-        </div>
-
-        <div className="form-group row">
-          <label className="col-sm-4 col-lg-2 col-form-label">Viernes</label>
-          <div className="col-sm-8 col-lg-10"> 15° Lluvia</div>
-        </div>
-      </form>
+        {days.length > 0 && <Days days={days} />}
+      </div>
     </div>
-  </div>
-)
+  )
+}
+
+function getNextDays(list) {
+  const days = []
+
+  list.map(value => {
+    const day = value.dt_txt.substring(0, 10).replace(/-/g, '')
+    const time = value.dt_txt.substring(11, 13)
+
+    if (days[day] === undefined) {
+      days[day] = []
+    }
+    if (time == '12' || time == '18' || time == '21') {
+      days[day].push(value)
+    }
+  })
+
+  return days
+}
 
 export default Aside

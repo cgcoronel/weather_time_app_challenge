@@ -1,10 +1,12 @@
 @import '../../../assets/main-styles/main.scss';
 
-.col-form-label {
-  font-size: 12px;
-}
+#dashboard {
+  .col-form-label {
+    font-size: 12px;
+  }
 
-.card {
-  background-color: #ffffff8f;
-  border-radius: 2.25rem;
+  .card {
+    background-color: #ffffff8f;
+    border-radius: 2.25rem;
+  }
 }
