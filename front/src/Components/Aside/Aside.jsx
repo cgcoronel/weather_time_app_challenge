@@ -1,6 +1,7 @@
 // Dependencias
 import React from 'react'
 import Days from './Components/Days'
+import { getNowYYYMMDD } from '../../Utils/Date'
 
 // Estilo
 import './scss/styles.scss'
@@ -26,6 +27,7 @@ const Aside = ({ forecast }) => {
 }
 
 function getNextDays(list) {
+  const now = getNowYYYMMDD()
   const days = []
 
   list.map(value => {
@@ -35,12 +37,15 @@ function getNextDays(list) {
     if (days[day] === undefined) {
       days[day] = []
     }
-    if (time == '12' || time == '18' || time == '21') {
+
+    if (day !== now && (time == '12' || time == '18' || time == '21')) {
+      console.log(day, now, day !== now)
+
       days[day].push(value)
     }
   })
 
-  return days.filter(day => day.length !== 0)
+  return days.filter(day => day.length >= 3)
 }
 
 export default Aside

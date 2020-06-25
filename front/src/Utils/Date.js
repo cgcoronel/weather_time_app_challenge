@@ -27,6 +27,21 @@ export function getNow() {
 }
 
 /**
+ * Obtiene la fecha actual en formato legible
+ *
+ * @return                    Dia Letras, Dia de Mes de Año
+ *
+ */
+export function getNowYYYMMDD() {
+  const newDate = new Date()
+
+  const month = (newDate.getMonth() + 1001).toString().substring(2, 4)
+  const day = (newDate.getDate() + 100).toString().substring(1, 3)
+
+  return `${newDate.getFullYear()}${month}${day}`
+}
+
+/**
  * Obtiene una fecha en formato legible
  *
  * @param date                en formato YYYYMMDD o YYYYMMDDHHMMSS (numero)
