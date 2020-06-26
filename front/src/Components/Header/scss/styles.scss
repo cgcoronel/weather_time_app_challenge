@@ -12,27 +12,29 @@
   .weather-icon {
     margin-top: -30px;
     margin-left: 5%;
-    margin-right: 5%;
+    padding-right: 20px;
+    margin-right: 10px;
     text-align: center;
   }
 
   .weather-temp {
     background-color: orange;
     border-radius: 100px;
-    margin-left: 36%;
-    margin-right: 44%;
-    height: 100px;
-    width: 100px;
+    margin-left: 35%;
+    //margin-right: 10%;
+    margin-bottom: 20px !important;
+    height: 150px;
+    width: 150px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 
     span {
-      padding-top: 27px;
+      padding-top: 40px;
       display: block;
       margin: 0 auto;
       text-align: center;
       font-style: bold;
-      font-size: 1.7em;
+      font-size: 2.7em;
       color: white;
     }
   }
