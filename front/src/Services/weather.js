@@ -24,11 +24,11 @@ const weather = {
   /**
    * Obtiene la locacion actual y el clima.
    */
-  getCurrent: async data => {
+  getCurrent: async (city = null) => {
     try {
-      const params = ''
+      const params = city !== null ? city : ''
 
-      const { data } = await axios.get(`${api}/current`)
+      const { data } = await axios.get(`${api}/current/${params}`)
 
       return data
       //return jsonmock.current
@@ -41,11 +41,11 @@ const weather = {
   /**
    * Obtiene la locacion actual y el clima extendido.
    */
-  getForecast: async data => {
+  getForecast: async (city = null) => {
     try {
-      const params = ''
+      const params = city !== null ? city : ''
 
-      const { data } = await axios.get(`${api}/forecast`)
+      const { data } = await axios.get(`${api}/forecast/${params}`)
 
       return data
       //return jsonmock.weather

@@ -5,11 +5,11 @@ import React, { useEffect, useState } from 'react'
 import weatherService from '../../../Services/weather'
 
 const City = ({ city }) => {
-  console.log(city)
   const [current, setCurrent] = useState(null)
 
   const getCurrent = async () => {
     const data = await weatherService.getCurrent(city)
+
     setCurrent(data)
   }
 
@@ -28,7 +28,7 @@ const City = ({ city }) => {
       <div className="card-body">
         <h6 className="card-title">
           <img className="weather-icon" src={`http://openweathermap.org/img/w/${icon}.png`} />
-          {city} {main.temp}° (Min° {main.temp_min} / Max {main.temp_max}°)
+          {weather.name} {main.temp}° (Min° {main.temp_min} / Max {main.temp_max}°)
         </h6>
       </div>
     </div>
