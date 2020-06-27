@@ -22,7 +22,7 @@ const Body = () => {
   return (
     <div className="others-cities">
       {selected.map(i => (
-        <City city={cities[i]} />
+        <City city={cities[i].value} />
       ))}
     </div>
   )
