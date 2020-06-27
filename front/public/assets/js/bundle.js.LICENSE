@@ -82,7 +82,15 @@
  *
  */
 
+// Filtro por horario, ya que dependiendo el horario del dia en
+
+// que se consulta algunas temperaturas no estan disponibles
+
 /* harmony default export */
+
+/**
+ * Retorna los siguientes dias
+ */
 
 /**
  * Obtiene la fecha actual en formato legible
@@ -91,7 +99,7 @@
  *
  */
 
-// EXTERNAL MODULE: ./node_modules/axios/index.js
+// CONCATENATED MODULE: ./src/assets/cities.js
 
 // CONCATENATED MODULE: ./src/Services/weather.js
 
@@ -111,17 +119,9 @@
    * Obtiene la locacion actual y el clima.
    */
 
-//const { data } = await axios.get(`${api}/current/${params}`)
-
-// return data
-
 /**
    * Obtiene la locacion actual y el clima extendido.
    */
-
-//const { data } = await axios.get(`${api}/forecast/${params}`)
-
-//return data
 
 // CONCATENATED MODULE: ./src/Components/Body/Components/City.jsx
 
@@ -129,13 +129,13 @@
 
 // Servicios
 
+// Estilos
+
 // EXTERNAL MODULE: ./src/Containers/Dashboard/scss/styles.scss
 
 // CONCATENATED MODULE: ./src/Containers/Dashboard/Dashboard.jsx
 
 // Componentes
-
-// Estilos
 
 /**
  * Contenedor de la pantalla de login
@@ -152,7 +152,7 @@
  */
 
 /**
- * Rutas.
+ * App.
  */
 
 /**

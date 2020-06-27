@@ -1,8 +1,6 @@
-@import '../../../assets/main-styles/theme.scss';
 @import '../../../assets/main-styles/main.scss';
 
 #content-body-main {
-  background: $color-body;
   height: 100%;
   width: 100%;
   padding: 0px;
@@ -12,23 +10,4 @@
 .others-cities {
   font-size: 11em;
   margin-top: 50px;
-
-  .card-title {
-    margin-bottom: 0px;
-    font-weight: bold;
-  }
-  .card-body {
-    margin-top: 2px;
-    text-align: left !important;
-    padding: 8px;
-    h6 {
-      margin-left: 40px;
-    }
-  }
-
-  .weather-icon {
-    margin-left: 5%;
-    margin-right: 5%;
-    text-align: center;
-  }
 }

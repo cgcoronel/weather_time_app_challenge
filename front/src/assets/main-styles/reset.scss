@@ -1,5 +1,5 @@
 select {
-  color: $color-text !important;
+  color: #a6aaaf !important;
   font-size: 1em !important;
 
   option {
@@ -17,12 +17,12 @@ select {
 }
 
 .form-control:focus {
-  border-color: $color-veryLightGrey !important;
+  border-color: #cdcdcd !important;
   box-shadow: none !important;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }

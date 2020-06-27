@@ -1,6 +1,7 @@
 // Dependencias
 import React from 'react'
 import City from './Components/City'
+import cities from '../../assets/cities'
 
 // Estilo
 import './scss/styles.scss'
@@ -9,7 +10,6 @@ import './scss/styles.scss'
  * Renderizador de la cabecera.
  */
 const Body = () => {
-  const cities = ['Buenos Aires', 'Cordoba', 'Los Angeles', 'Mar del Plata', 'New York', 'Detroit']
   const selected = []
 
   // Obtengo 5 ciudades al azar
@@ -29,7 +29,7 @@ const Body = () => {
 }
 
 function getRandomNotExist(exist) {
-  const random = Math.floor(Math.random() * 6)
+  const random = Math.floor(Math.random() * cities.length + 1)
 
   return exist.includes(random) ? getRandomNotExist(exist) : random
 }
