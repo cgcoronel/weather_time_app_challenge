@@ -15,7 +15,6 @@ const Body = () => {
   // Obtengo 5 ciudades al azar
   ;[0, 1, 2, 3, 4].map(value => {
     const s = getRandomNotExist(selected)
-
     selected.push(s)
   })
 
@@ -29,7 +28,7 @@ const Body = () => {
 }
 
 function getRandomNotExist(exist) {
-  const random = Math.floor(Math.random() * cities.length + 1)
+  const random = Math.floor(Math.random() * cities.length)
 
   return exist.includes(random) ? getRandomNotExist(exist) : random
 }
