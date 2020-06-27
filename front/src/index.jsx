@@ -12,7 +12,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import './assets/main-styles/main.scss'
 
 /**
- * Rutas.
+ * App.
  */
 import App from './Containers/App/App'
 

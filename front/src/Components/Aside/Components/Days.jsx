@@ -4,19 +4,23 @@ import Day from './Day'
 
 const Days = ({ days }) => (
   <form>
-    <div className="form-group row moment-of-day">
-      <div className="col-sm-2 col-lg-3"></div>
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Mañana</th>
+          <th>Tarde</th>
+          <th>Noche</th>
+          <th></th>
+        </tr>
+      </thead>
 
-      <div className="col-sm-2 col-lg-2">Mañana</div>
-
-      <div className="col-sm-2 col-lg-2">Tarde</div>
-
-      <div className="col-sm-2 col-lg-2">Noche</div>
-    </div>
-
-    {days.map(day => (
-      <Day day={day} />
-    ))}
+      <tbody>
+        {days.map(day => (
+          <Day day={day} />
+        ))}
+      </tbody>
+    </table>
   </form>
 )
 

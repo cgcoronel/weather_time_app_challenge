@@ -8,10 +8,10 @@ const Day = ({ day }) => {
   const dayDescription = Array.isArray(day) && day.length ? getDay(day[0].dt_txt) : 'En breve...'
 
   return (
-    <div className="form-group row">
-      <div className="col-sm-2 col-lg-3 days-next">
+    <tr>
+      <td className="days-next">
         <span>{dayDescription}</span>
-      </div>
+      </td>
 
       {/* Muestro las temperaturas por horario, quedo feo, pero es la alternativa rapida XD */}
       {['15:00:00', '18:00:00', '21:00:00'].map(time => {
@@ -20,13 +20,11 @@ const Day = ({ day }) => {
         const result = day.find(t => t.dt_txt.indexOf(time) > 0)
         const t = result === undefined ? '-' : result.main.temp
 
-        return <div className="col-sm-2 col-lg-2">{t}</div>
+        return <td>{t}</td>
       })}
 
-      <div className="col-sm-2 col-lg-2">
-        {icon && <img className="weather-icon" src={`${api_icons}/w/${icon}.png`} />}
-      </div>
-    </div>
+      <td>{icon && <img className="weather-icon" src={`${api_icons}/w/${icon}.png`} />}</td>
+    </tr>
   )
 }
 

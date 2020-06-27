@@ -20,12 +20,12 @@ const Dashboard = () => {
   const [forecast, setForecast] = useState(null)
 
   const getCurrent = async () => {
-    const data = await weatherService.getCurrent('')
+    const data = await weatherService.getCurrent()
     setCurrent(data)
   }
 
   const getForecast = async () => {
-    const data = await weatherService.getForecast('')
+    const data = await weatherService.getForecast()
     setForecast(data)
   }
 

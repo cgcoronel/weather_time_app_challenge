@@ -4,6 +4,10 @@
 #aside {
   background: $color-aside-bar;
 
+  .table-responsive {
+    padding-left: 40px;
+  }
+
   .days-next span {
     margin-top: -12px;
   }

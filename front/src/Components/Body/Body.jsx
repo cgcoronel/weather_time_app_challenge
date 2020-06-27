@@ -29,7 +29,7 @@ const Body = () => {
 }
 
 function getRandomNotExist(exist) {
-  const random = Math.floor(Math.random() * 5)
+  const random = Math.floor(Math.random() * 6)
 
   return exist.includes(random) ? getRandomNotExist(exist) : random
 }
