@@ -68,17 +68,9 @@
 
 /*#__PURE__*/
 
-// EXTERNAL MODULE: ./src/Components/Header/scss/styles.scss
+// CONCATENATED MODULE: ./src/Utils/Constants.js
 
-// CONCATENATED MODULE: ./src/Components/Header/Header.jsx
-
-// Dependencias
-
-// Estilo
-
-/**
- * Renderizador de la cabecera.
- */
+// Gateway
 
 /**
  * Obtiene una fecha en formato legible
@@ -99,9 +91,7 @@
  *
  */
 
-// CONCATENATED MODULE: ./src/Utils/Constants.js
-
-// Gateway
+// EXTERNAL MODULE: ./node_modules/axios/index.js
 
 // CONCATENATED MODULE: ./src/Services/weather.js
 
@@ -121,11 +111,21 @@
    * Obtiene la locacion actual y el clima.
    */
 
+//const { data } = await axios.get(`${api}/current/${params}`)
+
+// return data
+
 /**
    * Obtiene la locacion actual y el clima extendido.
    */
 
+//const { data } = await axios.get(`${api}/forecast/${params}`)
+
+//return data
+
 // CONCATENATED MODULE: ./src/Components/Body/Components/City.jsx
+
+// Dependencias
 
 // Servicios
 

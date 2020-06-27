@@ -12,7 +12,6 @@ import './scss/styles.scss'
 const Aside = ({ forecast }) => {
   const { city, weather } = forecast
   const { list } = weather
-
   const days = list ? getNextDays(list) : []
 
   return (
@@ -26,6 +25,9 @@ const Aside = ({ forecast }) => {
   )
 }
 
+/**
+ * Retorna los siguientes dias
+ */
 function getNextDays(list) {
   const now = getNowYYYMMDD()
   const days = []
@@ -34,7 +36,7 @@ function getNextDays(list) {
     const day = value.dt_txt.substring(0, 10).replace(/-/g, '')
     const time = value.dt_txt.substring(11, 13)
 
-    if (days[day] === undefined) {
+    if (day !== now && days[day] === undefined) {
       days[day] = []
     }
 
@@ -43,7 +45,7 @@ function getNextDays(list) {
     }
   })
 
-  return days.filter(day => day.length >= 3)
+  return days
 }
 
 export default Aside

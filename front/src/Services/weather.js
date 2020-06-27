@@ -28,10 +28,10 @@ const weather = {
     try {
       const params = city !== null ? city : ''
 
-      //const { data } = await axios.get(`${api}/current/${params}`)
+      const { data } = await axios.get(`${api}/current/${params}`)
 
-      // return data
-      return jsonmock.current
+      return data
+      // return jsonmock.current
     } catch (error) {
       console.log(error)
       return false
@@ -45,10 +45,10 @@ const weather = {
     try {
       const params = city !== null ? city : ''
 
-      //const { data } = await axios.get(`${api}/forecast/${params}`)
+      const { data } = await axios.get(`${api}/forecast/${params}`)
 
-      //return data
-      return jsonmock.weather
+      return data
+      // return jsonmock.weather
     } catch (error) {
       console.log(error)
       return false

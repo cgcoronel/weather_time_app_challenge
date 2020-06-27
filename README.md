@@ -2,8 +2,9 @@
 
 Aplicacion del Clima
 
-## Requisitos
+## Dependencias
 
+    node
     docker
     docker-compose
 
