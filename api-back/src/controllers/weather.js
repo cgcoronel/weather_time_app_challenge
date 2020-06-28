@@ -15,7 +15,7 @@ const getLocation = async (req, res) => {
   // Obtengo la ip del request
 
   const ip = getIpAddress(req)
-  console.log('controller ', ip)
+
   const { city } = await service.getLocation(ip)
 
   if (!city) {
