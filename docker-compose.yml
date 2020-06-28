@@ -13,15 +13,6 @@ services:
     volumes:
       - ./log/:/opt/app/log
 
-  # nginx:
-  #   container_name: nginx
-  #   build:
-  #     context: front
-  #     dockerfile: Dockerfile
-  #   networks:
-  #     - weather
-  #   ports:
-  #     - "80:80"
   nginx:
     container_name: nginx
     build:
@@ -30,15 +21,8 @@ services:
     networks:
       - weather
     ports:
-      - mode: host
-        protocol: tcp
-        published: 80
-        target: 80
-      - mode: host
-        protocol: tcp
-        published: 443
-        target: 81
+      - "80:80"
 
-  networks:
-    weather:
-      driver: "bridge"
+networks:
+  weather:
+    driver: "bridge"
