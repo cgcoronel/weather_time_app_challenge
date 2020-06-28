@@ -1,7 +1,7 @@
 const { HttpRequestError, ResponseHandler, logger } = require('../utils')
 
 /**
- * Verifica autenticación
+ * Controlador de errores
  *
  * @param req           request
  * @param res           response
