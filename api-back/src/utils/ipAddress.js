@@ -10,15 +10,19 @@ const { logger } = require('.')
  */
 const getIpAdress = req => {
   try {
-    return (
-      (req.headers['x-forwarded-for'] || '')
-        .split(',')
-        .pop()
-        .trim() ||
-      req.connection.remoteAddress ||
-      req.socket.remoteAddress ||
-      req.connection.socket.remoteAddress
-    )
+    // return (
+    const ip = req.clientIp
+    //   (req.headers['x-forwarded-for'] || '')
+    //     .split(',')
+    //     .pop()
+    //     .trim() ||
+    //   req.connection.remoteAddress ||
+    //   req.socket.remoteAddress ||
+    //   req.connection.socket.remoteAddress
+    // // )
+
+    console.log('get ip adress', ip)
+    return ip
   } catch (error) {
     logger.error(`(getIpAddress): (${error})`)
   } finally {
