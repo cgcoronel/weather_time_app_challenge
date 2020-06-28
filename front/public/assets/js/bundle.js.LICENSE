@@ -68,9 +68,21 @@
 
 /*#__PURE__*/
 
-// CONCATENATED MODULE: ./src/Utils/Constants.js
+// CONCATENATED MODULE: ./src/Components/Header/Components/City.jsx
 
-// Gateway
+// Dependencias
+
+/* harmony default export */
+
+// CONCATENATED MODULE: ./src/Components/Header/Header.jsx
+
+// Componentes
+
+// Estilo
+
+/**
+ * Renderizador de la cabecera.
+ */
 
 /**
  * Obtiene una fecha en formato legible
@@ -85,8 +97,6 @@
 // Filtro por horario, ya que dependiendo el horario del dia en
 
 // que se consulta algunas temperaturas no estan disponibles
-
-/* harmony default export */
 
 /**
  * Retorna los siguientes dias
@@ -125,8 +135,6 @@
 
 // CONCATENATED MODULE: ./src/Components/Body/Components/City.jsx
 
-// Dependencias
-
 // Servicios
 
 // Estilos
@@ -134,8 +142,6 @@
 // EXTERNAL MODULE: ./src/Containers/Dashboard/scss/styles.scss
 
 // CONCATENATED MODULE: ./src/Containers/Dashboard/Dashboard.jsx
-
-// Componentes
 
 /**
  * Contenedor de la pantalla de login
