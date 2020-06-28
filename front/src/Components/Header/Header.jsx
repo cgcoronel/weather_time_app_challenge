@@ -1,7 +1,12 @@
 // Dependencias
 import React from 'react'
-import { getNow } from '../../Utils/Date'
-import { api_icons } from '../../Utils/Constants'
+
+// Componentes
+import City from './Components/City'
+import Cloud from './Components/Cloud'
+import Temperatures from './Components/Temperatures'
+import Detail from './Components/Details'
+import MainTemp from './Components/MainTemp'
 
 // Estilo
 import './scss/styles.scss'
@@ -11,49 +16,25 @@ import './scss/styles.scss'
  */
 const Header = ({ current }) => {
   const { city, weather } = current
-
-  const { temp, feels_like, temp_min, temp_max, pressure, humidity } = weather.main
-  const icon = weather.weather[0]
+  const { main } = weather
 
   return (
     <div className="card mt-5" id="header-content">
       <div className="row no-gutters">
-        <div className="col-md-12">
-          <h1 className="card-title">
-            {city},<small>{getNow()}</small>
-          </h1>
-        </div>
+        <City city={city} />
       </div>
 
       <div className="row no-gutters">
-        <div className="col-md-2">
-          <div className="card-body">
-            <img className="weather-icon" src={`${api_icons}/wn/${icon.icon}@4x.png`} />
-          </div>
-        </div>
+        <Cloud icon={weather.weather[0].icon} />
 
-        <div className="col-md-4">
-          <div className="card-body">
-            <p className="card-text">Sensación térmica {feels_like}°</p>
-            <p className="card-text">Mín {temp_min}°</p>
-            <p className="card-text">Máx {temp_max}°</p>
-          </div>
-        </div>
+        <Temperatures {...main} />
 
-        <div className="col-md-3">
-          <div className="card-body">
-            <p className="card-text">Presión {pressure} hPa</p>
-            <p className="card-text">Humedad {humidity}%</p>
-            <p className="card-text">Viento {weather.wind.speed} km</p>
-          </div>
-        </div>
-        <div className="col-md-2">
-          <div className="weather-temp">
-            <span>{temp}°</span>
-          </div>
-        </div>
+        <Detail {...main} {...weather.wind} />
+
+        <MainTemp {...main} />
       </div>
     </div>
   )
 }
+
 export default Header

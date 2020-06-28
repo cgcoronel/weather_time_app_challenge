@@ -1,5 +1,7 @@
 // Dependencias
 import React from 'react'
+
+// Componentes
 import City from './Components/City'
 import cities from '../../assets/cities'
 
@@ -13,7 +15,7 @@ const Body = () => {
   const selected = []
 
   // Obtengo 5 ciudades al azar
-  ;[0, 1, 2, 3, 4].map(value => {
+  ;[0, 1, 2, 3, 4].map(() => {
     const s = getRandomNotExist(selected)
     selected.push(s)
   })

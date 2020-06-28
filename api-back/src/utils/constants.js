@@ -4,17 +4,17 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 /**
- * @desc Retorna la ruta base
+ * Retorna la ruta base
  */
 exports.BASE_ROUTE = process.env.BASE_ROUTE || '/v1'
 
 /**
- * @desc Retorna el puerto del microservicio
+ * Retorna el puerto del microservicio
  */
 exports.APP_PORT = process.env.APP_PORT || 3977
 
 /**
- * @desc Retorna las configuraciones de ip api
+ * Retorna las configuraciones de ip api
  */
 exports.IP_API = {
   url: process.env.IP_API_URL || '',
@@ -23,7 +23,7 @@ exports.IP_API = {
 }
 
 /**
- * @desc Retorna las configuraciones de open weather map
+ * Retorna las configuraciones de open weather map
  */
 exports.OPEN_WEATHER = {
   url: process.env.OPEN_WEATHER_URL || '',
