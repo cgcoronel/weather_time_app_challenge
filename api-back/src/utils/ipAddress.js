@@ -15,7 +15,6 @@ const getIpAdress = req => {
     return ip
   } catch (error) {
     logger.error(`(getIpAddress): (${error})`)
-  } finally {
     return undefined
   }
 }
