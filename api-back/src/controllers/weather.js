@@ -13,9 +13,8 @@ const { NOT_FOUND } = ResponseHandler.statusCodes
  */
 const getLocation = async (req, res) => {
   // Obtengo la ip del request
-
   const ip = await getIpAddress(req)
-  console.log('desde controller ip', ip)
+
   const { city } = await service.getLocation(ip)
 
   if (!city) {

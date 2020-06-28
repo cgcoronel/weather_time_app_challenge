@@ -9,9 +9,6 @@ const { IP_API, OPEN_WEATHER } = require('../utils/constants')
  */
 const getLocation = async ip => {
   try {
-    console.log('aca la ip en getLocatrion: ', ip)
-    // cambiarrrrrrrrrrrrrrrrrr ip
-    //    const ip1 = '181.44.61.42'
     const url = `${IP_API.url}/${ip}?access_key=${IP_API.accessKey}&language=${IP_API.lang}`
     const { data } = await axios.get(url)
 
