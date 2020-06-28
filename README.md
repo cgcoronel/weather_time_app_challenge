@@ -26,4 +26,4 @@ Aplicacion del Clima
 
 ## URL API
 
-<a href="http://142.93.59.194/v1">http://142.93.59.194/v1</a>
+http://142.93.59.194/v1
