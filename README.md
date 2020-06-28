@@ -2,6 +2,8 @@
 
 Aplicacion del Clima
 
+<img src='https://github.com/cgcoronel/telecom/blob/master/screenshot.png'>
+
 ## Dependencias
 
     node
