@@ -10,16 +10,7 @@ const { logger } = require('.')
  */
 const getIpAdress = req => {
   try {
-    // return (
-    const ip = req.clientIp
-    //   (req.headers['x-forwarded-for'] || '')
-    //     .split(',')
-    //     .pop()
-    //     .trim() ||
-    //   req.connection.remoteAddress ||
-    //   req.socket.remoteAddress ||
-    //   req.connection.socket.remoteAddress
-    // // )
+    const ip = req.clientIp.replace(/:/g, '').replace(/[a-zA-Z_-]/g, '')
 
     console.log('get ip adress', ip)
     return ip
