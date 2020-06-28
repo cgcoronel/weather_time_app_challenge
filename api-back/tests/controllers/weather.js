@@ -28,7 +28,7 @@ describe(' # Controllers - Weather', () => {
     })
 
     it('should return 200 when the ip is valid', async () => {
-      const req = mockReq({ headers: [{ 'x-forwarded-for': '127.0.0.1' }] })
+      const req = mockReq({ clientIp: '127.0.0.1' })
       const res = mockRes()
 
       await controller.getLocation(req, res)
@@ -73,7 +73,7 @@ describe(' # Controllers - Weather', () => {
     })
 
     it('should throw a error when the ip is valid and the city is undefined', async () => {
-      const req = mockReq({ headers: [{ 'x-forwarded-for': '127.0.0.1' }] })
+      const req = mockReq({ clientIp: '127.0.0.1' })
       const res = mockRes()
 
       expect(() => controller.getCurrent(req, res)).to.throw
@@ -84,7 +84,7 @@ describe(' # Controllers - Weather', () => {
         params: {
           city: 'Buenos Aires'
         },
-        headers: [{ 'x-forwarded-for': '127.0.0.1' }]
+        clientIp: '127.0.0.1'
       })
       const res = mockRes()
 
@@ -143,37 +143,10 @@ describe(' # Controllers - Weather', () => {
     })
 
     it('should throw a error when the ip is valid and the city is undefined', async () => {
-      const req = mockReq({ headers: [{ 'x-forwarded-for': '127.0.0.1' }] })
+      const req = mockReq({ clientIp: '127.0.0.1' })
       const res = mockRes()
 
       expect(() => controller.getForecast(req, res)).to.throw
-    })
-
-    it('should throw a error when the ip is valid and the city is valid', async () => {
-      const req = mockReq({
-        params: {
-          city: 'Buenos Aires'
-        },
-        headers: [{ 'x-forwarded-for': '127.0.0.1' }]
-      })
-      const res = mockRes()
-
-      await controller.getForecast(req, res)
-
-      expect(res.status.calledWith(200)).to.be.true
-    })
-
-    it('should throw a error when the ip is undefined and the city is valid', async () => {
-      const req = mockReq({
-        params: {
-          city: 'Buenos Aires'
-        }
-      })
-      const res = mockRes()
-
-      await controller.getForecast(req, res)
-
-      expect(res.status.calledWith(200)).to.be.true
     })
   })
 })
