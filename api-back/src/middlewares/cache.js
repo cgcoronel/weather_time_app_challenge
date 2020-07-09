@@ -1,9 +1,10 @@
 const redis = require('redis')
 const { getIpAddress, logger } = require('../utils')
+const { CACHE_REDIS } = require('../utils/constants')
 
 const redisClient = redis.createClient({
-  host: 'redis-cache',
-  port: 6379
+  host: CACHE_REDIS.host,
+  port: CACHE_REDIS.port
 })
 
 redisClient.on('connect', function() {

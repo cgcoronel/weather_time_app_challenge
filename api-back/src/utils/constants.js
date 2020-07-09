@@ -31,3 +31,11 @@ exports.OPEN_WEATHER = {
   lang: process.env.OPEN_WEATHER_LANG || 'sp',
   units: process.env.OPEN_WEATHER_UNITS || 'metric'
 }
+
+/**
+ * Retorna las configuraciones de la base redis para el cache
+ */
+exports.CACHE_REDIS = {
+  host: process.env.CACHE_REDIS_HOST || 'localhost',
+  port: process.env.CACHE_REDIS_PORT || '6379'
+}
