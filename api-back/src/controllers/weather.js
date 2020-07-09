@@ -1,5 +1,6 @@
 const { HttpRequestError, ResponseHandler, getIpAddress } = require('../utils')
 const service = require('../services/weather')
+const { redisClient } = require('../middlewares/cache')
 
 // Constantes globales
 const { NOT_FOUND } = ResponseHandler.statusCodes
@@ -23,6 +24,10 @@ const getLocation = async (req, res) => {
       '(getLocation): Error al obtener la ubicación'
     )
   }
+
+  // Guardo el resultado en el cache
+  const result = JSON.stringify({ city })
+  redisClient.setex(`location_${ip}`, 3600, result)
 
   ResponseHandler.ok(res, { city })
 }
@@ -65,6 +70,10 @@ const getCurrent = async (req, res) => {
     )
   }
 
+  // Guardo el resultado en el cache
+  const result = JSON.stringify({ city, weather })
+  redisClient.setex(`current_${city}`, 3600, result)
+
   ResponseHandler.ok(res, { city, weather })
 }
 
@@ -104,6 +113,10 @@ const getForecast = async (req, res) => {
       '(getForecast): Error al obtener el clima'
     )
   }
+
+  // Guardo el resultado en el cache
+  const result = JSON.stringify({ city, weather })
+  redisClient.setex(`forecast_${city}`, 3600, result)
 
   ResponseHandler.ok(res, { city, weather })
 }
