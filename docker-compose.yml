@@ -23,6 +23,14 @@ services:
     ports:
       - "80:80"
 
+  redis:
+    image: redis:latest
+    container_name: redis-cache
+    networks:
+      - weather
+    ports:
+      - "6379:6379"
+
 networks:
   weather:
     driver: "bridge"

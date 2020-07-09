@@ -29,7 +29,6 @@ const weather = {
       const params = city !== null ? city : ''
 
       const { data } = await axios.get(`${api}/current/${params}`)
-
       return data
     } catch (error) {
       console.log(error)
@@ -55,5 +54,3 @@ const weather = {
 }
 
 export default weather
-
-

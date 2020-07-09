@@ -8,7 +8,6 @@ const { HttpRequestError, ResponseHandler, logger } = require('../utils')
  *
  * @return Promise<void>
  */
-
 const errorHandler = fn => (req, res) => {
   fn(req, res).catch(err => {
     logger.error(
