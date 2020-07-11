@@ -19,21 +19,18 @@ const Dashboard = () => {
   const [current, setCurrent] = useState(null)
   const [forecast, setForecast] = useState(null)
 
-  const getCurrent = async () => {
+  const getLocation = async () => {
     const { city } = await weatherService.getLocation()
-    const data = await weatherService.getCurrent(city)
-    setCurrent(data)
-  }
 
-  const getForecast = async () => {
-    const { city } = await weatherService.getLocation()
-    const data = await weatherService.getForecast(city)
-    setForecast(data)
+    const current = await weatherService.getCurrent(city)
+    setCurrent(current)
+
+    const forecast = await weatherService.getForecast(city)
+    setForecast(forecast)
   }
 
   useEffect(() => {
-    getCurrent()
-    getForecast()
+    getLocation()
   }, [])
 
   return (
