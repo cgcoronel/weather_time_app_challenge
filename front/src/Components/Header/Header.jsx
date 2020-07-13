@@ -14,27 +14,26 @@ import './scss/styles.scss'
 /**
  * Renderizador de la cabecera.
  */
-const Header = ({current}) => {
-	const {city, weather} = current
-	const {main} = weather
+const Header = ({ current }) => {
+  const { city, weather } = current
+  const { main } = weather
 
-	return (
-		<div className="card mt-5" id="header-content">
-			<div className="row no-gutters">
-				<City city={city} />
-			</div>
+  return (
+    <div className="card mt-5" id="header-content">
+      <div className="row no-gutters">
+        <City city={city} />
+      </div>
+      <div className="row no-gutters">
+        <Cloud icon={weather.weather[0].icon} />
 
-			<div className="row no-gutters">
-				<Cloud icon={weather.weather[0].icon} />
+        <Temperatures {...main} />
 
-				<Temperatures {...main} />
+        <Detail {...main} {...weather.wind} />
 
-				<Detail {...main} {...weather.wind} />
-
-				<MainTemp {...main} />
-			</div>
-		</div>
-	)
+        <MainTemp {...main} />
+      </div>
+    </div>
+  )
 }
 
 export default Header
