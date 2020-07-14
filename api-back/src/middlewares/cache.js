@@ -20,15 +20,19 @@ redisClient.on('connect', function() {
  * @return Promise<void>
  */
 const cacheCurrent = (req, res, next) => {
-  const { city } = req.params
+  const { city = null } = req.params
 
-  redisClient.get(`current_${city}`, (err, data) => {
-    if (data !== null) {
-      res.send(JSON.parse(data))
-    } else {
-      next()
-    }
-  })
+  if (city === null) {
+    next()
+  } else {
+    redisClient.get(`current_${city}`, (err, data) => {
+      if (data !== null) {
+        res.send(JSON.parse(data))
+      } else {
+        next()
+      }
+    })
+  }
 }
 
 /**
@@ -40,15 +44,19 @@ const cacheCurrent = (req, res, next) => {
  * @return Promise<void>
  */
 const cacheForecast = (req, res, next) => {
-  const { city } = req.params
+  const { city = null } = req.params
 
-  redisClient.get(`forecast_${city}`, (err, data) => {
-    if (data !== null) {
-      res.send(JSON.parse(data))
-    } else {
-      next()
-    }
-  })
+  if (city === null) {
+    next()
+  } else {
+    redisClient.get(`forecast_${city}`, (err, data) => {
+      if (data !== null) {
+        res.send(JSON.parse(data))
+      } else {
+        next()
+      }
+    })
+  }
 }
 
 /**
