@@ -14,8 +14,8 @@ const {
 
 const api = Router()
 
-api.get('/location', cacheLocation, errorHandler(getLocation))
-api.get('/current/:city?', cacheCurrent, errorHandler(getCurrent))
-api.get('/forecast/:city?', cacheForecast, errorHandler(getForecast))
+api.get('/location', errorHandler(getLocation))
+api.get('/current/:city?', errorHandler(getCurrent))
+api.get('/forecast/:city?', errorHandler(getForecast))
 
 module.exports = api
