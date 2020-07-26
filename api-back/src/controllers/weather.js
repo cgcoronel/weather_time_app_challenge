@@ -16,8 +16,8 @@ const getLocation = async (req, res) => {
   // Obtengo la ip del request
   const ip = await getIpAddress(req)
 
+  console.log(ip)
   const { city } = await service.getLocation(ip)
-
   if (!city) {
     throw new HttpRequestError(
       NOT_FOUND,

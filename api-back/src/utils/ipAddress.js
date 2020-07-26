@@ -1,4 +1,4 @@
-const { logger } = require('.')
+const logger = require('./logger')
 
 /**
  * Retorna la ip del request
@@ -10,7 +10,7 @@ const { logger } = require('.')
  */
 const getIpAdress = req => {
   try {
-    const ip = '181.44.61.42' // req.clientIp.replace(/:/g, '').replace(/[a-zA-Z_-]/g, '')
+    const ip = req.clientIp.replace(/:/g, '').replace(/[a-zA-Z_-]/g, '')
     return ip
   } catch (error) {
     logger.error(`(getIpAddress): (${error})`)
