@@ -101,8 +101,7 @@ describe(' # Utils - responseHandler', () => {
       }
 
       const dd = await ResponseHandler.customCode(res, true)
-      console.log(dd)
-      // expect(jsonStub.firstCall.args[0]).to.eql({ message: 'true' })
+      expect(jsonStub.firstCall.args[0]).to.eql({ message: 'true' })
     })
   })
 })
