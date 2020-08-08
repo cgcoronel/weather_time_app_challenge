@@ -3,7 +3,6 @@ const sinon = require('sinon')
 const proxyquire = require('proxyquire')
 const { expect } = chai
 const { ResponseHandler } = require('../../src/utils')
-const { json } = require('body-parser')
 
 describe(' # Utils - responseHandler', () => {
   describe(' - responseHandler', () => {

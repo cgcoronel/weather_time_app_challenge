@@ -4,6 +4,7 @@ const { mockReq, mockRes } = require('sinon-express-mock')
 const controller = require('../../src/controllers/weather')
 const service = require('../../src/services/weather')
 const proxyquire = require('proxyquire')
+const { HttpRequestError } = require('../../src/utils')
 
 const { expect } = chai
 
@@ -11,25 +12,37 @@ describe(' # Controllers - Weather', () => {
   describe(' - getLocation', () => {
     it('should throw a error when the ip is undefined', async () => {
       const { getLocation } = proxyquire('../../src/controllers/weather.js', {
-        '../services/weather.js': {
-          getLocation: sinon.fake.resolves(false)
-        },
         '../utils': {
           getIpAddress: sinon.fake.resolves(undefined)
         }
       })
 
-      expect(() => getLocation({}, {})).to.throw
+      let error
+      try {
+        await getLocation({}, {})
+      } catch (err) {
+        error = err
+      }
+      expect(error).to.throw
     })
 
     it('should throw a error when the city is undefined', async () => {
       const { getLocation } = proxyquire('../../src/controllers/weather.js', {
+        '../utils': {
+          getIpAddress: sinon.fake.resolves('127.0.0.1')
+        },
         '../services/weather.js': {
-          getLocation: sinon.fake.resolves(false)
+          getLocation: sinon.fake.resolves({ city: false })
         }
       })
 
-      expect(async () => await getLocation('127.0.0.1')).to.throw
+      let error
+      try {
+        await getLocation({}, {})
+      } catch (err) {
+        error = err
+      }
+      expect(error).to.throw
     })
 
     it('should return 200 when the ip is valid', async () => {
@@ -62,39 +75,38 @@ describe(' # Controllers - Weather', () => {
     })
   })
   describe(' - getCurrent', () => {
-    let stubGetCurrent
-    let stubGetLocation
-
-    before(() => {
-      stubGetLocation = sinon
-        .stub(service, 'getLocation')
-        .callsFake(() => Promise.resolve({ city: 'Buenos Aires' }))
-
-      stubGetCurrent = sinon.stub(service, 'getCurrent').callsFake(() =>
-        Promise.resolve({
-          weather: [
-            {
-              id: 802,
-              main: 'Clouds',
-              description: 'nubes dispersas',
-              icon: '03n'
-            }
-          ]
-        })
-      )
-    })
-
-    after(() => {
-      stubGetLocation.restore()
-      stubGetCurrent.restore()
-    })
-
     it('should throw a error when the ip is undefined and the city is undefined', async () => {
-      const req = mockReq()
-      const res = mockRes()
+      const { getCurrent } = proxyquire('../../src/controllers/weather.js', {
+        '../utils': {
+          getIpAddress: sinon.fake.resolves(undefined)
+        }
+      })
 
-      expect(() => controller.getCurrent(req, res)).to.throw
+      let error
+      try {
+        await getCurrent({ params: { city: null } }, {})
+      } catch (err) {
+        error = err
+      }
+      expect(error).to.throw
     })
+
+    it('should throw a error when the ip is valid and the city is undefined', async () => {
+      const { getCurrent } = proxyquire('../../src/controllers/weather.js', {
+        '../utils': {
+          getIpAddress: sinon.fake.resolves('127.0.0.1')
+        }
+      })
+
+      let error
+      try {
+        await getCurrent({ params: { city: null } }, {})
+      } catch (err) {
+        error = err
+      }
+      expect(error).to.throw
+    })
+    /* 
 
     it('should throw a error when the ip is valid and the city is undefined', async () => {
       const req = mockReq({ clientIp: '127.0.0.1' })
@@ -129,8 +141,9 @@ describe(' # Controllers - Weather', () => {
 
       expect(res.status.calledWith(200)).to.be.true
     })
+    */
   })
-
+  /*
   describe(' - getForecast', () => {
     let stubGetCurrent
     let stubGetLocation
@@ -172,5 +185,5 @@ describe(' # Controllers - Weather', () => {
 
       expect(() => controller.getForecast(req, res)).to.throw
     })
-  })
+  })*/
 })
