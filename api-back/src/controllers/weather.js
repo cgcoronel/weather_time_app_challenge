@@ -1,7 +1,7 @@
 const { HttpRequestError, ResponseHandler, getIpAddress } = require('../utils')
 const service = require('../services/weather')
 const { redisClient } = require('../middlewares/cache')
-
+//console.log
 // Constantes globales
 const { NOT_FOUND } = ResponseHandler.statusCodes
 
