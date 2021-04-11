@@ -4,7 +4,7 @@ const { redisClient } = require('../middlewares/cache')
 
 // Constantes globales
 const { NOT_FOUND } = ResponseHandler.statusCodes
-
+///ssssssssgh
 /**
  * Devuelve los datos de ubicación
  *
